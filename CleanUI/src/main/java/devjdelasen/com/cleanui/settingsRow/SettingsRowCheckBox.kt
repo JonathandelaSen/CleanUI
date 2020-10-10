@@ -6,12 +6,10 @@ import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.View
 import android.widget.CompoundButton
-import android.widget.RadioGroup
 import androidx.core.content.ContextCompat
 import androidx.core.widget.CompoundButtonCompat
-import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
-import kotlinx.android.synthetic.main.settings_row_check.view.*
+import kotlinx.android.synthetic.main.settings_row_check_clean_ui.view.*
 
 
 class SettingsRowCheckBox: SettingsRow {
@@ -53,7 +51,7 @@ class SettingsRowCheckBox: SettingsRow {
     }
 
     private fun setView() {
-        View.inflate(context, R.layout.settings_row_check, this)
+        View.inflate(context, R.layout.settings_row_check_clean_ui, this)
         CompoundButtonCompat.setButtonTintList(clean_ui_cb, ColorStateList.valueOf(cbTintColor));
     }
 

@@ -2,7 +2,6 @@ package devjdelasen.com.cleanui
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -11,7 +10,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
-import kotlinx.android.synthetic.main.simple_toolbar.view.*
+import kotlinx.android.synthetic.main.simple_toolbar_clean_ui.view.*
 
 
 class SimpleToolbar : LinearLayout {
@@ -80,7 +79,7 @@ class SimpleToolbar : LinearLayout {
     }
 
     private fun init() {
-        View.inflate(context, R.layout.simple_toolbar, this)
+        View.inflate(context, R.layout.simple_toolbar_clean_ui, this)
         setView()
         setListeners()
     }

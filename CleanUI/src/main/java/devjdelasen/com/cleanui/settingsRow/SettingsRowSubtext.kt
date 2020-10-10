@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.set
-import kotlinx.android.synthetic.main.settings_row_subtext.view.*
+import kotlinx.android.synthetic.main.settings_row_subtext_clean_ui.view.*
 
 
 class SettingsRowSubtext: SettingsRow {
@@ -55,7 +55,7 @@ class SettingsRowSubtext: SettingsRow {
     }
 
     private fun setView() {
-        View.inflate(context, R.layout.settings_row_subtext, this)
+        View.inflate(context, R.layout.settings_row_subtext_clean_ui, this)
         clean_ui_tvSubtext?.set(subtext, subtextColor, subtextSize, subtextTextStyle)
     }
 

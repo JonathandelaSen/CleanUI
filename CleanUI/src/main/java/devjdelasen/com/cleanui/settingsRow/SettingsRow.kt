@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.set
-import kotlinx.android.synthetic.main.title_section.view.*
+import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
 
 
 abstract class SettingsRow: LinearLayout {

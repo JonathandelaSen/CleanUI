@@ -4,12 +4,9 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.TextStyle
-import devjdelasen.com.cleanui.set
-import kotlinx.android.synthetic.main.settings_row_action.view.*
+import kotlinx.android.synthetic.main.settings_row_action_clean_ui.view.*
 
 
 class SettingsRowAction: SettingsRow {
@@ -51,7 +48,7 @@ class SettingsRowAction: SettingsRow {
 
 
     private fun setView() {
-        View.inflate(context, R.layout.settings_row_action, this)
+        View.inflate(context, R.layout.settings_row_action_clean_ui, this)
         if (icTintColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivIcAction, ColorStateList.valueOf(icTintColor))
     }
 

@@ -2,12 +2,10 @@ package devjdelasen.com.cleanui
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.title_section.view.*
+import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
 
 
 class TitleSection : LinearLayout {
@@ -43,7 +41,7 @@ class TitleSection : LinearLayout {
     }
 
     private fun init() {
-        View.inflate(context, R.layout.title_section, this)
+        View.inflate(context, R.layout.title_section_clean_ui, this)
         setView()
     }
 
