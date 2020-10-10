@@ -3,7 +3,6 @@ package devjdelasen.com.cleanui
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.widget.TextView
-import kotlinx.android.synthetic.main.simple_toolbar.view.*
 
 
 internal fun TextView.set(text: String?, titleColor: Int, textSize: Float, textStyle: Int) {

@@ -11,9 +11,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.CompoundButtonCompat
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.TextStyle
-import devjdelasen.com.cleanui.set
-import kotlinx.android.synthetic.main.settings_row_action.view.*
 import kotlinx.android.synthetic.main.settings_row_check.view.*
 
 
@@ -32,7 +29,7 @@ class SettingsRowCheckBox: SettingsRow {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.SettingsRow, 0, 0)
         try {
-            cbTintColor = ta.getColor(R.styleable.SettingsRow_settings_row_icon_action_tint_color, ContextCompat.getColor(context, R.color.colorPrimary))
+            cbTintColor = ta.getColor(R.styleable.SettingsRow_settings_row_icon_action_tint_color, ContextCompat.getColor(context, R.color.clean_ui_colorPrimary))
         } finally {
             ta.recycle()
         }
@@ -52,12 +49,12 @@ class SettingsRowCheckBox: SettingsRow {
 
 
     fun setOnCheckedChangeListener(listener: CompoundButton.OnCheckedChangeListener) {
-        cb.setOnCheckedChangeListener(listener)
+        clean_ui_cb.setOnCheckedChangeListener(listener)
     }
 
     private fun setView() {
         View.inflate(context, R.layout.settings_row_check, this)
-        CompoundButtonCompat.setButtonTintList(cb, ColorStateList.valueOf(cbTintColor));
+        CompoundButtonCompat.setButtonTintList(clean_ui_cb, ColorStateList.valueOf(cbTintColor));
     }
 
 

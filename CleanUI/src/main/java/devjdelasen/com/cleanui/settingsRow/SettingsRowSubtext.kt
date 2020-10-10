@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.set
-import kotlinx.android.synthetic.main.settings_row_action.view.*
 import kotlinx.android.synthetic.main.settings_row_subtext.view.*
 
 
@@ -31,7 +30,7 @@ class SettingsRowSubtext: SettingsRow {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.SettingsRow, 0, 0)
         try {
             subtext = ta.getString(R.styleable.SettingsRow_settings_row_subtitle)
-            subtextColor = ta.getColor(R.styleable.SettingsRow_settings_row_subtitle_color, ContextCompat.getColor(context, R.color.subtitle_dark))
+            subtextColor = ta.getColor(R.styleable.SettingsRow_settings_row_subtitle_color, ContextCompat.getColor(context, R.color.clean_ui_subtitle_dark))
             subtextTextStyle = ta.getInt(R.styleable.SettingsRow_settings_row_subtitle_size, TextStyle.NORMAL.value)
             subtextSize = ta.getFloat(R.styleable.SettingsRow_settings_row_subtitle_style, SUBTEXT_TEXT_SIZE_DEFAULT_PD)
         } finally {
@@ -52,12 +51,12 @@ class SettingsRowSubtext: SettingsRow {
 
 
     fun setListener(listener: OnClickListener) {
-        tvSubtext.setOnClickListener(listener)
+        clean_ui_tvSubtext.setOnClickListener(listener)
     }
 
     private fun setView() {
         View.inflate(context, R.layout.settings_row_subtext, this)
-        tvSubtext?.set(subtext, subtextColor, subtextSize, subtextTextStyle)
+        clean_ui_tvSubtext?.set(subtext, subtextColor, subtextSize, subtextTextStyle)
     }
 
 

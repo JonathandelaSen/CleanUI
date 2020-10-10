@@ -7,7 +7,7 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/clean_ui_tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -16,7 +16,7 @@
         />
 
     <TextView
-        android:id="@+id/tvSubtext"
+        android:id="@+id/clean_ui_tvSubtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="v1.4.12"

@@ -9,7 +9,7 @@ class ToolbarSampleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toolbar_sample)
-        tintStatusBar(resources.getColor(R.color.white, null), false, this)
+        tintStatusBar(resources.getColor(R.color.app_white, null), false, this)
     }
 
 

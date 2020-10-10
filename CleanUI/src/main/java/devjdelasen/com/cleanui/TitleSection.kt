@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.title_section.view.tvTitle
+import kotlinx.android.synthetic.main.title_section.view.*
 
 
 class TitleSection : LinearLayout {
@@ -29,7 +29,7 @@ class TitleSection : LinearLayout {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.TitleSection, 0, 0)
         try {
             title = ta.getString(R.styleable.TitleSection_title_section_title)
-            titleColor = ta.getColor(R.styleable.TitleSection_title_section_title_color, ContextCompat.getColor(context, R.color.title_default))
+            titleColor = ta.getColor(R.styleable.TitleSection_title_section_title_color, ContextCompat.getColor(context, R.color.clean_ui_title_default))
             titleTextStyle = ta.getInt(R.styleable.TitleSection_title_section_title_style, TextStyle.BOLD.value)
             titleTextSize = ta.getFloat(R.styleable.TitleSection_title_section_title_size, TITLE_TEXT_SIZE_DEFAULT_PD)
         } finally {
@@ -53,6 +53,6 @@ class TitleSection : LinearLayout {
     }
 
     private fun setTitle() {
-        tvTitle.set(title, titleColor, titleTextSize, titleTextStyle)
+        clean_ui_tvTitle.set(title, titleColor, titleTextSize, titleTextStyle)
     }
 }

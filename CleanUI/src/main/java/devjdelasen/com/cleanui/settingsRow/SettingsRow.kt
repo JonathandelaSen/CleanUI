@@ -31,7 +31,7 @@ abstract class SettingsRow: LinearLayout {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.SettingsRow, 0, 0)
         try {
             title = ta.getString(R.styleable.SettingsRow_settings_row_title)
-            titleColor = ta.getColor(R.styleable.SettingsRow_settings_row_title_color, ContextCompat.getColor(context, R.color.title_default))
+            titleColor = ta.getColor(R.styleable.SettingsRow_settings_row_title_color, ContextCompat.getColor(context, R.color.clean_ui_title_default))
             titleTextStyle = ta.getInt(R.styleable.SettingsRow_settings_row_title_size, TextStyle.NORMAL.value)
             titleTextSize = ta.getFloat(R.styleable.SettingsRow_settings_row_title_style, TITLE_TEXT_SIZE_DEFAULT_PD)
         } finally {
@@ -43,7 +43,7 @@ abstract class SettingsRow: LinearLayout {
 
     //It must to be called after the view has been set in the children
     open fun init() {
-        tvTitle?.set(title, titleColor, titleTextSize, titleTextStyle)
+        clean_ui_tvTitle?.set(title, titleColor, titleTextSize, titleTextStyle)
     }
 
 

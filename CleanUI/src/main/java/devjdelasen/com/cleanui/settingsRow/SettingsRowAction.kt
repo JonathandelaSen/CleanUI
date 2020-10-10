@@ -46,13 +46,13 @@ class SettingsRowAction: SettingsRow {
 
 
     fun setListener(listener: OnClickListener) {
-        ivIcAction.setOnClickListener(listener)
+        clean_ui_ivIcAction.setOnClickListener(listener)
     }
 
 
     private fun setView() {
         View.inflate(context, R.layout.settings_row_action, this)
-        if (icTintColor != -1) ImageViewCompat.setImageTintList(ivIcAction, ColorStateList.valueOf(icTintColor))
+        if (icTintColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivIcAction, ColorStateList.valueOf(icTintColor))
     }
 
 

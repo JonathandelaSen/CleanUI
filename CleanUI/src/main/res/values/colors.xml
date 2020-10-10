@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#F52C82</color>
-    <color name="colorPrimaryDark">#F52C82</color>
-    <color name="colorAccent">#F52C82</color>
+    <color name="clean_ui_colorPrimary">#F52C82</color>
+    <color name="clean_ui_colorPrimaryDark">#F52C82</color>
+    <color name="clean_ui_colorAccent">#F52C82</color>
 
-    <color name="divider">#DEE4EB</color>
-    <color name="white">#FFF</color>
-    <color name="title_default">#3F4A58</color>
-    <color name="subtitle_dark">#757E90</color>
-    <color name="icon_light">#CAD1DA</color>
+    <color name="clean_ui_light_bg_contrast">#F8F8F8</color>
+    <color name="clean_white">#FFF</color>
+    <color name="clean_ui_divider">#DEE4EB</color>
+    <color name="clean_ui_white">#FFF</color>
+    <color name="clean_ui_title_default">#3F4A58</color>
+    <color name="clean_ui_subtitle_dark">#757E90</color>
+    <color name="clean_ui_icon_light">#CAD1DA</color>
 </resources>

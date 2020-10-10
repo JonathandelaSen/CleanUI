@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/light_bg_contrast"
+    android:background="@color/app_light_bg_contrast"
     android:orientation="vertical"
     >
 
     <devjdelasen.com.cleanui.SimpleToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/app_colorPrimary"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +22,8 @@
         app:simple_toolbar_hide_divider="true"
         app:simple_toolbar_title="Title"
         app:simple_toolbar_left_icon="@drawable/ic_back_arrow"
-        app:simple_toolbar_title_color="@color/icon"
-        app:simple_toolbar_left_color="@color/icon"
+        app:simple_toolbar_title_color="@color/app_icon"
+        app:simple_toolbar_left_color="@color/app_icon"
         app:simple_toolbar_title_style="bold"
         app:simple_toolbar_text_size="20"
     />
@@ -45,11 +45,11 @@
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="#FFF"
                 android:layout_marginTop="22dp"
                 app:title_section_title="SimpleToolbar view"
                 app:title_section_title_style="normal"
-                app:title_section_title_color="@color/colorPrimary"
+                app:title_section_title_color="@color/app_colorPrimary"
                 >
 
                 <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
@@ -64,11 +64,11 @@
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="#FFF"
                 android:layout_marginTop="12dp"
                 app:title_section_title="About"
                 app:title_section_title_style="normal"
-                app:title_section_title_color="@color/colorPrimary"
+                app:title_section_title_color="@color/app_colorPrimary"
                 >
 
                 <devjdelasen.com.cleanui.settingsRow.SettingsRowSubtext
@@ -98,11 +98,11 @@
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="#FFF"
                 android:layout_marginTop="12dp"
                 app:title_section_title="Users"
                 app:title_section_title_style="normal"
-                app:title_section_title_color="@color/colorPrimary"
+                app:title_section_title_color="@color/app_colorPrimary"
                 >
 
                 <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
@@ -117,11 +117,11 @@
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="#FFF"
                 android:layout_marginTop="12dp"
                 app:title_section_title="Notifications"
                 app:title_section_title_style="normal"
-                app:title_section_title_color="@color/colorPrimary"
+                app:title_section_title_color="@color/app_colorPrimary"
                 >
 
 

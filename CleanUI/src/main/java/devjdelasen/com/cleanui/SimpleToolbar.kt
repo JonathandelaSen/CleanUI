@@ -60,9 +60,9 @@ class SimpleToolbar : LinearLayout {
             right3Icon = ta.getDrawable(R.styleable.SimpleToolbar_simple_toolbar_right3_icon)
             hideDivider = ta.getBoolean(R.styleable.SimpleToolbar_simple_toolbar_hide_divider, false)
             titleToLeft = ta.getBoolean(R.styleable.SimpleToolbar_simple_toolbar_title_to_left, false)
-            dividerColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_divider_color, ContextCompat.getColor(context, R.color.divider))
-            bgColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_bg_color, ContextCompat.getColor(context, R.color.white))
-            titleColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_title_color, ContextCompat.getColor(context, R.color.title_default))
+            dividerColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_divider_color, ContextCompat.getColor(context, R.color.clean_ui_divider))
+            bgColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_bg_color, ContextCompat.getColor(context, R.color.clean_ui_white))
+            titleColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_title_color, ContextCompat.getColor(context, R.color.clean_ui_title_default))
             leftIconColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_left_color, -1)
             right1IconColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_right1_color, -1)
             right2IconColor = ta.getColor(R.styleable.SimpleToolbar_simple_toolbar_right2_color, -1)
@@ -87,19 +87,19 @@ class SimpleToolbar : LinearLayout {
 
 
     fun setRight1ClickListener(onClickListener: OnClickListener) {
-        ivRight1Icon.setOnClickListener(onClickListener)
+        clean_ui_ivRight1Icon.setOnClickListener(onClickListener)
     }
 
     fun setRight2ClickListener(onClickListener: OnClickListener) {
-        ivRight2Icon.setOnClickListener(onClickListener)
+        clean_ui_ivRight2Icon.setOnClickListener(onClickListener)
     }
 
     fun setRight3ClickListener(onClickListener: OnClickListener) {
-        ivRight3Icon.setOnClickListener(onClickListener)
+        clean_ui_ivRight3Icon.setOnClickListener(onClickListener)
     }
 
     fun setLeftClickListener(onClickListener: OnClickListener) {
-        ivLeftIcon.setOnClickListener(onClickListener)
+        clean_ui_ivLeftIcon.setOnClickListener(onClickListener)
     }
 
 
@@ -117,43 +117,43 @@ class SimpleToolbar : LinearLayout {
     }
 
     private fun setDivider() {
-        if (!hideDivider) vDivider.setBackgroundColor(dividerColor)
-        vDivider.visibility = if (hideDivider) View.GONE else View.VISIBLE
+        if (!hideDivider) clean_ui_vDivider.setBackgroundColor(dividerColor)
+        clean_ui_vDivider.visibility = if (hideDivider) View.GONE else View.VISIBLE
     }
 
     private fun setIcons() {
         leftIcon?.let {
-            if (leftIconColor != -1) ImageViewCompat.setImageTintList(ivLeftIcon, ColorStateList.valueOf(leftIconColor))
-            ivLeftIcon.visibility = View.VISIBLE
-            ivLeftIcon.setImageDrawable(it)
+            if (leftIconColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivLeftIcon, ColorStateList.valueOf(leftIconColor))
+            clean_ui_ivLeftIcon.visibility = View.VISIBLE
+            clean_ui_ivLeftIcon.setImageDrawable(it)
         } ?: run {
-            ivLeftIcon.visibility = View.GONE
+            clean_ui_ivLeftIcon.visibility = View.GONE
         }
         right1Icon?.let {
-            if (right1IconColor != -1) ImageViewCompat.setImageTintList(ivRight1Icon, ColorStateList.valueOf(right1IconColor))
-            ivRight1Icon.visibility = View.VISIBLE
-            ivRight1Icon.setImageDrawable(it)
+            if (right1IconColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivRight1Icon, ColorStateList.valueOf(right1IconColor))
+            clean_ui_ivRight1Icon.visibility = View.VISIBLE
+            clean_ui_ivRight1Icon.setImageDrawable(it)
         } ?: run {
-            ivRight1Icon.visibility = View.GONE
+            clean_ui_ivRight1Icon.visibility = View.GONE
         }
         right2Icon?.let {
-            if (right2IconColor != -1) ImageViewCompat.setImageTintList(ivRight2Icon, ColorStateList.valueOf(right2IconColor))
-            ivRight2Icon.visibility = View.VISIBLE
-            ivRight2Icon.setImageDrawable(it)
+            if (right2IconColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivRight2Icon, ColorStateList.valueOf(right2IconColor))
+            clean_ui_ivRight2Icon.visibility = View.VISIBLE
+            clean_ui_ivRight2Icon.setImageDrawable(it)
         } ?: run {
-            ivRight2Icon.visibility = View.GONE
+            clean_ui_ivRight2Icon.visibility = View.GONE
         }
         right3Icon?.let {
-            if (right3IconColor != -1) ImageViewCompat.setImageTintList(ivRight3Icon, ColorStateList.valueOf(right3IconColor))
-            ivRight3Icon.visibility = View.VISIBLE
-            ivRight3Icon.setImageDrawable(it)
+            if (right3IconColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivRight3Icon, ColorStateList.valueOf(right3IconColor))
+            clean_ui_ivRight3Icon.visibility = View.VISIBLE
+            clean_ui_ivRight3Icon.setImageDrawable(it)
         } ?: run {
-            ivRight3Icon.visibility = View.GONE
+            clean_ui_ivRight3Icon.visibility = View.GONE
         }
     }
 
     private fun setTitle() {
-        tvTitle.set(title, titleColor, titleTextSize, titleTextStyle)
+        clean_ui_tvTitle.set(title, titleColor, titleTextSize, titleTextStyle)
         if (titleToLeft) alignTitleToLeft() else alignTitleCenter()
     }
 
@@ -164,7 +164,7 @@ class SimpleToolbar : LinearLayout {
 
     private fun alignTitleToLeft() {
         val layoutParams =
-            tvTitle.layoutParams as RelativeLayout.LayoutParams
+            clean_ui_tvTitle.layoutParams as RelativeLayout.LayoutParams
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_START, RelativeLayout.TRUE)
         layoutParams.removeRule(RelativeLayout.CENTER_IN_PARENT)
         val paddingLeftPx = TypedValue.applyDimension(
@@ -172,8 +172,8 @@ class SimpleToolbar : LinearLayout {
             PADDING_START_ALIGN_LEFT_DP,
             context.resources.displayMetrics
         ).toInt()
-        tvTitle.setPadding(paddingLeftPx, 0, getPaddingEndAlignStart(), 0)
-        tvTitle.layoutParams = layoutParams
+        clean_ui_tvTitle.setPadding(paddingLeftPx, 0, getPaddingEndAlignStart(), 0)
+        clean_ui_tvTitle.layoutParams = layoutParams
     }
 
     private fun getPaddingEndAlignStart(): Int {
@@ -185,15 +185,15 @@ class SimpleToolbar : LinearLayout {
 
     private fun alignTitleCenter() {
         val layoutParams =
-            tvTitle.layoutParams as RelativeLayout.LayoutParams
+            clean_ui_tvTitle.layoutParams as RelativeLayout.LayoutParams
         layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE)
         layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_START)
         val paddingSidePx = TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP, getRightPaddingPerIconsDp(),
             context.resources.displayMetrics
         ).toInt()
-        tvTitle.setPadding(paddingSidePx, 0, paddingSidePx, 0)
-        tvTitle.layoutParams = layoutParams
+        clean_ui_tvTitle.setPadding(paddingSidePx, 0, paddingSidePx, 0)
+        clean_ui_tvTitle.layoutParams = layoutParams
     }
 
     private fun getRightPaddingPerIconsDp(): Float {

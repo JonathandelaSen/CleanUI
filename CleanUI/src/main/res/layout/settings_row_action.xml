@@ -8,7 +8,7 @@
     >
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/clean_ui_tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -17,7 +17,7 @@
         />
 
     <ImageView
-        android:id="@+id/ivIcAction"
+        android:id="@+id/clean_ui_ivIcAction"
         android:layout_width="62dp"
         android:layout_height="46dp"
         android:paddingEnd="16dp"

@@ -14,7 +14,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:visibility="gone"
-            android:id="@+id/ivLeftIcon"
+            android:id="@+id/clean_ui_ivLeftIcon"
             android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:paddingBottom="11dp"
@@ -26,7 +26,7 @@
             />
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/clean_ui_tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -50,7 +50,7 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:visibility="gone"
-                android:id="@+id/ivRight1Icon"
+                android:id="@+id/clean_ui_ivRight1Icon"
                 android:layout_width="32dp"
                 android:layout_height="wrap_content"
                 android:paddingBottom="11dp"
@@ -61,7 +61,7 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:visibility="gone"
-                android:id="@+id/ivRight2Icon"
+                android:id="@+id/clean_ui_ivRight2Icon"
                 android:layout_width="32dp"
                 android:layout_height="wrap_content"
                 android:paddingBottom="11dp"
@@ -72,7 +72,7 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:visibility="gone"
-                android:id="@+id/ivRight3Icon"
+                android:id="@+id/clean_ui_ivRight3Icon"
                 android:layout_width="32dp"
                 android:layout_height="wrap_content"
                 android:paddingBottom="11dp"
@@ -86,7 +86,7 @@
 
 
     <View
-        android:id="@+id/vDivider"
+        android:id="@+id/clean_ui_vDivider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         />

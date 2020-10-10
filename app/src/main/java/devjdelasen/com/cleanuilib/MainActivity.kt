@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tintStatusBar(resources.getColor(R.color.white, null), false, this)
+        tintStatusBar(resources.getColor(R.color.clean_ui_white, null), false, this)
 
 
         settingsToolbars.setOnClickListener {
