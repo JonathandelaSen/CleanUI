@@ -12,8 +12,6 @@ import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import kotlinx.android.synthetic.main.simple_toolbar.view.*
-import kotlinx.android.synthetic.main.simple_toolbar.view.tvTitle
-import kotlinx.android.synthetic.main.title_section.view.*
 
 
 class SimpleToolbar : LinearLayout {

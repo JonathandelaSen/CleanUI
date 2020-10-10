@@ -7,8 +7,6 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.simple_toolbar.view.*
-import kotlinx.android.synthetic.main.title_section.view.*
 import kotlinx.android.synthetic.main.title_section.view.tvTitle
 
 
