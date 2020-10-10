@@ -1,0 +1,3 @@
+include ':CleanUI'
+include ':app'
+rootProject.name = "CleanUILib"

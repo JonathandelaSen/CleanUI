@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingsRow">
+        <attr name="settings_row_title" format="string"/>
+        <attr name="settings_row_title_color" format="color"/>
+        <attr name="settings_row_title_size" format="float"/>
+        <attr name="settings_row_title_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="settings_row_subtitle" format="string"/>
+        <attr name="settings_row_subtitle_color" format="color"/>
+        <attr name="settings_row_subtitle_size" format="float"/>
+        <attr name="settings_row_subtitle_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="settings_row_icon_action_tint_color" format="color"/>
+    </declare-styleable>
+</resources>

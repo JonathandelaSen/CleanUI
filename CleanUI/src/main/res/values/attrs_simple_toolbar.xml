@@ -1,0 +1,24 @@
+<resources>
+    <declare-styleable name="SimpleToolbar">
+        <attr name="simple_toolbar_title" format="string"/>
+        <attr name="simple_toolbar_left_icon" format="reference"/>
+        <attr name="simple_toolbar_right1_icon" format="reference"/>
+        <attr name="simple_toolbar_right2_icon" format="reference"/>
+        <attr name="simple_toolbar_right3_icon" format="reference"/>
+        <attr name="simple_toolbar_left_color" format="color"/>
+        <attr name="simple_toolbar_right1_color" format="color"/>
+        <attr name="simple_toolbar_right2_color" format="color"/>
+        <attr name="simple_toolbar_right3_color" format="color"/>
+        <attr name="simple_toolbar_title_color" format="color"/>
+        <attr name="simple_toolbar_hide_divider" format="boolean"/>
+        <attr name="simple_toolbar_title_to_left" format="boolean"/>
+        <attr name="simple_toolbar_divider_color" format="color"/>
+        <attr name="simple_toolbar_bg_color" format="color"/>
+        <attr name="simple_toolbar_text_size" format="float"/>
+        <attr name="simple_toolbar_title_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

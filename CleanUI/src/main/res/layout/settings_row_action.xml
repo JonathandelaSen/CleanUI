@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="Settings text"
+        android:padding="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivIcAction"
+        android:layout_width="62dp"
+        android:layout_height="46dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:src="@drawable/ic_next_arrow"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/open_section"
+        />
+
+
+
+</LinearLayout>

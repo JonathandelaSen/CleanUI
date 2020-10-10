@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/light_bg_contrast"
+    android:orientation="vertical"
+    >
+
+    <devjdelasen.com.cleanui.SimpleToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:simple_toolbar_hide_divider="true"
+        app:simple_toolbar_title="Title"
+        app:simple_toolbar_left_icon="@drawable/ic_back_arrow"
+        app:simple_toolbar_title_color="@color/icon"
+        app:simple_toolbar_left_color="@color/icon"
+        app:simple_toolbar_title_style="bold"
+        app:simple_toolbar_text_size="20"
+    />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="22dp"
+                app:title_section_title="SimpleToolbar view"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsToolbars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Open samples clean toolbars"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="22dp"
+                app:title_section_title="About"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowSubtext
+                    android:id="@+id/settingsVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Version"
+                    app:settings_row_subtitle="v2.15.8"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Terms and conditions"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Privacy policy"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="22dp"
+                app:title_section_title="Users"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsBlocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Blocks"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="22dp"
+                app:title_section_title="Notifications"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/colorPrimary"
+                >
+
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsDisplayNotis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Display notifications"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsSound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Sound on"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
