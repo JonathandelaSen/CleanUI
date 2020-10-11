@@ -57,6 +57,7 @@
         />
 
     <devjdelasen.com.cleanui.SimpleToolbar
+        android:id="@+id/simpleToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:simple_toolbar_title="All icons"
