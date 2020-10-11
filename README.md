@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/JonathandelaSen/CleanUI.svg)](https://jitpack.io/#JonathandelaSen/CleanUI)
 
 Android library to create beautiful, clean and minimal UIs.
-
+![SimpleToolbar](/Screenshots/CleanUI_settings+SimpleToolbar.jpg)
 
 
 ## Instalation 🛠
