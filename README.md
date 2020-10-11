@@ -131,14 +131,114 @@ These are a few possible combinations
         />
 ```
 
-
+##### Set listeners
+```Kotlin
+	simpleToolbar.setLeftClickListener(View.OnClickListener { TODO("Not yet implemented") })
+        simpleToolbar.setRight1ClickListener(View.OnClickListener { TODO("Not yet implemented") })
+        simpleToolbar.setRight2ClickListener(View.OnClickListener { TODO("Not yet implemented") })
+        simpleToolbar.setRight3ClickListener(View.OnClickListener { TODO("Not yet implemented") })
+```
 
 ### Settings
+Combine these components to get your settings UI
+
+| Section check box   | Section action |  Section subtext | 
+| ------------- |:-------------:| :-------------:| 
+| ![SimpleToolbar](/Screenshots/Settings/CleanUI_section_setings_check_box.png) | ![SimpleToolbar](/Screenshots/Settings/CleanUI_section_settings_action.png)| ![SimpleToolbar](/Screenshots/Settings/CleanUI_section_settings_subtext.png)
+
+
 
 #### SettingsRowAction
-#### SettingsRowCheckBox
-#### SettingsRowSubtext
+```XML
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="Users"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
 
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsBlocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Blocks"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+```
+
+#### SettingsRowCheckBox
+```XML
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="Notifications"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsDisplayNotis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Display notifications"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsSound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Sound on"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+```
+
+#### SettingsRowSubtext
+```XML
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="About"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowSubtext
+                    android:id="@+id/settingsVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Version"
+                    app:settings_row_subtitle="v2.15.8"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Terms and conditions"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Privacy policy"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+```
 
 ### Other
 
