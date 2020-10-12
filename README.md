@@ -22,8 +22,26 @@ Add it in your root build.gradle at the end of repositories
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.JonathandelaSen:CleanUI:0.0.5'
+	        implementation 'com.github.JonathandelaSen:CleanUI:0.1.0'
 	}
+
+
+
+## Features ✅
+
+- [x] Toolbars
+- [x] Settings views
+- [x] Title sections
+
+
+## Next 🚀
+  
+- [ ] EditTexts
+- [ ] Popups
+- [ ] Notifications screen views
+
+I will be glad to hear your suggestions 🙏
+
 
 ## Components 🧩
 
@@ -139,6 +157,15 @@ These are a few possible combinations
         simpleToolbar.setRight3ClickListener(View.OnClickListener { TODO("Not yet implemented") })
 ```
 
+##### Programmatically
+```Kotlin
+	simpleToolbarProgrammatically.setIcons(null, null, null, null)
+        simpleToolbarProgrammatically.setTitle("From the code", false)
+        //simpleToolbarProgrammatically.getTitle() //Don't use it to set the text
+        simpleToolbarProgrammatically.setLeftIcon(ContextCompat.getDrawable(this, R.drawable.ic_chat_gradient))
+        simpleToolbarProgrammatically.setRight1Icon(ContextCompat.getDrawable(this, R.drawable.ic_options), R.color.app_colorPrimary)
+```
+
 ### Settings
 Combine these components to get your settings UI
 
@@ -240,6 +267,46 @@ Combine these components to get your settings UI
 
 ```
 
+#### Programmatically
+```Kotlin
+    	settingsSubtextProgrammatically.setTitle(title = "From code")
+        settingsSubtextProgrammatically.setSubtext(subtext = "Subtext", subtextColor = resources.getColor(R.color.app_colorPrimary, null))
+        settingsActionProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null))
+        settingsCheckboxProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null), titleTextSize = 14f, titleTextStyle = TextStyle.BOLD)
+
+```
+
+        
+
 ### Other
 
 #### TitleSection
+```XML
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:title_section_title="Title section"
+                app:title_section_title_style="bold"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Just a long text inside a TitleSection view. You can add here any view you like."
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+```
+
+
+
+## Author
+👨🏻‍💻  [Jonnie](https://www.instagram.com/devjdelasen/)
+
