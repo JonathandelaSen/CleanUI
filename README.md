@@ -25,6 +25,24 @@ Add the dependency
 	        implementation 'com.github.JonathandelaSen:CleanUI:0.0.5'
 	}
 
+
+
+## Features ✅
+
+- [x] Toolbars
+- [x] Settings views
+- [x] Title sections
+
+
+## Next 🚀
+  
+- [ ] EditTexts
+- [ ] Popups
+- [ ] Notifications screen views
+
+I will be glad to hear your suggestions 🙏
+
+
 ## Components 🧩
 
 ### Toolbar
@@ -263,3 +281,32 @@ Combine these components to get your settings UI
 ### Other
 
 #### TitleSection
+```XML
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:title_section_title="Title section"
+                app:title_section_title_style="bold"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Just a long text inside a TitleSection view. You can add here any view you like."
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+```
+
+
+
+## Author
+👨🏻‍💻  [Jonnie](https://www.instagram.com/devjdelasen/)
+
