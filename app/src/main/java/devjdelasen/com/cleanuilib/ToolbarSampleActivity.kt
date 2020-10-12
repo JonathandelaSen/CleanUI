@@ -20,7 +20,7 @@ class ToolbarSampleActivity : AppCompatActivity() {
 
         simpleToolbarProgrammatically.setIcons(null, null, null, null)
         simpleToolbarProgrammatically.setTitle("From the code", false)
-        //simpleToolbarProgrammatically.getTitle()
+        //simpleToolbarProgrammatically.getTitle() //Don't use it to set the text
         simpleToolbarProgrammatically.setLeftIcon(ContextCompat.getDrawable(this, R.drawable.ic_chat_gradient))
         simpleToolbarProgrammatically.setRight1Icon(ContextCompat.getDrawable(this, R.drawable.ic_options), R.color.app_colorPrimary)
     }

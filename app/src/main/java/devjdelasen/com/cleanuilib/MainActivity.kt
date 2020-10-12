@@ -53,8 +53,7 @@ class MainActivity : AppCompatActivity() {
         settingsSubtextProgrammatically.setTitle(title = "From code")
         settingsSubtextProgrammatically.setSubtext(subtext = "Subtext", subtextColor = resources.getColor(R.color.app_colorPrimary, null))
         settingsActionProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null))
-        settingsCheckboxProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null),
-            titleTextSize = 14f, titleTextStyle = TextStyle.BOLD)
+        settingsCheckboxProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null), titleTextSize = 14f, titleTextStyle = TextStyle.BOLD)
         //settingsCheckboxProgrammatically.getTitleTextView()
 
     }
