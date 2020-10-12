@@ -139,6 +139,15 @@ These are a few possible combinations
         simpleToolbar.setRight3ClickListener(View.OnClickListener { TODO("Not yet implemented") })
 ```
 
+##### Programmatically
+```Kotlin
+	simpleToolbarProgrammatically.setIcons(null, null, null, null)
+        simpleToolbarProgrammatically.setTitle("From the code", false)
+        //simpleToolbarProgrammatically.getTitle() //Don't use it to set the text
+        simpleToolbarProgrammatically.setLeftIcon(ContextCompat.getDrawable(this, R.drawable.ic_chat_gradient))
+        simpleToolbarProgrammatically.setRight1Icon(ContextCompat.getDrawable(this, R.drawable.ic_options), R.color.app_colorPrimary)
+```
+
 ### Settings
 Combine these components to get your settings UI
 
@@ -239,6 +248,17 @@ Combine these components to get your settings UI
             </devjdelasen.com.cleanui.TitleSection>
 
 ```
+
+#### Programmatically
+```Kotlin
+    	settingsSubtextProgrammatically.setTitle(title = "From code")
+        settingsSubtextProgrammatically.setSubtext(subtext = "Subtext", subtextColor = resources.getColor(R.color.app_colorPrimary, null))
+        settingsActionProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null))
+        settingsCheckboxProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null), titleTextSize = 14f, titleTextStyle = TextStyle.BOLD)
+
+```
+
+        
 
 ### Other
 
