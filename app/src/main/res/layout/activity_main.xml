@@ -96,6 +96,7 @@
             </devjdelasen.com.cleanui.TitleSection>
 
             <devjdelasen.com.cleanui.TitleSection
+                android:id="@+id/blocksTitleSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF"
@@ -141,6 +142,62 @@
 
             </devjdelasen.com.cleanui.TitleSection>
 
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="About"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowSubtext
+                    android:id="@+id/settingsSubtextProgrammatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="From code"
+                    app:settings_row_subtitle="Subtext"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsActionProgrammatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Terms and conditions"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsCheckboxProgrammatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Privacy policy"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:title_section_title="Title section"
+                app:title_section_title_style="bold"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Just a long text inside a TitleSection view. You can add here any view you like."
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
         </LinearLayout>
 
     </ScrollView>

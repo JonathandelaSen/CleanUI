@@ -6,8 +6,10 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import kotlinx.android.synthetic.main.simple_toolbar_clean_ui.view.*
@@ -102,11 +104,93 @@ class SimpleToolbar : LinearLayout {
     }
 
 
+    fun setTitle(title: String, titleToLeft: Boolean = false) {
+        this.title = title
+        this.titleToLeft = titleToLeft
+
+        adjustTitle()
+    }
+
+    /**
+     * Set an icon to null to hide it.
+     */
+    fun setIcons(leftIcon: Drawable?, right1Icon: Drawable?, right2Icon: Drawable?, right3Icon: Drawable?) {
+        this.leftIcon = leftIcon
+        this.right1Icon = right1Icon
+        this.right2Icon = right2Icon
+        this.right3Icon = right3Icon
+
+        setIcons()
+        adjustTitle()
+    }
+
+    fun setLeftIcon(icon: Drawable?, colorResId: Int? = null) {
+        this.leftIcon = icon
+        this.leftIconColor = if (colorResId != null) ContextCompat.getColor(context, colorResId) else -1
+
+        setIcons()
+        adjustTitle()
+    }
+
+    fun setRight1Icon(icon: Drawable?, colorResId: Int? = null) {
+        this.right1Icon = icon
+        this.right1IconColor = if (colorResId != null) ContextCompat.getColor(context, colorResId) else -1
+
+        setIcons()
+        adjustTitle()
+    }
+
+    fun setRight2Icon(icon: Drawable?, colorResId: Int? = null) {
+        this.right2Icon = icon
+        this.right2IconColor = if (colorResId != null) ContextCompat.getColor(context, colorResId) else -1
+
+        setIcons()
+        adjustTitle()
+    }
+
+    fun setRight3Icon(icon: Drawable?, colorResId: Int? = null) {
+        this.right3Icon = icon
+        this.right3IconColor = if (colorResId != null) ContextCompat.getColor(context, colorResId) else -1
+
+        setIcons()
+        adjustTitle()
+    }
+
+    fun hideShowDivider(hideDivider: Boolean) {
+        this.hideDivider = hideDivider
+        setDivider()
+    }
+
+    fun getTitle(): TextView {
+        return clean_ui_tvTitle
+    }
+
+    fun getLeftIcon(): ImageView {
+        return clean_ui_ivLeftIcon
+    }
+
+    fun getRight1Icon(): ImageView {
+        return clean_ui_ivRight1Icon
+    }
+
+    fun getRight2Icon(): ImageView {
+        return clean_ui_ivRight2Icon
+    }
+
+    fun getRight3Icon(): ImageView {
+        return clean_ui_ivRight3Icon
+    }
+
+    fun getDivider(): View {
+        return clean_ui_vDivider
+    }
+
+
 
 
     private fun setView() {
         setBg()
-        setTitle()
+        adjustTitle()
         setIcons()
         setDivider()
     }
@@ -149,11 +233,6 @@ class SimpleToolbar : LinearLayout {
         } ?: run {
             clean_ui_ivRight3Icon.visibility = View.GONE
         }
-    }
-
-    private fun setTitle() {
-        clean_ui_tvTitle.set(title, titleColor, titleTextSize, titleTextStyle)
-        if (titleToLeft) alignTitleToLeft() else alignTitleCenter()
     }
 
 
@@ -207,6 +286,11 @@ class SimpleToolbar : LinearLayout {
             paddingSideDp += PADDING_INCREASE_PER_ICON_DP
         }
         return paddingSideDp
+    }
+
+    private fun adjustTitle() {
+        clean_ui_tvTitle.set(title, titleColor, titleTextSize, titleTextStyle)
+        if (titleToLeft) alignTitleToLeft() else alignTitleCenter()
     }
 
 

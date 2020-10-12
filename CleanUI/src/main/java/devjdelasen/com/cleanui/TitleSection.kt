@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
 
@@ -44,6 +45,17 @@ class TitleSection : LinearLayout {
         View.inflate(context, R.layout.title_section_clean_ui, this)
         setView()
     }
+
+
+    fun setTitle(title: String) {
+        this.title = title
+        setTitle()
+    }
+
+    fun getTitleTextView(): TextView {
+        return clean_ui_tvTitle
+    }
+
 
     private fun setView() {
         orientation = VERTICAL

@@ -3,11 +3,14 @@ package devjdelasen.com.cleanui.settingsRow
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.set
 import kotlinx.android.synthetic.main.settings_row_subtext_clean_ui.view.*
+import kotlinx.android.synthetic.main.settings_row_subtext_clean_ui.view.clean_ui_tvTitle
+import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
 
 
 class SettingsRowSubtext: SettingsRow {
@@ -50,9 +53,25 @@ class SettingsRowSubtext: SettingsRow {
     }
 
 
+    fun setSubtext(subtext: String, subtextColor: Int? = ContextCompat.getColor(context, R.color.clean_ui_subtitle_dark),
+                   subtextSize: Float? = SUBTEXT_TEXT_SIZE_DEFAULT_PD, subtextTextStyle: TextStyle? = TextStyle.NORMAL) {
+        this.subtext = subtext
+        this.subtextColor = subtextColor!!
+        this.subtextSize = subtextSize!!
+        this.subtextTextStyle = subtextTextStyle!!.value
+
+        init()
+    }
+
+    fun getSubtextTextView(): TextView {
+        return clean_ui_tvSubtext
+    }
+
     fun setListener(listener: OnClickListener) {
         clean_ui_tvSubtext.setOnClickListener(listener)
     }
+
+
 
     private fun setView() {
         View.inflate(context, R.layout.settings_row_subtext_clean_ui, this)

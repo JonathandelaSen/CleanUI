@@ -3,6 +3,7 @@ package devjdelasen.com.cleanui.settingsRow
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
@@ -40,6 +41,21 @@ abstract class SettingsRow: LinearLayout {
     }
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
+
+
+    fun setTitle(title: String, titleColor: Int? = ContextCompat.getColor(context, R.color.clean_ui_title_default),
+                 titleTextSize: Float? = TITLE_TEXT_SIZE_DEFAULT_PD, titleTextStyle: TextStyle? = TextStyle.NORMAL) {
+        this.title = title
+        this.titleColor = titleColor!!
+        this.titleTextSize = titleTextSize!!
+        this.titleTextStyle = titleTextStyle!!.value
+
+        init()
+    }
+
+    fun getTitleTextView(): TextView {
+        return clean_ui_tvTitle
+    }
 
     //It must to be called after the view has been set in the children
     open fun init() {

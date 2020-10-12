@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.View
+import android.widget.ImageView
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
 import kotlinx.android.synthetic.main.settings_row_action_clean_ui.view.*
@@ -41,6 +42,9 @@ class SettingsRowAction: SettingsRow {
         super.init()
     }
 
+    fun getIcon(): ImageView {
+        return clean_ui_ivIcAction
+    }
 
     fun setListener(listener: OnClickListener) {
         clean_ui_ivIcAction.setOnClickListener(listener)

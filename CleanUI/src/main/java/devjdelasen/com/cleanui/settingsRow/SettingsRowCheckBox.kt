@@ -5,10 +5,14 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.View
+import android.widget.CheckBox
 import android.widget.CompoundButton
+import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatCheckBox
 import androidx.core.content.ContextCompat
 import androidx.core.widget.CompoundButtonCompat
 import devjdelasen.com.cleanui.R
+import kotlinx.android.synthetic.main.settings_row_action_clean_ui.view.*
 import kotlinx.android.synthetic.main.settings_row_check_clean_ui.view.*
 
 
@@ -44,6 +48,10 @@ class SettingsRowCheckBox: SettingsRow {
         super.init()
     }
 
+
+    fun getCheckBox(): AppCompatCheckBox {
+        return clean_ui_cb
+    }
 
 
     fun setOnCheckedChangeListener(listener: CompoundButton.OnCheckedChangeListener) {
