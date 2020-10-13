@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="clean_ui_dialog_radius">10dp</dimen>
+    <dimen name="clean_ui_dialog_button_radius">8dp</dimen>
+</resources>

@@ -8,6 +8,7 @@ import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.dialogs.ActionDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         settingsTerms.setListener(View.OnClickListener {
-            Toast.makeText(this@MainActivity, "Settings terms clicked", Toast.LENGTH_SHORT).show()
+            val dialog = ActionDialog(title = "Title", subtitle = "Subtitle alsd amd maksmd lam dkasm dkamskd malsmd aklmsd lamsl dmasksksks almkdsl akmsd lka", buttonText = "Button",
+                buttonColor = R.color.app_colorPrimary, buttonSecondaryColor = R.color.app_colorSeconday, context = this)
+            dialog.showDialog()
         })
 
         settingsPrivacyPolicy.setListener(View.OnClickListener {
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         settingsActionProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null))
         settingsCheckboxProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null), titleTextSize = 14f, titleTextStyle = TextStyle.BOLD)
         //settingsCheckboxProgrammatically.getTitleTextView()
+
 
     }
 
