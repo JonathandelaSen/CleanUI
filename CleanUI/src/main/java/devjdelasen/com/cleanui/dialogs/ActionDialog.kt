@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.AutoCompleteTextView
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
 import devjdelasen.com.cleanui.R
@@ -16,7 +18,10 @@ import kotlinx.android.synthetic.main.action_dialog.*
 
 
 class ActionDialog(title: String? = null, subtitle: String?, buttonText: String? = null, dismissText: String? = null,
-                   @ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int? = null, context: Context) {
+                   @ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int? = null,
+                   gradientOrientation: GradientDrawable.Orientation = GradientDrawable.Orientation.TL_BR,
+                   cancelable: Boolean = true,
+                   context: Context) {
 
     private var dialog: Dialog? = null
     private var onButtonClickListener: View.OnClickListener? = null
@@ -26,23 +31,14 @@ class ActionDialog(title: String? = null, subtitle: String?, buttonText: String?
         dialog = Dialog(context)
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog?.setContentView(R.layout.action_dialog)
-        dialog?.setCancelable(true)
+        dialog?.setCancelable(cancelable)
         dialog?.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog?.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
-        setData(title, subtitle, buttonText, dismissText, buttonColor, buttonSecondaryColor)
-        setListeners()
+        setData(title, subtitle, buttonText, dismissText, buttonColor, buttonSecondaryColor, gradientOrientation)
     }
 
 
-
-    fun showDismiss() {
-        dialog?.clean_ui_tvDismiss?.visibility = View.VISIBLE
-        dialog?.clean_ui_tvDismiss?.setOnClickListener { v: View? ->
-            onDismissListener?.onClick(v)
-            dismiss()
-        }
-    }
 
     fun showDialog() {
         dialog?.show()
@@ -52,26 +48,47 @@ class ActionDialog(title: String? = null, subtitle: String?, buttonText: String?
         dialog?.dismiss()
     }
 
-    fun setListeners(onButtonClickListener: View.OnClickListener, onDismissListener: View.OnClickListener) {
+    fun setListeners(onButtonClickListener: View.OnClickListener, onDismissListener: View.OnClickListener? = null) {
         this.onButtonClickListener = onButtonClickListener
         this.onDismissListener = onDismissListener
+        setClickListeners()
+    }
+
+    fun getTitle(): TextView {
+        return dialog!!.clean_ui_tvTitle
+    }
+
+    fun getSubtitle(): TextView {
+        return dialog!!.clean_ui_tvSubtitlet
+    }
+
+    fun getButton(): TextView {
+        return dialog!!.clean_ui_tvButton
+    }
+
+    fun getDismissButton(): TextView {
+        return dialog!!.clean_ui_tvDismiss
+    }
+
+    fun getRootLayout(): LinearLayout {
+        return dialog!!.clean_ui_llRoot
     }
 
 
 
     private fun setData(title: String?, subtitle: String?, buttonText: String?, dismissText: String?,
-                        @ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int?) {
+                        @ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int?, gradientOrientation: GradientDrawable.Orientation) {
         setTitle(title)
+        setDismiss(dismissText)
         setSubtitle(subtitle)
-        setButton(buttonText, buttonColor, buttonSecondaryColor)
-        dialog?.clean_ui_tvDismiss?.text = dismissText
+        setButton(buttonText, buttonColor, buttonSecondaryColor, gradientOrientation)
     }
 
-    private fun setButton(buttonText: String?, @ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int?) {
+    private fun setButton(buttonText: String?, @ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int?, gradientOrientation: GradientDrawable.Orientation) {
         if (!buttonText.isNullOrBlank()) {
             dialog?.clean_ui_tvButton?.visibility = View.VISIBLE
             dialog?.clean_ui_tvButton?.text = buttonText
-            setButtonColor(buttonColor, buttonSecondaryColor)
+            setButtonColor(buttonColor, buttonSecondaryColor, gradientOrientation)
         }
         else {
             dialog?.clean_ui_tvButton?.visibility = View.GONE
@@ -98,14 +115,24 @@ class ActionDialog(title: String? = null, subtitle: String?, buttonText: String?
         }
     }
 
-    private fun setButtonColor(@ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int?) {
+    private fun setDismiss(dismissText: String?) {
+        if (!dismissText.isNullOrBlank()) {
+            dialog?.clean_ui_tvDismiss?.visibility = View.VISIBLE
+            dialog?.clean_ui_tvDismiss?.text = dismissText
+        }
+        else {
+            dialog?.clean_ui_tvDismiss?.visibility = View.GONE
+        }
+    }
+
+    private fun setButtonColor(@ColorRes buttonColor: Int, @ColorRes buttonSecondaryColor: Int?, gradientOrientation: GradientDrawable.Orientation) {
         dialog?.let {
             val firstColor = it.context.getColor(buttonColor)
             var secondColor = it.context.getColor(buttonColor)
             if (buttonSecondaryColor != null) {
                 secondColor = it.context.getColor(buttonSecondaryColor)
             }
-            val gd = GradientDrawable(GradientDrawable.Orientation.TL_BR, intArrayOf(firstColor, secondColor))
+            val gd = GradientDrawable(gradientOrientation, intArrayOf(firstColor, secondColor))
             gd.cornerRadius = dialog?.context?.resources?.getDimensionPixelOffset(R.dimen.clean_ui_dialog_button_radius)?.let { radius ->
                 radius.toFloat()
             } ?: run {
@@ -116,8 +143,9 @@ class ActionDialog(title: String? = null, subtitle: String?, buttonText: String?
     }
 
 
-    private fun setListeners() {
+    private fun setClickListeners() {
         dialog?.clean_ui_tvButton?.setOnClickListener(onButtonClickListener)
+        dialog?.clean_ui_tvDismiss?.setOnClickListener(onDismissListener)
     }
 
 

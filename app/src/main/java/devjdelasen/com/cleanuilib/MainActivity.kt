@@ -2,6 +2,7 @@ package devjdelasen.com.cleanuilib
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.CompoundButton
@@ -24,9 +25,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ToolbarSampleActivity::class.java))
         }
 
+
+
         settingsTerms.setListener(View.OnClickListener {
-            val dialog = ActionDialog(title = "Title", subtitle = "Subtitle alsd amd maksmd lam dkasm dkamskd malsmd aklmsd lamsl dmasksksks almkdsl akmsd lka", buttonText = "Button",
-                buttonColor = R.color.app_colorPrimary, buttonSecondaryColor = R.color.app_colorSeconday, context = this)
+            val dialog = ActionDialog(title = "Sed ut perspiciatis",
+                subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+                buttonText = "Button",
+                buttonColor = R.color.app_colorAccent,
+                buttonSecondaryColor = R.color.app_colorSeconday,
+                gradientOrientation = GradientDrawable.Orientation.TL_BR,
+                cancelable = true,
+                context = this)
+            dialog.setListeners(onButtonClickListener = View.OnClickListener {
+                dialog.dismiss()
+            })
             dialog.showDialog()
         })
 
