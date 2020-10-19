@@ -2,8 +2,9 @@
 
 [![](https://jitpack.io/v/JonathandelaSen/CleanUI.svg)](https://jitpack.io/#JonathandelaSen/CleanUI)
 
-Android library to create beautiful, clean and minimal UIs.
-![SimpleToolbar](/Screenshots/CleanUI_settings+SimpleToolbar.jpg)
+Android library to create beautiful, clean and minimal UIs.  
+
+![SimpleToolbar](/Screenshots/Dialog/clean_ui_action_dialog.gif)
 
 
 ## Instalation 🛠
@@ -22,7 +23,7 @@ Add it in your root build.gradle at the end of repositories
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.JonathandelaSen:CleanUI:0.1.2'
+	        implementation 'com.github.JonathandelaSen:CleanUI:0.2.0'
 	}
 
 
@@ -43,10 +44,29 @@ Add the dependency
 I will be glad to hear your suggestions 🙏
 
 
-## Components 🧩
 
-### Toolbar
-#### SimpleToolbar
+## ActionDialog
+![SimpleToolbar](/Screenshots/Dialog/clean_ui_action_dialog.gif)
+![SimpleToolbar](/Screenshots/Dialog/clean_ui_action_dialog.jpg)
+
+```Kotlin
+val dialog = ActionDialog(title = "Sed ut perspiciatis",
+                subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                buttonText = "Button",
+                buttonColor = R.color.app_colorAccent,
+                buttonSecondaryColor = R.color.app_colorSeconday,
+                gradientOrientation = GradientDrawable.Orientation.TL_BR,
+                cancelable = true,
+                context = this)
+            dialog.setListeners(onButtonClickListener = View.OnClickListener {
+                dialog.dismiss()
+            })
+            dialog.showDialog()
+```
+
+
+## Toolbar
+### SimpleToolbar
 These are a few possible combinations
 
 
@@ -60,7 +80,7 @@ These are a few possible combinations
 
 
 
-##### Center title
+#### Center title
 ```XML
 <devjdelasen.com.cleanui.SimpleToolbar
         android:layout_width="match_parent"
@@ -77,7 +97,7 @@ These are a few possible combinations
 
 
 
-##### Left title, no divider & tint icon
+#### Left title, no divider & tint icon
 ```XML
 <devjdelasen.com.cleanui.SimpleToolbar
         android:layout_width="match_parent"
@@ -95,7 +115,7 @@ These are a few possible combinations
   
   
   
-##### Changed title text styles
+#### Changed title text styles
 ```XML
 <devjdelasen.com.cleanui.SimpleToolbar
         android:layout_width="match_parent"
@@ -111,7 +131,7 @@ These are a few possible combinations
   
   
   
-##### Changed divider color
+#### Changed divider color
 
 ```XML
 <devjdelasen.com.cleanui.SimpleToolbar
@@ -127,7 +147,7 @@ These are a few possible combinations
   
   
   
-##### Full icons
+#### Full icons
 
 ```XML
 <devjdelasen.com.cleanui.SimpleToolbar
@@ -149,7 +169,7 @@ These are a few possible combinations
         />
 ```
 
-##### Set listeners
+#### Set listeners
 ```Kotlin
 	simpleToolbar.setLeftClickListener(View.OnClickListener { TODO("Not yet implemented") })
         simpleToolbar.setRight1ClickListener(View.OnClickListener { TODO("Not yet implemented") })
@@ -157,7 +177,7 @@ These are a few possible combinations
         simpleToolbar.setRight3ClickListener(View.OnClickListener { TODO("Not yet implemented") })
 ```
 
-##### Programmatically
+#### Programmatically
 ```Kotlin
 	simpleToolbarProgrammatically.setIcons(null, null, null, null)
         simpleToolbarProgrammatically.setTitle("From the code", false)
@@ -166,7 +186,8 @@ These are a few possible combinations
         simpleToolbarProgrammatically.setRight1Icon(ContextCompat.getDrawable(this, R.drawable.ic_options), R.color.app_colorPrimary)
 ```
 
-### Settings
+
+## Settings
 Combine these components to get your settings UI
 
 | Section check box   | Section action |  Section subtext | 
@@ -175,7 +196,7 @@ Combine these components to get your settings UI
 
 
 
-#### SettingsRowAction
+### SettingsRowAction
 ```XML
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
@@ -197,7 +218,7 @@ Combine these components to get your settings UI
             </devjdelasen.com.cleanui.TitleSection>
 ```
 
-#### SettingsRowCheckBox
+### SettingsRowCheckBox
 ```XML
 
             <devjdelasen.com.cleanui.TitleSection
@@ -229,7 +250,7 @@ Combine these components to get your settings UI
 
 ```
 
-#### SettingsRowSubtext
+### SettingsRowSubtext
 ```XML
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
@@ -267,7 +288,7 @@ Combine these components to get your settings UI
 
 ```
 
-#### Programmatically
+### Programmatically
 ```Kotlin
     	settingsSubtextProgrammatically.setTitle(title = "From code")
         settingsSubtextProgrammatically.setSubtext(subtext = "Subtext", subtextColor = resources.getColor(R.color.app_colorPrimary, null))
@@ -278,9 +299,9 @@ Combine these components to get your settings UI
 
         
 
-### Other
+## Other
 
-#### TitleSection
+### TitleSection
 ```XML
             <devjdelasen.com.cleanui.TitleSection
                 android:layout_width="match_parent"
