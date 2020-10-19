@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import devjdelasen.com.cleanui.extensions.set
 import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
 
 

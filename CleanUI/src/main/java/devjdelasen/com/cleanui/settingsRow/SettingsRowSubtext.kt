@@ -7,10 +7,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
-import devjdelasen.com.cleanui.set
+import devjdelasen.com.cleanui.extensions.set
 import kotlinx.android.synthetic.main.settings_row_subtext_clean_ui.view.*
-import kotlinx.android.synthetic.main.settings_row_subtext_clean_ui.view.clean_ui_tvTitle
-import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
 
 
 class SettingsRowSubtext: SettingsRow {

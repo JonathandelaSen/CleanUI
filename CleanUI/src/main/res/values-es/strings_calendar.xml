@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="clean_ui_sun_label">Dom</string>
+    <string name="clean_ui_sat_label">Sab</string>
+    <string name="clean_ui_fri_label">Vie</string>
+    <string name="clean_ui_thu_label">Jue</string>
+    <string name="clean_ui_wed_label">Mie</string>
+    <string name="clean_ui_tue_label">Mar</string>
+    <string name="clean_ui_mon_label">Lun</string>
+
+    <string name="clean_ui_sun_initial_letter_label">D</string>
+    <string name="clean_ui_sat_initial_letter_label">S</string>
+    <string name="clean_ui_fri_initial_letter_label">V</string>
+    <string name="clean_ui_thu_initial_letter_label">J</string>
+    <string name="clean_ui_wed_initial_letter_label">M</string>
+    <string name="clean_ui_tue_initial_letter_label">M</string>
+    <string name="clean_ui_mon_initial_letter_label">L</string>
+
+    <string name="clean_ui_monday_label">Lunes</string>
+    <string name="clean_ui_tuesday_label">Martes</string>
+    <string name="clean_ui_wednesday_label">Miércoles</string>
+    <string name="clean_ui_thursday_label">Jueves</string>
+    <string name="clean_ui_friday_label">Viernes</string>
+    <string name="clean_ui_saturday_label">Sábado</string>
+    <string name="clean_ui_sunday_label">Domingo</string>
+
+    <string name="clean_ui_today">Hoy</string>
+    <string name="clean_ui_yesterday">Ayer</string>
+
+</resources>

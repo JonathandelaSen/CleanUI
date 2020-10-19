@@ -5,11 +5,13 @@
     <color name="clean_ui_colorPrimaryDark">#F52C82</color>
     <color name="clean_ui_colorAccent">#F52C82</color>
 
+    <color name="clean_ui_colorPrimary_trans">#8BF52C82</color>
     <color name="clean_ui_light_bg_contrast">#F8F8F8</color>
-    <color name="clean_white">#FFF</color>
     <color name="clean_ui_divider">#DEE4EB</color>
     <color name="clean_ui_white">#FFF</color>
-    <color name="clean_ui_title_default">#3F4A58</color>
+    <color name="clean_ui_title_default">#313943</color>
+    <!--<color name="clean_ui_title_default">#3F4A58</color>-->
     <color name="clean_ui_subtitle_dark">#757E90</color>
     <color name="clean_ui_icon_light">#CAD1DA</color>
+    <color name="clean_ui_divider_calendar">#F7F8FC</color>
 </resources>

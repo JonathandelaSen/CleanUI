@@ -46,8 +46,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF"
+                android:layout_marginTop="22dp"
+                app:title_section_title="Samples"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsToolbars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Open samples clean toolbars"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Open samples calendars"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
                 app:title_section_title="Title section"
                 app:title_section_title_style="bold"
                 app:title_section_title_color="@color/app_colorPrimary"
@@ -60,26 +86,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="12dp"
-                    />
-
-            </devjdelasen.com.cleanui.TitleSection>
-
-
-            <devjdelasen.com.cleanui.TitleSection
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFF"
-                android:layout_marginTop="22dp"
-                app:title_section_title="SimpleToolbar view"
-                app:title_section_title_style="normal"
-                app:title_section_title_color="@color/app_colorPrimary"
-                >
-
-                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
-                    android:id="@+id/settingsToolbars"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:settings_row_title="Open samples clean toolbars"
+                    android:textColor="@color/clean_ui_title_default"
                     />
 
             </devjdelasen.com.cleanui.TitleSection>

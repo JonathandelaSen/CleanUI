@@ -12,6 +12,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
+import devjdelasen.com.cleanui.extensions.set
 import kotlinx.android.synthetic.main.simple_toolbar_clean_ui.view.*
 
 
@@ -22,7 +23,8 @@ class SimpleToolbar : LinearLayout {
 
     private val TITLE_TEXT_SIZE_DEFAULT_PD = 19f
 
-    private val PADDING_START_ALIGN_LEFT_DP = 44f
+    private val PADDING_START_ALIGN_LEFT_WITH_TITLE_DP = 44f
+    private val PADDING_START_ALIGN_LEFT_DP = 16f
     private val MIN_PADDING_ALIGN_CENTER_DP = 40f
     private val PADDING_INCREASE_PER_ICON_DP = 22f
 
@@ -241,16 +243,15 @@ class SimpleToolbar : LinearLayout {
 
 
     private fun alignTitleToLeft() {
-        val layoutParams =
-            clean_ui_tvTitle.layoutParams as RelativeLayout.LayoutParams
+        val layoutParams= clean_ui_tvTitle.layoutParams as RelativeLayout.LayoutParams
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_START, RelativeLayout.TRUE)
         layoutParams.removeRule(RelativeLayout.CENTER_IN_PARENT)
-        val paddingLeftPx = TypedValue.applyDimension(
+        val paddingLeft = TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
-            PADDING_START_ALIGN_LEFT_DP,
+            if (leftIcon != null) PADDING_START_ALIGN_LEFT_WITH_TITLE_DP else PADDING_START_ALIGN_LEFT_DP,
             context.resources.displayMetrics
         ).toInt()
-        clean_ui_tvTitle.setPadding(paddingLeftPx, 0, getPaddingEndAlignStart(), 0)
+        clean_ui_tvTitle.setPadding(paddingLeft, 0, getPaddingEndAlignStart(), 0)
         clean_ui_tvTitle.layoutParams = layoutParams
     }
 

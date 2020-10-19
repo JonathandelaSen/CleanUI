@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:paddingBottom="12dp"
+        android:paddingTop="6dp"
+        >
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleMon"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_mon_initial_letter_label"
+            android:textColor="@color/clean_ui_subtitle_dark"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleTue"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_tue_initial_letter_label"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleWed"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_wed_initial_letter_label"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleThu"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_thu_initial_letter_label"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleFri"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_fri_initial_letter_label"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleSat"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_sat_initial_letter_label"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvTitleSun"
+            style="@style/clean_ui_TopExpandedCalendarWeekDayTitle"
+            android:text="@string/clean_ui_sun_initial_letter_label"
+            />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="7"
+        android:rowCount="5"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay00"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay10"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay20"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                tools:background="@drawable/ui_clean_circle"
+                tools:textColor="@color/clean_ui_colorAccent"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay30"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay40"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay50"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay60"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay01"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay11"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay21"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay31"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay41"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay51"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay61"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay02"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay12"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay22"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay32"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay42"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay52"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay62"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay03"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay13"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay23"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay33"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay43"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay53"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay63"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay04"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay14"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay24"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay34"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay44"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay54"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay64"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay05"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay15"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay25"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay35"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay45"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay55"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                tools:text="12"
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clean_ui_llDay65"
+            style="@style/clean_ui_TopExpandedCalendarRootDayNotification"
+            >
+
+            <TextView
+                style="@style/clean_ui_TopExpandedCalendarDayNumber"
+                />
+
+            <View
+                android:visibility="gone"
+                style="@style/clean_ui_TopCalendarNotification"
+                />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+
+</LinearLayout>

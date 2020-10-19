@@ -18,14 +18,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tintStatusBar(resources.getColor(R.color.clean_ui_white, null), false, this)
+        Utils.tintStatusBar(resources.getColor(R.color.clean_ui_white, null), false, this)
 
 
         settingsToolbars.setOnClickListener {
             startActivity(Intent(this, ToolbarSampleActivity::class.java))
         }
 
-
+        settingsCalendar.setListener(View.OnClickListener {
+            startActivity(Intent(this, CalendarActivity::class.java))
+        })
 
         settingsTerms.setListener(View.OnClickListener {
             val dialog = ActionDialog(title = "Sed ut perspiciatis",
@@ -72,13 +74,5 @@ class MainActivity : AppCompatActivity() {
         //settingsCheckboxProgrammatically.getTitleTextView()
 
 
-    }
-
-
-    private fun tintStatusBar(color: Int, lightText: Boolean, activity: Activity) {
-        if (!lightText) {
-            activity.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
-        activity.window.statusBarColor = color
     }
 }

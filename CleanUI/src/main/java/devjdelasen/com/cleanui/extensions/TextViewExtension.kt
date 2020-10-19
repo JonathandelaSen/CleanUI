@@ -1,8 +1,9 @@
-package devjdelasen.com.cleanui
+package devjdelasen.com.cleanui.extensions
 
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.widget.TextView
+import devjdelasen.com.cleanui.TextStyle
 
 
 internal fun TextView.set(text: String?, titleColor: Int, textSize: Float, textStyle: Int) {

@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="TopHorizontalCalendarWithHeader">
+        <attr name="top_calendar_accent_color" format="color"/>
+        <attr name="top_calendar_divider_color" format="color"/>
+        <attr name="top_calendar_title_color" format="color"/>
+        <attr name="top_calendar_main_text_color" format="color"/>
+        <attr name="top_calendar_subtext_color" format="color"/>
+        <attr name="top_calendar_hide_divider" format="boolean"/>
+        <attr name="top_calendar_hide_toolbar" format="boolean"/>
+        <attr name="top_calendar_type">
+            <flag name="horizontal" value="0" />
+            <flag name="expanded" value="1" />
+            <flag name="both" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

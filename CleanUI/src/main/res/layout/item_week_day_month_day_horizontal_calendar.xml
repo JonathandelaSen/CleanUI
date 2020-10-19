@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="60dp"
+    android:layout_height="wrap_content"
+
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/clean_ui_tvDayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        tools:text="l"
+        style="@style/clean_ui_TopHorizontalCalendarWeekDayTitle"
+        />
+
+    <TextView
+        android:id="@+id/clean_ui_tvDayNumber"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        tools:text="14"
+        style="@style/clean_ui_TopHorizontalCalendarDayNumber"
+        />
+
+    <View
+        android:id="@+id/clean_ui_vNotificationCircle"
+        android:visibility="invisible"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:background="@drawable/ui_clean_circle"
+        />
+
+</LinearLayout>

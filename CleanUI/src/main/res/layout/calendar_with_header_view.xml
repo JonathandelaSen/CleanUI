@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <devjdelasen.com.cleanui.SimpleToolbar
+        android:id="@+id/ui_clean_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:simple_toolbar_hide_divider="true"
+        app:simple_toolbar_text_size="22"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/clean_ui_tvDayMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:layout_marginStart="16dp"
+
+            android:textSize="22dp"
+            tools:text="23 de Diciembre"
+            android:textColor="@color/clean_ui_title_default"
+            android:textStyle="bold"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/clean_ui_ivIcTimelineTaskline"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ui_clean_ic_list"
+            android:layout_marginEnd="16dp"
+            android:tint="@color/clean_ui_title_default"
+            />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingEnd="16dp"
+        android:background="@color/clean_ui_divider_calendar"
+        >
+
+        <TextView
+            android:id="@+id/clean_ui_tvPreviousMonthName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            style="@style/clean_ui_NoSelectedMonth"
+            android:layout_centerVertical="true"
+            tools:text="February"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvMonthName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/clean_ui_TopCalendarSelectedMonth"
+            android:layout_toEndOf="@+id/clean_ui_tvPreviousMonthName"
+            android:layout_centerVertical="true"
+            tools:text="March"
+            />
+
+        <TextView
+            android:id="@+id/clean_ui_tvPosteriorMonthName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            style="@style/clean_ui_NoSelectedMonth"
+            android:layout_toEndOf="@+id/clean_ui_tvMonthName"
+            android:layout_centerVertical="true"
+            tools:text="April"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/clean_ui_ivIcCalendar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@drawable/ui_clean_ic_calendar"
+            android:tint="@color/clean_ui_title_default"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clean_ui_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:layoutManager="LinearLayoutManager"
+
+        tools:itemCount="31"
+        tools:listitem="@layout/item_week_day_month_day_horizontal_calendar"
+        tools:orientation="horizontal" />
+
+    <devjdelasen.com.cleanui.calendar.top.TopExpandedCalendar
+        android:id="@+id/clean_ui_expandedCalendar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/ui_clean_vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clean_ui_divider"
+        />
+
+</LinearLayout>

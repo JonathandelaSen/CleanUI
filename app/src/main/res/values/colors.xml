@@ -5,6 +5,8 @@
     <color name="app_colorAccent">#F63A8B</color>
 
 
+    <color name="app_red">#CD0011</color>
+    <color name="app_green">#4CAF50</color>
     <color name="app_colorSeconday">#48E4EA</color>
     <color name="app_white">#FFF</color>
     <color name="app_light_bg_contrast">#F8F8F8</color>

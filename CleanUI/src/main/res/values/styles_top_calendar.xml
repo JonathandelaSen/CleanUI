@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="clean_ui_TopExpandedCalendarDayNumber" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textColor">@color/clean_ui_subtitle_dark</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="clean_ui_TopExpandedCalendarWeekDayTitle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/clean_ui_subtitle_dark</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="clean_ui_TopExpandedCalendarRootDayNotification" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="clean_ui_TopHorizontalCalendarWeekDayTitle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_title_default</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="clean_ui_TopHorizontalCalendarDayNumber" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_title_default</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+    <style name="clean_ui_TopCalendarNotification" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:drawable">@drawable/ui_clean_circle</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="clean_ui_TopCalendarNoSelectedMonth" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_subtitle_dark</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="clean_ui_TopCalendarSelectedMonth" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_title_default</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="clean_ui_NoSelectedMonth" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_title_default</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+</resources>
