@@ -29,7 +29,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CalendarActivity::class.java))
         })
 
-        settingsTerms.setListener(View.OnClickListener {
+        settingsSettings.setListener(View.OnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        })
+
+        settingsActionDialog.setListener(View.OnClickListener {
             val dialog = ActionDialog(title = "Sed ut perspiciatis",
                 subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
                 buttonText = "Button",
@@ -44,34 +48,6 @@ class MainActivity : AppCompatActivity() {
             dialog.showDialog()
         })
 
-        settingsPrivacyPolicy.setListener(View.OnClickListener {
-            Toast.makeText(this@MainActivity, "Settings privacy policy clicked", Toast.LENGTH_SHORT).show()
-        })
-
-        settingsVersion.setListener(View.OnClickListener {
-            Toast.makeText(this@MainActivity, "Settings version clicked", Toast.LENGTH_SHORT).show()
-        })
-
-        settingsBlocks.setListener(View.OnClickListener {
-            Toast.makeText(this@MainActivity, "Settings blocks clicked", Toast.LENGTH_SHORT).show()
-        })
-
-        settingsSound.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { p0, checked ->
-            Toast.makeText(this@MainActivity, "Settings sound $checked", Toast.LENGTH_SHORT).show()
-        })
-
-        settingsDisplayNotis.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { p0, checked ->
-            Toast.makeText(this@MainActivity, "Settings display notis $checked", Toast.LENGTH_SHORT).show()
-        })
-
-        blocksTitleSection.getTitleTextView().text = "Access to the TextView"
-        blocksTitleSection.setTitle("Programmatically long title to se its behaviour")
-
-        settingsSubtextProgrammatically.setTitle(title = "From code")
-        settingsSubtextProgrammatically.setSubtext(subtext = "Subtext", subtextColor = resources.getColor(R.color.app_colorPrimary, null))
-        settingsActionProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null))
-        settingsCheckboxProgrammatically.setTitle(title = "From code", titleColor = resources.getColor(R.color.clean_ui_title_default, null), titleTextSize = 14f, titleTextStyle = TextStyle.BOLD)
-        //settingsCheckboxProgrammatically.getTitleTextView()
 
 
     }

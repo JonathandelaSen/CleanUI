@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@color/app_light_bg_contrast"
+    android:orientation="vertical"
+    >
+
+
+    <devjdelasen.com.cleanui.SimpleToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_colorPrimary"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:simple_toolbar_hide_divider="true"
+        app:simple_toolbar_left_color="@color/app_icon"
+        app:simple_toolbar_left_icon="@drawable/ic_back_arrow"
+        app:simple_toolbar_text_size="20"
+        app:simple_toolbar_title="Settings"
+        app:simple_toolbar_title_color="@color/app_icon"
+        app:simple_toolbar_title_style="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="About"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowSubtext
+                    android:id="@+id/settingsVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Version"
+                    app:settings_row_subtitle="v2.15.8"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Terms and conditions"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Privacy policy"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:id="@+id/blocksTitleSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="Users"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsBlocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Blocks"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="Notifications"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsDisplayNotis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Display notifications"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsSound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Sound on"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+
+            <devjdelasen.com.cleanui.TitleSection
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                app:title_section_title="About"
+                app:title_section_title_style="normal"
+                app:title_section_title_color="@color/app_colorPrimary"
+                >
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowSubtext
+                    android:id="@+id/settingsSubtextProgrammatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="From code"
+                    app:settings_row_subtitle="Subtext"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsActionProgrammatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Terms and conditions"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowCheckBox
+                    android:id="@+id/settingsCheckboxProgrammatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Privacy policy"
+                    />
+
+            </devjdelasen.com.cleanui.TitleSection>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

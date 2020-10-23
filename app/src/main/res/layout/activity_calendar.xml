@@ -10,12 +10,11 @@
     >
 
     <devjdelasen.com.cleanui.calendar.top.TopHorizontalCalendarWithHeader
+        android:id="@+id/topHorizontalCalendar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:background="@color/clean_ui_white"
-        app:top_calendar_hide_divider="true"
-        app:top_calendar_accent_color="@color/app_red"
         />
 
 

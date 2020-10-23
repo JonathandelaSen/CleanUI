@@ -163,6 +163,7 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
                         selectedMonth = monthNumber
                         seDayMonth(selectedDay, selectedMonth, selectedYear)
                         rvAdapter?.setSelect(daySelectedNumber)
+                        interactionListener?.onDaySelected(selectedDay, selectedMonth, selectedYear)
                     }
                 }, mainTextColor, accentColor)
             llManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
