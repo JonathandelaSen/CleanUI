@@ -4,7 +4,8 @@
 
 Android library to create beautiful, clean and minimal UIs.  
 
-![SimpleToolbar](/Screenshots/Dialog/clean_ui_action_dialog.gif)
+![ActionDialog](/Screenshots/Dialog/clean_ui_action_dialog.gif)
+![TopHorizontalCalendarWithHeader](/Screenshots/Calendar/clean_ui_calendar.gif)
 
 
 ## Instalation 🛠
@@ -33,16 +34,40 @@ Add the dependency
 - [x] Toolbars
 - [x] Settings views
 - [x] Title sections
+- [x] Action dialog
+- [x] Calendars
+
 
 
 ## Next 🚀
   
+- [ ] Tasks to combine with calendars
 - [ ] EditTexts
-- [ ] Popups
 - [ ] Notifications screen views
 
 I will be glad to hear your suggestions 🙏
 
+
+## Calendars
+![TopHorizontalCalendarWithHeader](/Screenshots/Calendar/clean_ui_calendar.gif)
+
+```Kotlin
+<devjdelasen.com.cleanui.calendar.top.TopHorizontalCalendarWithHeader
+        android:id="@+id/topHorizontalCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/clean_ui_white"
+        app:top_calendar_accent_color="@color/app_red"
+        app:top_calendar_divider_color="@color/app_colorSeconday"
+        app:top_calendar_hide_divider="false"
+        app:top_calendar_hide_toolbar="false"
+        app:top_calendar_main_text_color="@color/clean_ui_title_default"
+        app:top_calendar_subtext_color="@color/clean_ui_icon_light"
+        app:top_calendar_title_color="@color/app_colorSeconday"
+        app:top_calendar_type="both"
+        />
+```
 
 
 ## ActionDialog
