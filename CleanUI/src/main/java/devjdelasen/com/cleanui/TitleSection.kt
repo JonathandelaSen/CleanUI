@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.extensions.set
-import kotlinx.android.synthetic.main.title_section_clean_ui.view.*
+import kotlinx.android.synthetic.main.clean_ui_title_section_clean_ui.view.*
 
 
 class TitleSection : LinearLayout {
@@ -43,7 +43,7 @@ class TitleSection : LinearLayout {
     }
 
     private fun init() {
-        View.inflate(context, R.layout.title_section_clean_ui, this)
+        View.inflate(context, R.layout.clean_ui_title_section_clean_ui, this)
         setView()
     }
 

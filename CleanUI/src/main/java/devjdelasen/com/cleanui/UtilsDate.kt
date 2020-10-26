@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class UtilsDate {
+internal class UtilsDate {
 
     companion object {
 
@@ -26,8 +26,11 @@ class UtilsDate {
          * - OUTPUT WEEK DAY NUMBERS STARTS WITH 1 (MON = 1)
          *
          */
-        private val DEFAULT_TIME_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-        private val DEFAULT_TIME_FORMAT = "HH:mm"
+
+        const val DEFAULT_TIME_FORMAT = "HH:mm aa"
+
+
+        private const val DEFAULT_TIME_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS"
 
         /* TIME */
         fun getHour24Format(): Int {
@@ -92,6 +95,13 @@ class UtilsDate {
                 0
             }
         }
+
+        fun getTime(date: Date, outFormat: String): String {
+            val simpleDateFormat = SimpleDateFormat(outFormat, Locale.getDefault())
+            return simpleDateFormat.format(date)
+        }
+
+
         /* TIME */
         /** e.g. 20 April  */
         fun getFormatDateDayMonthLong(

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="clean_ui_TasklineTitleTask" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_title_default</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="clean_ui_TasklineDescriptionTask" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_subtitle_dark</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="clean_ui_TasklineTimeTask" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_subtitle_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="clean_ui_TasklineBgTask" parent="@android:style/TextAppearance">
+        <item name="android:background">@drawable/clean_ui__tasks_task_bg</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <style name="clean_ui_TasklineTaskHour" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/clean_ui_subtitle_dark</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

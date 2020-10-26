@@ -8,13 +8,11 @@ import android.graphics.drawable.GradientDrawable
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import android.widget.AutoCompleteTextView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.ColorRes
-import androidx.annotation.StringRes
 import devjdelasen.com.cleanui.R
-import kotlinx.android.synthetic.main.action_dialog.*
+import kotlinx.android.synthetic.main.clean_ui_action_dialog.*
 
 
 class ActionDialog(title: String? = null, subtitle: String?, buttonText: String? = null, dismissText: String? = null,
@@ -30,7 +28,7 @@ class ActionDialog(title: String? = null, subtitle: String?, buttonText: String?
     init {
         dialog = Dialog(context)
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog?.setContentView(R.layout.action_dialog)
+        dialog?.setContentView(R.layout.clean_ui_action_dialog)
         dialog?.setCancelable(cancelable)
         dialog?.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog?.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)

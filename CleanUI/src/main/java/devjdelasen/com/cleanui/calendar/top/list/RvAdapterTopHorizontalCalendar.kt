@@ -42,7 +42,7 @@ internal class RvAdapterTopHorizontalCalendar(list: ArrayList<DayCalendar>,
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val itemView: View = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_week_day_month_day_horizontal_calendar, viewGroup, false)
+            .inflate(R.layout.clean_ui_item_week_day_month_day_horizontal_calendar, viewGroup, false)
         return DayHorizontalTopHorizontalCalendarViewHolder(itemView, listener, mainTextColor, accentColor)
     }
 

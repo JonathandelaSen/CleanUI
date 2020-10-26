@@ -1,8 +1,6 @@
 package devjdelasen.com.cleanui.calendar.top
 
 import android.content.Context
-import android.content.res.ColorStateList
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.AlphaAnimation
@@ -11,14 +9,12 @@ import android.view.animation.LinearInterpolator
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.TextStyle
-import devjdelasen.com.cleanui.UtilsDate
+import devjdelasen.com.cleanui.*
+import devjdelasen.com.cleanui.DividerType
 import devjdelasen.com.cleanui.calendar.models.YearCalendar
 import devjdelasen.com.cleanui.calendar.top.list.RvAdapterTopHorizontalCalendar
-import kotlinx.android.synthetic.main.calendar_with_header_view.view.*
+import kotlinx.android.synthetic.main.clean_ui_calendar_with_header_view.view.*
 
 
 class TopHorizontalCalendarWithHeader : LinearLayout {
@@ -51,13 +47,13 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
     private val year: YearCalendar? = YearCalendar(selectedYear, selectedMonth)
 
     private var hideToolbar = false
-    private var hideDivider = false
     private var accentColor: Int = -1
     private var dividerColor: Int = -1
     private var mainTextColor: Int = -1
     private var subtextColor: Int = -1
     private var titleColor: Int = -1
     private var type: Int = Types.BOTH.value
+    private var dividerType: Int = DividerType.SHADOW.value
 
 
 
@@ -69,13 +65,13 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.TopHorizontalCalendarWithHeader, 0, 0)
         try {
             dividerColor = ta.getColor(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_divider_color, ContextCompat.getColor(context, R.color.clean_ui_divider))
-            hideDivider = ta.getBoolean(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_hide_divider, false)
             hideToolbar = ta.getBoolean(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_hide_toolbar, false)
             titleColor = ta.getColor(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_title_color, ContextCompat.getColor(context, R.color.clean_ui_title_default))
             mainTextColor = ta.getColor(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_main_text_color, ContextCompat.getColor(context, R.color.clean_ui_title_default))
             subtextColor = ta.getColor(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_subtext_color, ContextCompat.getColor(context, R.color.clean_ui_subtitle_dark))
             accentColor = ta.getColor(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_accent_color, ContextCompat.getColor(context, R.color.clean_ui_colorPrimary))
             type = ta.getInt(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_type, Types.BOTH.value)
+            dividerType = ta.getInt(R.styleable.TopHorizontalCalendarWithHeader_top_calendar_divider_type, DividerType.SHADOW.value)
         } finally {
             ta.recycle()
         }
@@ -87,7 +83,7 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
     }
 
     private fun init() {
-        View.inflate(context, R.layout.calendar_with_header_view, this)
+        View.inflate(context, R.layout.clean_ui_calendar_with_header_view, this)
         setInitialState()
         setListeners()
     }
@@ -107,7 +103,9 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
         setStyles()
         showHideViews()
         setType()
-
+        setDividerType(dividerType, clean_ui_calendar_vDivider, this,
+            context.resources.getDimensionPixelOffset(R.dimen.clean_ui_dialog_button_radius),
+            shadowColor = resources.getColor(R.color.clean_ui_divider_shadow, null), dividerColor = dividerColor)
         selectCurrentDayMonth()
         setDayListIfVisible()
         updateExpandedIfVisible()
@@ -129,13 +127,11 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
 
     private fun showHideViews() {
         ui_clean_toolbar.visibility = if (hideToolbar) View.GONE else View.VISIBLE
-        ui_clean_vDivider.visibility = if (hideDivider) View.GONE else View.VISIBLE
         clean_ui_ivIcTimelineTaskline.setColorFilter(subtextColor)
     }
 
     private fun setStyles() {
         if (titleColor != -1) ui_clean_toolbar.getTitle().setTextColor(titleColor)
-        if (dividerColor != -1) ui_clean_vDivider.setBackgroundColor(dividerColor)
         clean_ui_tvPreviousMonthName.setTextColor(subtextColor)
         clean_ui_tvMonthName.setTextColor(mainTextColor)
         clean_ui_tvPosteriorMonthName.setTextColor(subtextColor)
@@ -225,10 +221,10 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
 
     private fun setIconTimelineTaskline() {
         if (isTaskline) {
-            clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ui_clean_ic_list, null))
+            clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.clean_ui__ic_list, null))
             return
         }
-        clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ui_clean_ic_calendar, null))
+        clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.clean_ui__ic_calendar, null))
     }
 
     private fun setMonthListeners() {

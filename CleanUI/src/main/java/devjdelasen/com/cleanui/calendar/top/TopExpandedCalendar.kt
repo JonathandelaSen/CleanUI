@@ -10,7 +10,7 @@ import devjdelasen.com.cleanui.UtilsDate
 import devjdelasen.com.cleanui.calendar.setSelectedTopCalendarDay
 import devjdelasen.com.cleanui.calendar.top.list.DayCalendar
 import kotlinx.android.synthetic.main.clean_ui_top_explanded_calendar.view.*
-import kotlinx.android.synthetic.main.item_week_day_month_day_horizontal_calendar.view.*
+import kotlinx.android.synthetic.main.clean_ui_item_week_day_month_day_horizontal_calendar.view.*
 import kotlin.collections.ArrayList
 
 

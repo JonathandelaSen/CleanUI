@@ -2,7 +2,7 @@ package devjdelasen.com.cleanui.calendar.top.list
 
 import devjdelasen.com.cleanui.UtilsDate
 import devjdelasen.com.cleanui.calendar.GenericHolderInterface
-import devjdelasen.com.cleanui.tasks.TaskAbstract
+import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 import java.util.*
 
 internal class DayCalendar: GenericHolderInterface {
@@ -14,15 +14,6 @@ internal class DayCalendar: GenericHolderInterface {
 
     companion object {
 
-        fun getByStartHour(tasks: List<TaskAbstract>, startHour: Int): List<TaskAbstract>? {
-            val selectedTasks: ArrayList<TaskAbstract> = ArrayList<TaskAbstract>()
-            for (task in tasks) {
-                if (UtilsDate.getHour24Format(task.startTime) == startHour) {
-                    selectedTasks.add(task)
-                }
-            }
-            return selectedTasks
-        }
 
     }
 

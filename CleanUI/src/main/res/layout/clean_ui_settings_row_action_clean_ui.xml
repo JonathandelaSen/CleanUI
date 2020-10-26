@@ -22,7 +22,7 @@
         android:layout_height="46dp"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
-        android:src="@drawable/ic_next_arrow"
+        android:src="@drawable/clean_ui_ic_next_arrow"
         android:layout_gravity="center_vertical"
         android:contentDescription="@string/open_section"
         />

@@ -31,7 +31,7 @@
         android:visibility="invisible"
         android:layout_width="4dp"
         android:layout_height="4dp"
-        android:background="@drawable/ui_clean_circle"
+        android:background="@drawable/clean_ui_circle"
         />
 
 </LinearLayout>

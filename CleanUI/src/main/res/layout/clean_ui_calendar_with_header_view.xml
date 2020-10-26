@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/clean_ui_llRoot"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -42,7 +43,7 @@
             android:id="@+id/clean_ui_ivIcTimelineTaskline"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:src="@drawable/ui_clean_ic_list"
+            android:src="@drawable/clean_ui__ic_list"
             android:layout_marginEnd="16dp"
             android:tint="@color/clean_ui_title_default"
             />
@@ -98,7 +99,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:padding="5dp"
-            android:src="@drawable/ui_clean_ic_calendar"
+            android:src="@drawable/clean_ui__ic_calendar"
             android:tint="@color/clean_ui_title_default"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
@@ -118,7 +119,7 @@
         app:layoutManager="LinearLayoutManager"
 
         tools:itemCount="31"
-        tools:listitem="@layout/item_week_day_month_day_horizontal_calendar"
+        tools:listitem="@layout/clean_ui_item_week_day_month_day_horizontal_calendar"
         tools:orientation="horizontal" />
 
     <devjdelasen.com.cleanui.calendar.top.TopExpandedCalendar
@@ -128,7 +129,7 @@
         android:layout_height="wrap_content"/>
 
     <View
-        android:id="@+id/ui_clean_vDivider"
+        android:id="@+id/clean_ui_calendar_vDivider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/clean_ui_divider"

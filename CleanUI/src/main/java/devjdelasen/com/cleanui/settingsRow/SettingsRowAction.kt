@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
-import kotlinx.android.synthetic.main.settings_row_action_clean_ui.view.*
+import kotlinx.android.synthetic.main.clean_ui_settings_row_action_clean_ui.view.*
 
 
 class SettingsRowAction: SettingsRow {
@@ -52,7 +52,7 @@ class SettingsRowAction: SettingsRow {
 
 
     private fun setView() {
-        View.inflate(context, R.layout.settings_row_action_clean_ui, this)
+        View.inflate(context, R.layout.clean_ui_settings_row_action_clean_ui, this)
         if (icTintColor != -1) ImageViewCompat.setImageTintList(clean_ui_ivIcAction, ColorStateList.valueOf(icTintColor))
     }
 

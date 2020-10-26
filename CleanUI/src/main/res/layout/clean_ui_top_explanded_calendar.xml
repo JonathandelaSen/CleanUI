@@ -112,7 +112,7 @@
 
             <TextView
                 tools:text="12"
-                tools:background="@drawable/ui_clean_circle"
+                tools:background="@drawable/clean_ui_circle"
                 tools:textColor="@color/clean_ui_colorAccent"
                 style="@style/clean_ui_TopExpandedCalendarDayNumber"
                 />

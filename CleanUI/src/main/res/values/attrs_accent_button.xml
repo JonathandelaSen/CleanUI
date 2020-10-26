@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AccentButton">
+        <attr name="circle_accent_button_text" format="string"/>
+        <attr name="circle_accent_button_tint_color" format="reference"/>
+        <attr name="circle_accent_button_text_size" format="float"/>
+        <attr name="circle_accent_button_text_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

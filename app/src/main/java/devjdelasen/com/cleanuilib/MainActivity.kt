@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.dialogs.ActionDialog
 import kotlinx.android.synthetic.main.activity_main.*
 

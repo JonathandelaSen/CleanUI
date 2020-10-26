@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="30dp"
+    android:layout_height="wrap_content"
     android:gravity="center_vertical"
     >
 
@@ -12,20 +12,19 @@
         android:id="@+id/clean_ui_tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-
-        android:textSize="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="12dp"
         android:textColor="@color/clean_ui_subtitle_dark"
-        android:textStyle="bold"
         tools:text="14"
         />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/clean_ui_divider"
+        android:background="@color/clean_ui_divider_light"
         android:layout_marginEnd="16dp"
         />
 

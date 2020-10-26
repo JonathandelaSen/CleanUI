@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleIcon">
+        <attr name="circle_icon_icon" format="reference"/>
+        <attr name="circle_icon_tint_icon_color" format="reference"/>
+        <attr name="circle_icon_tint_bg_color" format="reference"/>
+    </declare-styleable>
+</resources>

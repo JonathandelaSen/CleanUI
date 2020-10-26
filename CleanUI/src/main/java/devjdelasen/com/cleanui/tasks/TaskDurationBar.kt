@@ -9,7 +9,7 @@ import devjdelasen.com.cleanui.UtilsDate
 import kotlinx.android.synthetic.main.clean_ui_tasks_task_duration_bar.view.*
 
 
-class TaskDurationBar : LinearLayout {
+internal class TaskDurationBar : LinearLayout {
 
 
     constructor(context: Context?) : super(context) {

@@ -7,14 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".CalendarActivity"
     android:orientation="vertical"
+    android:background="@color/clean_ui_white"
     >
 
     <devjdelasen.com.cleanui.calendar.top.TopHorizontalCalendarWithHeader
         android:id="@+id/topHorizontalCalendar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/clean_ui_white"
+        app:top_calendar_divider_type="shadow"
+        />
+
+    <devjdelasen.com.cleanui.tasks.Taskline
+        android:id="@+id/taskline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/clean_ui_light_bg_contrast"
         />
 
 

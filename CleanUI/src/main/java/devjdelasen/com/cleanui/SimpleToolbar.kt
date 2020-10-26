@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.extensions.set
-import kotlinx.android.synthetic.main.simple_toolbar_clean_ui.view.*
+import kotlinx.android.synthetic.main.clean_ui_simple_toolbar_clean_ui.view.*
 
 
 class SimpleToolbar : LinearLayout {
@@ -83,7 +83,7 @@ class SimpleToolbar : LinearLayout {
     }
 
     private fun init() {
-        View.inflate(context, R.layout.simple_toolbar_clean_ui, this)
+        View.inflate(context, R.layout.clean_ui_simple_toolbar_clean_ui, this)
         setView()
         setListeners()
     }

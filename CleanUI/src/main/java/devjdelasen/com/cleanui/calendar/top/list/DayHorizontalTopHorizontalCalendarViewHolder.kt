@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.UtilsDate
 import devjdelasen.com.cleanui.calendar.setSelectedTopCalendarDay
-import kotlinx.android.synthetic.main.item_week_day_month_day_horizontal_calendar.view.*
+import kotlinx.android.synthetic.main.clean_ui_item_week_day_month_day_horizontal_calendar.view.*
 
 
 internal class DayHorizontalTopHorizontalCalendarViewHolder(itemView: View,
