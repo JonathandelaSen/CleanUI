@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.calendar.top.TopHorizontalCalendarWithHeader
 import devjdelasen.com.cleanui.extensions.addHours
-import devjdelasen.com.cleanui.tasks.models.IconCleanUI
-import devjdelasen.com.cleanui.tasks.models.SimpleTask
-import devjdelasen.com.cleanui.tasks.models.TaskAbstract
+import devjdelasen.com.cleanui.tasks.models.*
 import kotlinx.android.synthetic.main.activity_calendar.*
 import java.util.*
 
@@ -45,11 +44,51 @@ class CalendarActivity: AppCompatActivity() {
         val dateEnd3 = Date()
         dateEnd3.addHours(6)
 
-        tasks.add(SimpleTask("Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo",
-            dateStart1, dateEnd1,
-            IconCleanUI(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null)))
-        tasks.add(SimpleTask("Excepteur sint occaecat cupidat", "proident, sunt in culpa qu", dateStart2, dateEnd2))
-        tasks.add(SimpleTask("Da exercitation ullam", "mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excep", dateStart3, dateEnd3))
+        tasks.add(SimpleTask(
+            title = "Lorem ipsum dolor",
+            startTime = dateStart1, endTime = dateEnd1,
+            category = CategoryTaskModel("1", IconModel(ResourcesCompat.getDrawable(resources, R.drawable.icons8_origami_96, null), null, null)),
+            topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null),
+            accentButton = AccentButtonModel(text = "#Daily", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)))
+
+        tasks.add(SimpleTask(
+            title = "Chaos is the only moonlight",
+            category = CategoryTaskModel("1", IconModel(ResourcesCompat.getDrawable(resources, R.drawable.icons8_origami_96, null), null, null)),
+            topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null),
+            accentButton = AccentButtonModel(text = "#Daily", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)))
+
+        tasks.add(SimpleTask(
+            title = "Chaos is the only moonlight, the only guarantee of life.",
+            category = CategoryTaskModel("1", IconModel(ResourcesCompat.getDrawable(resources, R.drawable.icons8_origami_96, null), null, null)),
+            topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null),
+            accentButton = AccentButtonModel(text = "#Daily", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)))
+
+        tasks.add(SimpleTask(
+            title = "Lorem ipsum dolor sit amet",
+            description = "Cum adiurator messis, omnes nixuses vitare noster, altus mineralises. Compater moris, tanquam ferox verpa.",
+            startTime = dateStart1, endTime = dateEnd1,
+            topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null),
+            accentButton = AccentButtonModel(text = "#Daily", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)))
+
+        tasks.add(SimpleTask(
+            title = "Apolloniates, rector, et sensorem.",
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo",
+            startTime = dateStart1, endTime = dateEnd1,
+            category = CategoryTaskModel("1", IconModel(ResourcesCompat.getDrawable(resources, R.drawable.icons8_origami_96, null), null, null)),
+            topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null)))
+
+        tasks.add(SimpleTask(
+            title = "Space suits wobble with energy at the quirky infinity room! Imbers mori, tanquam grandis pes.",
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo",
+            startTime = dateStart1, endTime = dateEnd1,
+            category = CategoryTaskModel("1", IconModel(ResourcesCompat.getDrawable(resources, R.drawable.icons8_origami_96, null), null, null)),
+            topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null),
+            accentButton = AccentButtonModel(text = "#Daily", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)))
+
+        tasks.add(SimpleTask(
+            title = "Space suits wobble with energy at the quirky infinity room! Imbers mori, tanquam grandis pes.",
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo",
+            startTime = dateStart1, endTime = dateEnd1))
         return tasks
     }
 

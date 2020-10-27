@@ -12,6 +12,8 @@ import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.extensions.set
+import devjdelasen.com.cleanui.tasks.models.AccentButtonModel
+import devjdelasen.com.cleanui.tasks.models.IconModel
 import kotlinx.android.synthetic.main.clean_ui_circle_icon.view.*
 import kotlinx.android.synthetic.main.clean_ui_accent_button.view.*
 import kotlinx.android.synthetic.main.clean_ui_simple_toolbar_clean_ui.view.*
@@ -48,6 +50,20 @@ class AccentButton : FrameLayout {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
         init()
     }
+
+
+
+    fun set(button: AccentButtonModel) {
+        this.text = button.text
+        this.textSize = button.textSize
+        this.textStyle = button.textStyle.value
+        button.tintColor.let {
+            this.accentColor = context.getColor(it)
+        }
+        setView()
+    }
+
+
 
     private fun init() {
         View.inflate(context, R.layout.clean_ui_accent_button, this)

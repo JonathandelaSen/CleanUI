@@ -3,4 +3,7 @@
     <dimen name="clean_ui_dialog_radius">10dp</dimen>
     <dimen name="clean_ui_dialog_button_radius">8dp</dimen>
     <dimen name="clean_ui_shadow_divider_elevation">8dp</dimen>
+    <dimen name="clean_ui_simple_task_top_inner_space">16dp</dimen>
+    <dimen name="clean_ui_simple_task_bottom_inner_space">16dp</dimen>
+    <dimen name="clean_ui_simple_task_side_inner_space">16dp</dimen>
 </resources>

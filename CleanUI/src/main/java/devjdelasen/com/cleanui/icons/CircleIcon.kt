@@ -6,11 +6,9 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.annotation.ColorRes
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.tasks.models.IconCleanUI
+import devjdelasen.com.cleanui.tasks.models.IconModel
 import kotlinx.android.synthetic.main.clean_ui_circle_icon.view.*
 
 class CircleIcon : FrameLayout {
@@ -43,7 +41,7 @@ class CircleIcon : FrameLayout {
     }
 
 
-    fun set(icon: IconCleanUI?) {
+    fun set(icon: IconModel?) {
         this.icon = icon?.icon
         icon?.iconColor?.let {
             this.iconColor = context.getColor(it)

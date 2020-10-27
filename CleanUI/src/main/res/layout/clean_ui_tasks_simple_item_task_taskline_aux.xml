@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        style="@style/clean_ui_TasklineBgTask"
+        android:outlineAmbientShadowColor="@color/clean_ui_taskline_task_shadow"
+        android:outlineSpotShadowColor="@color/clean_ui_taskline_task_shadow"
+        >
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/clean_ui_taskline_task_color_mark_bg"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/clean_ui_llHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/clean_ui_tvHours"
+                    style="@style/clean_ui_TasklineTimeTask"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    tools:text="09:00 - 10:00"
+                    />
+
+                <devjdelasen.com.cleanui.icons.CircleIcon
+                    android:id="@+id/clean_ui_taskTopRightIcon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:rotation="90"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/clean_ui_tvTitle"
+                style="@style/clean_ui_TasklineTitleTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                tools:text="Lorem ipsum dolor sit amet"
+                />
+
+            <TextView
+                android:id="@+id/clean_ui_tvDescription"
+                style="@style/clean_ui_TasklineDescriptionTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+
+                    <devjdelasen.com.cleanui.icons.CircleIcon
+                        android:id="@+id/clean_ui_iconCategory"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        app:circle_icon_icon="@drawable/icons8_origami_96"
+                        app:circle_icon_tint_bg_color="@color/clean_ui_icon_bg"
+                        />
+
+
+                </LinearLayout>
+
+                <devjdelasen.com.cleanui.buttons.AccentButton
+                    android:id="@+id/clean_ui_accentButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:circle_accent_button_text="#GoGoGo"
+                    app:circle_accent_button_tint_color="@color/clean_ui_colorPrimary"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <devjdelasen.com.cleanui.tasks.TaskDurationBar
+                android:visibility="gone"
+                android:id="@+id/clean_ui_durationBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <!--
+            - Total duration
+            - Category with circle icon
+            - Hashtag
+            - Place
+            - Top right icon
+            - Move color mark
+            - Progress bar
+            - action button
+            - Highlighted text
+            - Iconos para categorías específicas, por ejemplo, place con relleno cuadrado redondeado con el icono en color?
+            - Notification de important
+            - Bottom section actions (e.g. iconos de enviar, comentar ?)
+            - Lista enumerado
+            -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

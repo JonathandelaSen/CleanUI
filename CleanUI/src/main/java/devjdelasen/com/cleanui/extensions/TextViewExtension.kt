@@ -7,7 +7,7 @@ import devjdelasen.com.cleanui.TextStyle
 
 
 internal fun TextView.set(text: String?, titleColor: Int, textSize: Float, textStyle: Int) {
-    setTextColor(titleColor)
+    if (titleColor != -1) setTextColor(titleColor)
     setTextSize(TypedValue.COMPLEX_UNIT_DIP, textSize)
     setStyle(textStyle)
     this.text = text

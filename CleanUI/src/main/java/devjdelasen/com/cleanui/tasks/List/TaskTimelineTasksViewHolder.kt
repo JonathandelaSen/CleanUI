@@ -1,8 +1,15 @@
 package devjdelasen.com.cleanui.tasks.List
 
 import android.view.View
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
 import devjdelasen.com.cleanui.R
+import devjdelasen.com.cleanui.Utils
+import devjdelasen.com.cleanui.extensions.constraintCenterHorizontal
+import devjdelasen.com.cleanui.extensions.constraintParent
+import devjdelasen.com.cleanui.extensions.constraintParentDontApply
+import devjdelasen.com.cleanui.extensions.constraintTo
 import devjdelasen.com.cleanui.tasks.models.SimpleTask
 import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 import kotlinx.android.synthetic.main.clean_ui_tasks_simple_item_task_taskline.view.*
@@ -18,13 +25,55 @@ class SimpleTaskTimelineViewHolder(itemView: View) : RecyclerView.ViewHolder(ite
         setDescription()
         setTime()
         setTopRightIcon()
+        setCategory()
+        setAccentButton()
+        reorganizeConstraints()
+    }
 
-        //itemView.clean_ui_tvDuration.text = task.duration
+    private fun reorganizeConstraints() {
+        setTitleConstraints()
+    }
 
-        //itemView.clean_ui_llTaskBg.setBackgroundResource(task.backgroundLight)
-        //itemView.clean_ui_tvTitle.setTextColor(itemView.context.resources.getColor(task.intenseColor, null))
-        //itemView.clean_ui_tvHours.setTextColor(itemView.context.resources.getColor(task.intenseColor, null))
-        //itemView.clean_ui_itDuration.setColor(activity.getResources().getColor(model.getIntenseColor()));
+    private fun setTitleConstraints() {
+        if (itemView.clean_ui_tvHours.visibility == View.VISIBLE) return
+        if (itemView.clean_ui_taskTopRightIcon.visibility == View.VISIBLE) {
+
+            val constraintSet = itemView.clean_ui_tvTitle.constraintParentDontApply(start = true, top = true, end = false, bottom = false,
+                marginTop = itemView.resources?.getDimensionPixelOffset(R.dimen.clean_ui_simple_task_top_inner_space) ?: 0,
+                marginStart = itemView.resources?.getDimensionPixelOffset(R.dimen.clean_ui_simple_task_side_inner_space) ?: 0)
+
+            itemView.clean_ui_tvTitle.constraintTo(
+                endToId = itemView.clean_ui_taskTopRightIcon.id,
+                endToOfView = ConstraintSet.START,
+                marginEnd = Utils.dpsToPxs(itemView.resources, 16f).toInt(),
+                constraintSet = constraintSet)
+            return
+        }
+
+        itemView.clean_ui_tvTitle.constraintParent(start = true, top = true, end = true, bottom = false,
+            marginTop = itemView.resources?.getDimensionPixelOffset(R.dimen.clean_ui_simple_task_top_inner_space) ?: 0,
+            marginStart = itemView.resources?.getDimensionPixelOffset(R.dimen.clean_ui_simple_task_side_inner_space) ?: 0,
+            marginEnd = itemView.resources?.getDimensionPixelOffset(R.dimen.clean_ui_simple_task_side_inner_space) ?: 0)
+
+    }
+
+
+    private fun setAccentButton() {
+        if (task?.accentButton == null) {
+            itemView.clean_ui_accentButton.visibility = View.GONE
+            return
+        }
+        itemView.clean_ui_accentButton.visibility = View.VISIBLE
+        itemView.clean_ui_accentButton.set(task!!.accentButton!!)
+    }
+
+    private fun setCategory() {
+        if (task?.category?.iconCategory == null) {
+            itemView.clean_ui_iconCategory.visibility = View.GONE
+            return
+        }
+        itemView.clean_ui_iconCategory.visibility = View.VISIBLE
+        itemView.clean_ui_iconCategory.set(task?.category?.iconCategory)
     }
 
     private fun setTitle() {

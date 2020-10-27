@@ -4,9 +4,13 @@ import devjdelasen.com.cleanui.UtilsDate
 import java.util.*
 
 
-abstract class TaskAbstract(val title: String, val description: String? = null,
-                            val startTime: Date? = null, private val endTime: Date? = null,
-                            val topRightIcon: IconCleanUI? = null) {
+abstract class TaskAbstract(val title: String,
+                            val description: String? = null,
+                            val startTime: Date? = null,
+                            private val endTime: Date? = null,
+                            val category: CategoryTaskModel? = null,
+                            val topRightIcon: IconModel? = null,
+                            val accentButton: AccentButtonModel? = null) {
 
     enum class TaskType(val value: Int) {
         SIMPLE(0)
