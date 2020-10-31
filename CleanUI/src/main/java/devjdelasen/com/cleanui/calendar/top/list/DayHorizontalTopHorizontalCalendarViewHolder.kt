@@ -30,6 +30,7 @@ internal class DayHorizontalTopHorizontalCalendarViewHolder(itemView: View,
         itemView.clean_ui_tvDayNumber.text = (dayNumber + 1).toString()
         itemView.clean_ui_tvDayName.text = UtilsDate.getDayNameInitialLetrer(year, monthNumber, dayNumber + 1, itemView.context)
         itemView.clean_ui_tvDayName.setTextColor(mainTextColor)
+        itemView.clean_ui_vNotificationCircle.background.setTint(accentColor)
         setHasTasks(day)
         setSelected(day)
     }

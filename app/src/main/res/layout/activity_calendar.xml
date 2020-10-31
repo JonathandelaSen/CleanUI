@@ -19,12 +19,13 @@
         app:top_calendar_divider_type="shadow"
         />
 
-    <devjdelasen.com.cleanui.tasks.Taskline
-        android:id="@+id/taskline"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/clean_ui_light_bg_contrast"
+        tools:listitem="@layout/clean_ui_tasks_simple_item_task_taskline"
+        tools:itemCount="4"
         />
-
 
 </LinearLayout>

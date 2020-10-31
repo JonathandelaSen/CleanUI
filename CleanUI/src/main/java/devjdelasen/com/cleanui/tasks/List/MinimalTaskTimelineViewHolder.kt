@@ -6,6 +6,7 @@ import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.Utils
 import devjdelasen.com.cleanui.extensions.constraintParentDontApply
 import devjdelasen.com.cleanui.extensions.constraintTo
+import devjdelasen.com.cleanui.extensions.removeConstraint
 import devjdelasen.com.cleanui.tasks.models.MinimalTask
 import kotlinx.android.synthetic.main.clean_ui_tasks_minimal_item_task_taskline.view.*
 
@@ -122,6 +123,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
 
 
     private fun setTitleAboveTimeWithTopRightConstraints() {
+        itemView.clean_ui_tvTitle.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_tvTitle.constraintParentDontApply(start = false, top = true, end = false, bottom = false,
             marginTop = Utils.dpsToPxs(itemView.resources, 12f).toInt()
         )

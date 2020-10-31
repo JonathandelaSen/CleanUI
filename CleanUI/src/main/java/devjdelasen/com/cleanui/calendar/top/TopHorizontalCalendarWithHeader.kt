@@ -14,6 +14,7 @@ import devjdelasen.com.cleanui.*
 import devjdelasen.com.cleanui.DividerType
 import devjdelasen.com.cleanui.calendar.models.YearCalendar
 import devjdelasen.com.cleanui.calendar.top.list.RvAdapterTopHorizontalCalendar
+import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 import kotlinx.android.synthetic.main.clean_ui_calendar_with_header_view.view.*
 
 
@@ -91,12 +92,11 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
 
 
 
-    fun setListeners(horizontalCalendarInteractListener: TopHorizontalCalendarInteractionListener?) {
+    fun init(horizontalCalendarInteractListener: TopHorizontalCalendarInteractionListener?) {
         this.interactionListener = horizontalCalendarInteractListener
+        updateTasks()
+        setDayListIfVisible()
     }
-
-
-
 
 
     private fun setInitialState() {
@@ -122,12 +122,14 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
                 showExpandedCalendar()
                 return
             }
+            Types.BOTH.value -> {
+                clean_ui_ivIcCalendar.setColorFilter(subtextColor)
+            }
         }
     }
 
     private fun showHideViews() {
         ui_clean_toolbar.visibility = if (hideToolbar) View.GONE else View.VISIBLE
-        clean_ui_ivIcTimelineTaskline.setColorFilter(subtextColor)
     }
 
     private fun setStyles() {
@@ -144,7 +146,6 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
 
     private fun seDayMonth(actualDay: Int, monthNumber: Int,  year: Int) {
         val yearToDisplay = if (year != UtilsDate.getYearNumber()) ", $year" else ""
-        clean_ui_tvDayMonth.text = UtilsDate.getFormatDateDayMonthLong(actualDay, monthNumber) + yearToDisplay
         ui_clean_toolbar.setTitle(UtilsDate.getFormatDateDayMonthLong(actualDay, monthNumber) + yearToDisplay, true)
     }
 
@@ -159,7 +160,7 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
                         selectedMonth = monthNumber
                         seDayMonth(selectedDay, selectedMonth, selectedYear)
                         rvAdapter?.setSelect(daySelectedNumber)
-                        interactionListener?.onDaySelected(selectedDay, selectedMonth, selectedYear)
+                        fireListeners()
                     }
                 }, mainTextColor, accentColor)
             llManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -172,6 +173,11 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
         rvAdapter?.setMonth(year?.get(selectedYear)?.get(selectedMonth)?.days ?: ArrayList(), selectedYear, selectedMonth)
         rvAdapter?.setSelect(selectedDay - 1)
         (clean_ui_rv.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(selectedDay - 1, 0)
+    }
+
+    private fun fireListeners() {
+        interactionListener?.onDaySelected(selectedDay, selectedMonth, selectedYear,
+            year?.get(selectedYear)?.get(selectedMonth)?.days?.get(selectedDay-1)?.tasks ?: ArrayList())
     }
 
     private fun setMonthName(monthNumber: Int) {
@@ -204,7 +210,7 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
             }
 
             private fun hideExpandedCalendar() {
-                clean_ui_ivIcCalendar.setColorFilter(ContextCompat.getColor(context, R.color.clean_ui_subtitle_dark))
+                clean_ui_ivIcCalendar.setColorFilter(subtextColor)
                 clean_ui_rv.visibility = View.VISIBLE
                 clean_ui_expandedCalendar.visibility = View.GONE
                 setDayListIfVisible()
@@ -219,13 +225,6 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
         updateExpandedIfVisible()
     }
 
-    private fun setIconTimelineTaskline() {
-        if (isTaskline) {
-            clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.clean_ui__ic_list, null))
-            return
-        }
-        clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.streamline_interface_calendar, null))
-    }
 
     private fun setMonthListeners() {
         clean_ui_tvPreviousMonthName.setOnClickListener {
@@ -239,19 +238,23 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
     private fun selectNextMonth() {
         animateMonthTvs()
         incrementSelectedMonth()
+        updateTasks()
         setMonthName(selectedMonth)
         selectCurrentDayMonth()
         setDayListIfVisible()
         updateExpandedIfVisible()
+        fireListeners()
     }
 
     private fun selectPreviousMonth() {
         animateMonthTvs()
         decrementSelectedMonth()
+        updateTasks()
         setMonthName(selectedMonth)
         selectCurrentDayMonth()
         setDayListIfVisible()
         updateExpandedIfVisible()
+        fireListeners()
     }
 
     private fun updateExpandedIfVisible() {
@@ -263,7 +266,7 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
                         selectedMonth = monthSelected
                         selectedYear = yearSelected
                         selectCurrentDayMonth()
-                        interactionListener?.onDaySelected(daySelected, monthSelected, yearSelected)
+                        fireListeners()
                     }
                 }, mainTextColor, subtextColor, accentColor)
         }
@@ -312,9 +315,14 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
         clean_ui_tvPosteriorMonthName.startAnimation(fadeIn)
     }
 
+    private fun updateTasks() {
+        this.year?.get(selectedYear)?.get(selectedMonth)?.setTasks(interactionListener?.getTasks(selectedMonth, selectedYear))
+    }
+
 
     interface TopHorizontalCalendarInteractionListener {
-        fun onDaySelected(daySelected: Int, monthSelected: Int, yearSelected: Int)
+        fun onDaySelected(daySelected: Int, monthSelected: Int, yearSelected: Int, tasks: List<TaskAbstract>)
+        fun getTasks(monthSelected: Int, yearSelected: Int): List<TaskAbstract>
     }
 
 }

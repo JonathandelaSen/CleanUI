@@ -102,7 +102,7 @@
             android:layout_marginStart="@dimen/clean_ui_simple_task_side_inner_space"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="@dimen/clean_ui_simple_task_bottom_inner_space"
-            app:circle_icon_icon="@drawable/icons8_origami_96"
+            app:circle_icon_icon="@drawable/streamline_application_framework_meteor"
             app:circle_icon_tint_bg_color="@color/clean_ui_icon_bg"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="14dp"
-            app:circle_accent_button_text="#GoGoGo"
+            app:circle_accent_button_text="#CleanUI"
             app:circle_accent_button_tint_color="@color/clean_ui_colorPrimary"
 
             app:layout_constraintBottom_toBottomOf="@+id/clean_ui_iconCategory"

@@ -3,6 +3,7 @@ package devjdelasen.com.cleanui
 import android.content.Context
 import android.content.res.Resources
 import devjdelasen.com.cleanui.extensions.capitalize
+import devjdelasen.com.cleanui.extensions.getDayOfMonthNumber
 import java.text.DateFormat
 import java.text.DateFormatSymbols
 import java.text.ParseException
@@ -231,13 +232,13 @@ internal class UtilsDate {
             }
 
         fun getDayOfMonthNumber(): Int {
-            return getDayOfMonthNumber(Calendar.getInstance())
+            return Calendar.getInstance().getDayOfMonthNumber()
         }
 
         fun getDayOfMonthNumber(dateSeconds: Long): Int {
             val calendar = Calendar.getInstance()
             calendar.timeInMillis = dateSeconds * 1000
-            return getDayOfMonthNumber(calendar)
+            return calendar.getDayOfMonthNumber()
         }
 
         fun getMonthOfYearNumber(): Int {
@@ -375,9 +376,6 @@ internal class UtilsDate {
             return cal1[Calendar.YEAR] == cal[Calendar.YEAR] && cal1[Calendar.DAY_OF_YEAR] - 1 == cal[Calendar.DAY_OF_YEAR]
         }
 
-        private fun getDayOfMonthNumber(calendar: Calendar): Int {
-            return calendar[Calendar.DAY_OF_MONTH]
-        }
 
         private fun getMonthOfYearNumber(calendar: Calendar): Int {
             return calendar[Calendar.MONTH] + 1

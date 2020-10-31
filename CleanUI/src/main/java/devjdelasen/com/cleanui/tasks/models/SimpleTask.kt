@@ -7,13 +7,14 @@ import java.util.*
 
 class SimpleTask(title: String,
                  description: String? = null,
+                 date: Date? = null,
                  startTime: Date? = null,
                  endTime: Date? = null,
                  category: CategoryTaskModel? = null,
                  topRightIcon: SimpleIconModel? = null,
                  accentButton: AccentButtonModel? = null,
                  @ColorRes markColor: Int? = null):
-    TaskAbstract(title, description, startTime, endTime, category, accentButton, topRightIcon, markColor) {
+    TaskAbstract(title, description, date, startTime, endTime, category, accentButton, topRightIcon, markColor) {
 
     override fun getType(): TaskType {
         return TaskType.SIMPLE

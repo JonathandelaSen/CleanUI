@@ -11,7 +11,7 @@ import devjdelasen.com.cleanui.tasks.models.SimpleTask
 import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 
 
-internal class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
+class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
 
 
     private val sortedList: ArrayList<TaskAbstract> = ArrayList()
@@ -20,6 +20,11 @@ internal class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<R
         sortTasks(list)
     }
 
+
+    fun updateTasks(list: List<TaskAbstract>) {
+        sortTasks(list)
+        notifyDataSetChanged()
+    }
 
 
 

@@ -17,40 +17,6 @@
         app:simple_toolbar_text_size="22"
         />
 
-    <LinearLayout
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-        <TextView
-            android:id="@+id/clean_ui_tvDayMonth"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:layout_marginStart="16dp"
-
-            android:textSize="22dp"
-            tools:text="23 de Diciembre"
-            android:textColor="@color/clean_ui_title_default"
-            android:textStyle="bold"
-            />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/clean_ui_ivIcTimelineTaskline"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/clean_ui__ic_list"
-            android:layout_marginEnd="16dp"
-            android:tint="@color/clean_ui_title_default"
-            />
-
-
-    </LinearLayout>
-
 
     <RelativeLayout
         android:layout_width="match_parent"

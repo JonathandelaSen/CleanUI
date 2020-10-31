@@ -9,6 +9,7 @@ import java.util.*
 
 abstract class TaskAbstract(val title: String,
                             val description: String? = null,
+                            val date: Date? = null,
                             val startTime: Date? = null,
                             private val endTime: Date? = null,
                             val category: CategoryTaskModel? = null,
