@@ -8,12 +8,13 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.tasks.models.IconModel
+import devjdelasen.com.cleanui.icons.models.CircleIconModel
 import kotlinx.android.synthetic.main.clean_ui_circle_icon.view.*
 
 class CircleIcon : FrameLayout {
 
     //TODO: Expose views
+    //TODO: Add circle margin as parameter
 
     private var iconColor: Int? = -1
     private var icon: Drawable? = null
@@ -41,7 +42,7 @@ class CircleIcon : FrameLayout {
     }
 
 
-    fun set(icon: IconModel?) {
+    fun set(icon: CircleIconModel?) {
         this.icon = icon?.icon
         icon?.iconColor?.let {
             this.iconColor = context.getColor(it)
@@ -63,7 +64,12 @@ class CircleIcon : FrameLayout {
 
     private fun setView() {
         setIcon()
-        if (iconColor != -1) ImageViewCompat.setImageTintList(clean_ui_IvIcon, ColorStateList.valueOf(iconColor!!))
+        if (iconColor != -1) {
+            ImageViewCompat.setImageTintList(clean_ui_IvIcon, ColorStateList.valueOf(iconColor!!))
+        }
+        else {
+            ImageViewCompat.setImageTintList(clean_ui_IvIcon, null)
+        }
         clean_ui_flBgIcon.background.setTint(bgColor!!)
     }
 

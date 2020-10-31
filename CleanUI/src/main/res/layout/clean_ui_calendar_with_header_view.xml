@@ -99,7 +99,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:padding="5dp"
-            android:src="@drawable/clean_ui__ic_calendar"
+            android:src="@drawable/streamline_interface_calendar"
             android:tint="@color/clean_ui_title_default"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="14dp"
+    android:height="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M9.543,5.728h3.392a0.565 0.565 ,0,0,1,0.565 0.565 V9.12A1.979,1.979,0,0,1,10.469,10.8" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M5.966,3.468a1.7,1.7,0,1,1,1.32,1.107" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M4.508,10.25a3.109,3.109,0,0,0,6.166-0.565V6.293a0.565 0.565 ,0,0,0-0.565-0.565H7.283" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 1.5 3.467 L 6.283 3.467 Q 7.283 3.467 7.283 4.467 L 7.283 9.25 Q 7.283 10.25 6.283 10.25 L 1.5 10.25 Q 0.5 10.25 0.5 9.25 L 0.5 4.467 Q 0.5 3.467 1.5 3.467 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 2.196 5.163 L 5.587 5.163" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 3.891 5.163 L 3.891 8.554" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 11.522 2.337 C 12.1460817673 2.337 12.652 2.84291823269 12.652 3.467 C 12.652 4.09108176731 12.1460817673 4.597 11.522 4.597 C 10.8979182327 4.597 10.392 4.09108176731 10.392 3.467 C 10.392 2.84291823269 10.8979182327 2.337 11.522 2.337 Z" />
+</vector>

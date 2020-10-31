@@ -6,4 +6,7 @@
     <dimen name="clean_ui_simple_task_top_inner_space">16dp</dimen>
     <dimen name="clean_ui_simple_task_bottom_inner_space">16dp</dimen>
     <dimen name="clean_ui_simple_task_side_inner_space">16dp</dimen>
+    <dimen name="clean_ui_simple_task_top_half_inner_space">8dp</dimen>
+    <dimen name="clean_ui_simple_task_bottom_half_inner_space">8dp</dimen>
+    <dimen name="clean_ui_simple_task_side_half_inner_space">8dp</dimen>
 </resources>

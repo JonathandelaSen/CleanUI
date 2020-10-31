@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="14dp"
+    android:height="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 5.304 6.309 C 5.85628474983 6.309 6.304 6.75671525017 6.304 7.309 C 6.304 7.86128474983 5.85628474983 8.309 5.304 8.309 C 4.75171525017 8.309 4.304 7.86128474983 4.304 7.309 C 4.304 6.75671525017 4.75171525017 6.309 5.304 6.309 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 8.696 6.309 C 9.24828474983 6.309 9.696 6.75671525017 9.696 7.309 C 9.696 7.86128474983 9.24828474983 8.309 8.696 8.309 C 8.14371525017 8.309 7.696 7.86128474983 7.696 7.309 C 7.696 6.75671525017 8.14371525017 6.309 8.696 6.309 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M8.7,6.3V5.607s-0.289-1.137 0.559 -1.419c0-1.131-1.407-3.1-2.255-3.1s-2.255,1.972-2.255,3.1c0.848 0.282 0.559,1.419 0.559 ,1.419V6.3" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M0.741,4.681a6.5,6.5,0,1,0,12.518,0" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 12.915 L 7 8.5" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M2.988,4.5A4.434,4.434,0,0,0,5,10.512V8.5H9v2.012A4.434,4.434,0,0,0,11.012,4.5" />
+</vector>

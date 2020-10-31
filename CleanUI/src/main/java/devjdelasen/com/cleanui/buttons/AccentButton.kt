@@ -1,22 +1,16 @@
 package devjdelasen.com.cleanui.buttons
 
 import android.content.Context
-import android.content.res.ColorStateList
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
-import androidx.core.widget.ImageViewCompat
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.TextStyle
 import devjdelasen.com.cleanui.extensions.set
 import devjdelasen.com.cleanui.tasks.models.AccentButtonModel
-import devjdelasen.com.cleanui.tasks.models.IconModel
-import kotlinx.android.synthetic.main.clean_ui_circle_icon.view.*
 import kotlinx.android.synthetic.main.clean_ui_accent_button.view.*
-import kotlinx.android.synthetic.main.clean_ui_simple_toolbar_clean_ui.view.*
 
 class AccentButton : FrameLayout {
 

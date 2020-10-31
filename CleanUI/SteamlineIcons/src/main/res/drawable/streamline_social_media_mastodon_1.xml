@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="14dp"
+    android:height="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M0.843,7.2C0.812,6.7 0.8 ,6.2 0.79 ,5.7A7.713,7.713,0,0,1,1.136,2.9,3.392,3.392,0,0,1,3.72 0.772 ,19.223,19.223,0,0,1,8.006 0.53 a10.152,10.152,0,0,1,3.145 0.5 A3.224,3.224,0,0,1,12.941,3.1a9.987,9.987,0,0,1,0.1,4.175c-0.344,3.2-5.083,2.874-7.484,2.628-0.455-0.047-0.905-0.141-1.359-0.214a1.863,1.863,0,0,0,1.31,2.1,17.617,17.617,0,0,0,2.54 0.083 ,3.131,3.131,0,0,0,0.564-0.071 0.522 0.522,0,0,1,0.627 0.457 l0,0.034c0.022 0.222 -0.093 0.732 -0.3 0.817 a9.245,9.245,0,0,1-5.054 0.073 ,3.381,3.381,0,0,1-2.119-1.539A7.955,7.955,0,0,1,1,8.9Q0.9,8.053 0.843 ,7.2Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 3.7 4.513 C 4.1788308781 4.513 4.567 4.9011691219 4.567 5.38 C 4.567 5.8588308781 4.1788308781 6.247 3.7 6.247 C 3.2211691219 6.247 2.833 5.8588308781 2.833 5.38 C 2.833 4.9011691219 3.2211691219 4.513 3.7 4.513 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 6.878 4.513 C 7.3568308781 4.513 7.745 4.9011691219 7.745 5.38 C 7.745 5.8588308781 7.3568308781 6.247 6.878 6.247 C 6.3991691219 6.247 6.011 5.8588308781 6.011 5.38 C 6.011 4.9011691219 6.3991691219 4.513 6.878 4.513 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 10.056 4.513 C 10.5348308781 4.513 10.923 4.9011691219 10.923 5.38 C 10.923 5.8588308781 10.5348308781 6.247 10.056 6.247 C 9.5771691219 6.247 9.189 5.8588308781 9.189 5.38 C 9.189 4.9011691219 9.5771691219 4.513 10.056 4.513 Z" />
+</vector>

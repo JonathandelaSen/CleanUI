@@ -224,7 +224,7 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
             clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.clean_ui__ic_list, null))
             return
         }
-        clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.clean_ui__ic_calendar, null))
+        clean_ui_ivIcTimelineTaskline.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.streamline_interface_calendar, null))
     }
 
     private fun setMonthListeners() {

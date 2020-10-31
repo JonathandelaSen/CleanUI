@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="14dp"
+    android:height="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M5.741,8.581a0.18 0.18 ,0,0,0-0.177 0.122 h0c-0.057 0.2 0.256 0.225 0.306 0.043 a0.131 0.131 ,0,0,0-0.129-0.165M4.67,10.156a0.406 0.406 ,0,0,0-0.433-0.5 0.573 0.573,0,0,0-0.539 0.409 0.4 0.4 ,0,0,0,0.433 0.5 0.555 0.555 ,0,0,0,0.539-0.41Zm6.347-2.783a2.589,2.589,0,0,0-0.683-0.337c-0.247-0.093-0.286-0.136-0.183-0.382a2.211,2.211,0,0,0,0.155-0.535c0.149-0.93-0.6-1.238-1.462-1.2a4.666,4.666,0,0,0-1.11 0.207 c-0.231 0.065 -0.666 0.288 -0.754 0.139 -0.049-0.075 0.018 -0.187 0.042 -0.259 0.153 -0.5 0.232 -1.207-0.255-1.537a1.811,1.811,0,0,0-1.378-0.083c-2.1 0.627 -5.381,3.5-4.827,5.9a2.781,2.781,0,0,0,0.69,1.264A6.2,6.2,0,0,0,4.631,12.2a8.7,8.7,0,0,0,2.742 0.05 ,6.089,6.089,0,0,0,3.878-1.974,1.885,1.885,0,0,0,0.1-2.626,2.674,2.674,0,0,0-0.333-0.272Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M8.817,1.81a3.678,3.678,0,0,1,4.611,4.26" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M9.563,3.5a1.672,1.672,0,0,1,0.577-0.077,1.7,1.7,0,0,1,1.631,1.758,1.713,1.713,0,0,1-0.107 0.533" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M8.606,7.921a5.359,5.359,0,0,0-4.387-0.529A4.112,4.112,0,0,0,2.305,8.537,1.851,1.851,0,0,0,2.033,10.8c0.734,1.192,2.537,1.474,4.562,1.4a3.905,3.905,0,0,0,2.791-1.787,1.932,1.932,0,0,0-0.78-2.493Z" />
+</vector>

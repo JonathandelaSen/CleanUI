@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.clean_ui_circle_icon.view.*
 class CircleAccentIcon : FrameLayout {
 
     //TODO: Expose views
+    //TODO: Add circle margin as parameter
 
     private var ALPHA = 20
     private var iconAccentColor: Int? = -1
@@ -46,7 +47,12 @@ class CircleAccentIcon : FrameLayout {
 
     private fun setView() {
         setIcon()
-        if (iconAccentColor != -1) ImageViewCompat.setImageTintList(clean_ui_IvIcon, ColorStateList.valueOf(iconAccentColor!!))
+        if (iconAccentColor != -1) {
+            ImageViewCompat.setImageTintList(clean_ui_IvIcon, ColorStateList.valueOf(iconAccentColor!!))
+        }
+        else {
+            ImageViewCompat.setImageTintList(clean_ui_IvIcon, null)
+        }
         if (iconAccentColor != -1) {
             clean_ui_flBgIcon.background.setTint(ColorUtils.setAlphaComponent(iconAccentColor!!, ALPHA))
         }

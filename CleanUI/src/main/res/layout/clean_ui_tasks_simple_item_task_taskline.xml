@@ -12,10 +12,10 @@
         android:id="@+id/clean_ui_constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         style="@style/clean_ui_TasklineBgTask"
         android:outlineAmbientShadowColor="@color/clean_ui_taskline_task_shadow"
         android:outlineSpotShadowColor="@color/clean_ui_taskline_task_shadow"
@@ -31,31 +31,37 @@
             app:layout_constraintBottom_toBottomOf="parent"
             />
 
-
+        <!--
+                    app:layout_constraintBottom_toBottomOf="@+id/clean_ui_taskTopRightIcon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clean_ui_taskTopRightIcon"
+                    -->
         <TextView
             android:id="@+id/clean_ui_tvHours"
             style="@style/clean_ui_TasklineTimeTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/clean_ui_simple_task_side_inner_space"
+            android:layout_marginTop="16dp"
 
-            app:layout_constraintBottom_toBottomOf="@+id/clean_ui_taskTopRightIcon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/clean_ui_taskTopRightIcon"
+            app:layout_constraintTop_toTopOf="parent"
+
             tools:text="09:00 - 10:00"
             />
 
-        <devjdelasen.com.cleanui.icons.CircleIcon
+        <devjdelasen.com.cleanui.icons.SimpleIcon
             android:id="@+id/clean_ui_taskTopRightIcon"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:rotation="90"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_marginTop="@dimen/clean_ui_simple_task_top_inner_space"
             android:layout_marginBottom="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="@dimen/clean_ui_simple_task_side_inner_space"
+            app:circle_icon_icon="@drawable/clean_ui_ic_options"
 
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@id/clean_ui_tvHours"
+            app:layout_constraintBottom_toBottomOf="@id/clean_ui_tvHours"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
@@ -91,18 +97,17 @@
 
         <devjdelasen.com.cleanui.icons.CircleIcon
             android:id="@+id/clean_ui_iconCategory"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="14dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginStart="@dimen/clean_ui_simple_task_side_inner_space"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="@dimen/clean_ui_simple_task_bottom_inner_space"
             app:circle_icon_icon="@drawable/icons8_origami_96"
             app:circle_icon_tint_bg_color="@color/clean_ui_icon_bg"
 
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clean_ui_tvDescription"
-            app:layout_constraintBottom_toBottomOf="parent"
             />
 
         <devjdelasen.com.cleanui.buttons.AccentButton

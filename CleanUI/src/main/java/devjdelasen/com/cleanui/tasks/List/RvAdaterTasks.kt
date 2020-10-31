@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import devjdelasen.com.cleanui.NoPostViewHolder
 import devjdelasen.com.cleanui.R
+import devjdelasen.com.cleanui.tasks.models.MinimalTask
 import devjdelasen.com.cleanui.tasks.models.SimpleTask
 import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 
@@ -28,12 +29,22 @@ internal class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<R
             itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_tasks_simple_item_task_taskline, viewGroup, false)
             return SimpleTaskTimelineViewHolder(itemView)
         }
-        itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_tasks_simple_item_task_taskline, viewGroup, false)
+        if (viewType == TaskAbstract.TaskType.MINIMAL.value) {
+            itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_tasks_minimal_item_task_taskline, viewGroup, false)
+            return MinimalTaskTimelineViewHolder(itemView)
+        }
+        itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_item_no_task, viewGroup, false)
         return NoPostViewHolder(itemView)
     }
 
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, pos: Int) {
-        (viewHolder as SimpleTaskTimelineViewHolder).bind(sortedList[pos] as SimpleTask)
+        if (viewHolder is SimpleTaskTimelineViewHolder) {
+            viewHolder.bind(sortedList[pos] as SimpleTask)
+            return
+        }
+        if (viewHolder is MinimalTaskTimelineViewHolder) {
+            viewHolder.bind(sortedList[pos] as MinimalTask)
+        }
     }
 
     override fun getItemCount(): Int {

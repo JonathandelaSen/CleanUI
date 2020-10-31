@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="14dp"
+    android:height="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 0.518 L 7 13.5" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 4.981 L 8.865 3.649" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 9.6 2.27 C 10.0887720036 2.27 10.485 2.6662279964 10.485 3.155 C 10.485 3.6437720036 10.0887720036 4.04 9.6 4.04 C 9.1112279964 4.04 8.715 3.6437720036 8.715 3.155 C 8.715 2.6662279964 9.1112279964 2.27 9.6 2.27 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 8.77 L 8.865 7.436" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 9.6 6.06 C 10.0887720036 6.06 10.485 6.4562279964 10.485 6.945 C 10.485 7.4337720036 10.0887720036 7.83 9.6 7.83 C 9.1112279964 7.83 8.715 7.4337720036 8.715 6.945 C 8.715 6.4562279964 9.1112279964 6.06 9.6 6.06 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 12.901 L 8.865 11.569" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 9.6 10.19 C 10.0887720036 10.19 10.485 10.5862279964 10.485 11.075 C 10.485 11.5637720036 10.0887720036 11.96 9.6 11.96 C 9.1112279964 11.96 8.715 11.5637720036 8.715 11.075 C 8.715 10.5862279964 9.1112279964 10.19 9.6 10.19 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 3.211 L 5.135 1.878" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 4.4 0.5 C 4.8887720036 0.5 5.285 0.8962279964 5.285 1.385 C 5.285 1.8737720036 4.8887720036 2.27 4.4 2.27 C 3.9112279964 2.27 3.515 1.8737720036 3.515 1.385 C 3.515 0.8962279964 3.9112279964 0.5 4.4 0.5 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 7 L 5.135 5.668" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 4.4 4.289 C 4.8887720036 4.289 5.285 4.6852279964 5.285 5.174 C 5.285 5.6627720036 4.8887720036 6.059 4.4 6.059 C 3.9112279964 6.059 3.515 5.6627720036 3.515 5.174 C 3.515 4.6852279964 3.9112279964 4.289 4.4 4.289 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 11.131 L 5.134 9.798" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 4.4 8.42 C 4.8887720036 8.42 5.285 8.8162279964 5.285 9.305 C 5.285 9.7937720036 4.8887720036 10.19 4.4 10.19 C 3.9112279964 10.19 3.515 9.7937720036 3.515 9.305 C 3.515 8.8162279964 3.9112279964 8.42 4.4 8.42 Z" />
+</vector>

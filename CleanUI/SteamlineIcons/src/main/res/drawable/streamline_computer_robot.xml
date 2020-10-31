@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="14dp"
+    android:height="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M12.5,9.5c0-3.038-2.462-5-5.5-5s-5.5,1.962-5.5,5v4h11Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 4.5 L 7 0.5" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 1.5 10.5 L 12.5 10.5" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 5 10.5 L 5 13.5" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 9 10.5 L 9 13.5" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 5 7.5 C 5.27614237492 7.5 5.5 7.72385762508 5.5 8 C 5.5 8.27614237492 5.27614237492 8.5 5 8.5 C 4.72385762508 8.5 4.5 8.27614237492 4.5 8 C 4.5 7.72385762508 4.72385762508 7.5 5 7.5 Z" />
+    <path
+        android:strokeColor="#000"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 9 7.5 C 9.27614237492 7.5 9.5 7.72385762508 9.5 8 C 9.5 8.27614237492 9.27614237492 8.5 9 8.5 C 8.72385762508 8.5 8.5 8.27614237492 8.5 8 C 8.5 7.72385762508 8.72385762508 7.5 9 7.5 Z" />
+</vector>
