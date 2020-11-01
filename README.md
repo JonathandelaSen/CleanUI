@@ -5,7 +5,7 @@
 Android library to create beautiful, clean and minimal UIs.  
 
 ![ActionDialog](/Screenshots/Dialog/clean_ui_action_dialog.gif)
-![TopHorizontalCalendarWithHeader](/Screenshots/Calendar/clean_ui_calendar.gif)
+![Tasks with calendar](/Screenshots/Tasks/SimpleTask/clean_ui_tasks_simple_task.gif)
 
 
 ## Instalation 🛠
@@ -49,6 +49,14 @@ I will be glad to hear your suggestions 🙏
 
 Recycler view with two different type of tasks 
 
+![Simple tasks with calendar](/Screenshots/Tasks/SimpleTask/clean_ui_tasks_simple_task.gif)
+
+![Minimal tasks with calendar](/Screenshots/Tasks/MinimalTask/clean_ui_tasks_minimal_task.gif)
+
+
+![Simple tasks with calendar](/Screenshots/Tasks/SimpleTask/clean_ui_tasks_simple_task.png)
+
+![Minimal tasks with calendar](/Screenshots/Tasks/MinimalTask/clean_ui_tasks_minimal_task.png)
 ```Kotlin
 	MinimalTask(
                 title = "Everyone loves the pepperiness of onion curry rinsed with clammy thyme.",
