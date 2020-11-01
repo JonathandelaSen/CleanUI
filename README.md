@@ -24,7 +24,7 @@ Add it in your root build.gradle at the end of repositories
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.JonathandelaSen:CleanUI:0.3.0'
+	        implementation 'com.github.JonathandelaSen:CleanUI:1.0.1'
 	}
 
 
