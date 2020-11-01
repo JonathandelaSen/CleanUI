@@ -36,19 +36,97 @@ Add the dependency
 - [x] Title sections
 - [x] Action dialog
 - [x] Calendars
+- [x] Tasks to combine or not with calendars
 
 
 
 ## Next 🚀
-  
-- [ ] Tasks to combine with calendars
-- [ ] EditTexts
-- [ ] Notifications screen views
+- [ ] Chat
 
 I will be glad to hear your suggestions 🙏
 
+## ☝️ Tasks
 
-## Calendars
+Recycler view with two different type of tasks 
+
+```Kotlin
+	MinimalTask(
+                title = "Everyone loves the pepperiness of onion curry rinsed with clammy thyme.",
+                date = dateStart1,
+                startTime = dateStart1,
+                endTime = dateEnd1,
+                topRightIcon = SimpleIconModel(
+                    ResourcesCompat.getDrawable(
+                        resources,
+                        R.drawable.streamline_interface_setting_menu_horizontal,
+                        null
+                    ), null
+                )
+            )
+```
+
+```Kotlin
+	SimpleTask(
+                title = "It is the only guarantee of life.",
+                description = "Cum deus assimilant, omnes brabeutaes attrahendam talis, flavum adiuratores.",
+                date = dateStart4,
+                category = CategoryTaskModel(
+                    "1",
+                    CircleIconModel(
+                        ResourcesCompat.getDrawable(
+                            resources,
+                            R.drawable.streamline_interface_religion_cross_1,
+                            null
+                        ), null, null
+                    )
+                ),
+                topRightIcon = SimpleIconModel(
+                    ResourcesCompat.getDrawable(
+                        resources,
+                        R.drawable.ic_options,
+                        null
+                    ), null
+                ),
+                accentButton = AccentButtonModel(
+                    text = "#Daily",
+                    textSize = 12f,
+                    textStyle = TextStyle.NORMAL,
+                    tintColor = R.color.app_colorAccent
+                )
+            )
+```
+
+```Kotlin
+private fun setList(list: List<TaskAbstract>) {
+        if (rvAdapter == null) {
+            rvAdapter = RvAdapterTasks(list, object : RvAdapterTasks.TaskInteractionListener {
+                override fun onItemClickListener() {
+                    Toast.makeText(this@CalendarActivity,"On item click", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onTopRightIconListener() {
+                    Toast.makeText(this@CalendarActivity,"On top right icon click", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onCategoryListener() {
+                    Toast.makeText(this@CalendarActivity,"On category click", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onActionButtonListener() {
+                    Toast.makeText(this@CalendarActivity,"On action button click", Toast.LENGTH_SHORT).show()
+                }
+
+            })
+            val llManager = LinearLayoutManager(this)
+            rv.layoutManager = llManager
+            rv.adapter = rvAdapter
+            return
+        }
+        rvAdapter?.updateTasks(list)
+    }
+```
+
+## ☝️ Calendars
 ![TopHorizontalCalendarWithHeader](/Screenshots/Calendar/clean_ui_calendar.gif)
 
 ```Kotlin
@@ -69,8 +147,30 @@ I will be glad to hear your suggestions 🙏
         />
 ```
 
+### Combine calendar with tasks
+```Kotlin
+topHorizontalCalendar?.init(object :
+            TopHorizontalCalendarWithHeader.TopHorizontalCalendarInteractionListener {
+            override fun onDaySelected(daySelected: Int, monthSelected: Int, yearSelected: Int, tasks: List<TaskAbstract>) {
+                Toast.makeText(
+                    this@CalendarActivity,
+                    "$daySelected - ${monthSelected + 1} - $yearSelected",
+                    Toast.LENGTH_SHORT
+                ).show()
+                setList(tasks)
+            }
 
-## ActionDialog
+            override fun getTasks(
+                monthSelected: Int,
+                yearSelected: Int
+            ): List<TaskAbstract> {
+                return getRandomTasks(monthSelected)
+            }
+        })
+```
+
+
+## ☝️ ActionDialog
 ![SimpleToolbar](/Screenshots/Dialog/clean_ui_action_dialog.gif)
 ![SimpleToolbar](/Screenshots/Dialog/clean_ui_action_dialog.jpg)
 
@@ -90,7 +190,7 @@ val dialog = ActionDialog(title = "Sed ut perspiciatis",
 ```
 
 
-## Toolbar
+## ☝️ Toolbar
 ### SimpleToolbar
 These are a few possible combinations
 
@@ -212,7 +312,7 @@ These are a few possible combinations
 ```
 
 
-## Settings
+## ☝️ Settings
 Combine these components to get your settings UI
 
 | Section check box   | Section action |  Section subtext | 
@@ -324,7 +424,7 @@ Combine these components to get your settings UI
 
         
 
-## Other
+## ☝️ Other
 
 ### TitleSection
 ```XML
