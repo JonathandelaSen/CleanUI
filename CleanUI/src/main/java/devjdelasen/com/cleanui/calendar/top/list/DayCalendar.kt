@@ -1,6 +1,5 @@
 package devjdelasen.com.cleanui.calendar.top.list
 
-import devjdelasen.com.cleanui.UtilsDate
 import devjdelasen.com.cleanui.calendar.GenericHolderInterface
 import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 import java.util.*

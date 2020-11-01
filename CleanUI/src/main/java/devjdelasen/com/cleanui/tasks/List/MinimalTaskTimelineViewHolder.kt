@@ -3,16 +3,21 @@ package devjdelasen.com.cleanui.tasks.List
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintSet
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.Utils
+import devjdelasen.com.cleanui.utils.Utils
 import devjdelasen.com.cleanui.extensions.constraintParentDontApply
 import devjdelasen.com.cleanui.extensions.constraintTo
 import devjdelasen.com.cleanui.extensions.removeConstraint
 import devjdelasen.com.cleanui.tasks.models.MinimalTask
 import kotlinx.android.synthetic.main.clean_ui_tasks_minimal_item_task_taskline.view.*
 
-class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbstract(itemView) {
+internal class MinimalTaskTimelineViewHolder(itemView: View, listener: RvAdapterTasks.TaskInteractionListener?) : TaskTimelineViewHolderAbstract(itemView, listener) {
 
     override var task: MinimalTask? = null
+
+    init {
+        super.setListeners()
+    }
+
 
     fun bind(task: MinimalTask) {
         this.task = task
@@ -33,6 +38,8 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
         setHoursConstraints()
     }
 
+
+
     private fun setHoursConstraints() {
         if (itemView.clean_ui_vMarkColor.visibility == View.VISIBLE) {
             setHoursWithMarkColorConstraints()
@@ -42,6 +49,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setHoursWithoutMarkColorConstraints() {
+        itemView.clean_ui_tvHours.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_tvHours.constraintParentDontApply(start = true, top = false, end = false, bottom = true,
             marginBottom = Utils.dpsToPxs(itemView.resources, 12f).toInt(),
             marginStart = getMarginStart()
@@ -58,6 +66,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setHoursWithMarkColorConstraints() {
+        itemView.clean_ui_tvHours.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_tvHours.constraintParentDontApply(start = false, top = false, end = false, bottom = true,
             marginBottom = Utils.dpsToPxs(itemView.resources, 12f).toInt()
         )
@@ -98,6 +107,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setVColorMarkWithoutTimeConstraints() {
+        itemView.clean_ui_vMarkColor.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_vMarkColor.constraintParentDontApply(start = true, top = false, end = false, bottom = false,
             marginStart = Utils.dpsToPxs(itemView.resources, 12f).toInt()
         )
@@ -110,6 +120,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setVColorMarkWithTimeConstraints() {
+        itemView.clean_ui_vMarkColor.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_vMarkColor.constraintParentDontApply(start = true, top = false, end = false, bottom = false,
             marginStart = Utils.dpsToPxs(itemView.resources, 12f).toInt()
         )
@@ -139,6 +150,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setTitleAboveTimeNoTopRightConstraints() {
+        itemView.clean_ui_tvTitle.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_tvTitle.constraintParentDontApply(start = false, top = true, end = true, bottom = false,
             marginTop = Utils.dpsToPxs(itemView.resources, 12f).toInt(),
             marginEnd = Utils.dpsToPxs(itemView.resources, 12f).toInt()
@@ -151,6 +163,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setTitleNoTimeWithTopRightConstraints() {
+        itemView.clean_ui_tvTitle.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_tvTitle.constraintParentDontApply(start = false, top = true, end = false, bottom = true,
             marginTop = Utils.dpsToPxs(itemView.resources, 12f).toInt(),
             marginBottom = Utils.dpsToPxs(itemView.resources, 12f).toInt()
@@ -166,6 +179,7 @@ class MinimalTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbst
     }
 
     private fun setTitleNoTimeNoTopRightConstraints() {
+        itemView.clean_ui_tvTitle.removeConstraint(start = true, top = true, end = true, bottom = true)
         val constraintSet = itemView.clean_ui_tvTitle.constraintParentDontApply(start = false, top = true, end = true, bottom = true,
             marginTop = Utils.dpsToPxs(itemView.resources, 12f).toInt(),
             marginEnd = Utils.dpsToPxs(itemView.resources, 12f).toInt(),

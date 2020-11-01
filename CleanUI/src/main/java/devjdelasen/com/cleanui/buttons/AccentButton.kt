@@ -7,7 +7,7 @@ import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.utils.TextStyle
 import devjdelasen.com.cleanui.extensions.set
 import devjdelasen.com.cleanui.tasks.models.AccentButtonModel
 import kotlinx.android.synthetic.main.clean_ui_accent_button.view.*

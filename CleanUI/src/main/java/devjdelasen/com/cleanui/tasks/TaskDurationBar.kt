@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.UtilsDate
+import devjdelasen.com.cleanui.utils.UtilsDate
 import kotlinx.android.synthetic.main.clean_ui_tasks_task_duration_bar.view.*
 
 

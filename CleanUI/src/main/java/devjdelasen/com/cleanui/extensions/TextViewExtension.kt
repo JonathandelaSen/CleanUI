@@ -3,7 +3,7 @@ package devjdelasen.com.cleanui.extensions
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.widget.TextView
-import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.utils.TextStyle
 
 
 internal fun TextView.set(text: String?, titleColor: Int, textSize: Float, textStyle: Int) {

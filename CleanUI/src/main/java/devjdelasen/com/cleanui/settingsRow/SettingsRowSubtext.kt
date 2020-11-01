@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.utils.TextStyle
 import devjdelasen.com.cleanui.extensions.set
 import kotlinx.android.synthetic.main.clean_ui_settings_row_subtext_clean_ui.view.*
 

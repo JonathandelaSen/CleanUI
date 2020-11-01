@@ -10,7 +10,7 @@
     android:background="@color/clean_ui_light_bg_contrast"
     >
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:simple_toolbar_title="No tint icon"
@@ -22,7 +22,7 @@
         android:layout_marginBottom="20dp"
         />
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:simple_toolbar_hide_divider="true"
@@ -35,7 +35,7 @@
         android:layout_marginBottom="20dp"
         />
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:simple_toolbar_title="Changed size, text style and color"
@@ -46,7 +46,7 @@
         android:layout_marginBottom="20dp"
         />
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:simple_toolbar_title="Changed divider color"
@@ -56,7 +56,7 @@
         android:layout_marginBottom="20dp"
         />
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:id="@+id/simpleToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
         android:layout_marginBottom="20dp"
         />
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:id="@+id/simpleToolbarProgrammatically"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

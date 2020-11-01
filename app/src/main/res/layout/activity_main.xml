@@ -10,7 +10,7 @@
     android:orientation="vertical"
     >
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/app_colorPrimary"
@@ -42,7 +42,7 @@
             >
 
 
-            <devjdelasen.com.cleanui.TitleSection
+            <devjdelasen.com.cleanui.sections.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF"
@@ -80,7 +80,7 @@
                     app:settings_row_title="Show dialog"
                     />
 
-            </devjdelasen.com.cleanui.TitleSection>
+            </devjdelasen.com.cleanui.sections.TitleSection>
 
 
         </LinearLayout>

@@ -1,13 +1,12 @@
 package devjdelasen.com.cleanuilib
 
-import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CompoundButton
 import android.widget.Toast
-import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.utils.TextStyle
 import devjdelasen.com.cleanui.dialogs.ActionDialog
 import kotlinx.android.synthetic.main.activity_settings.*
 

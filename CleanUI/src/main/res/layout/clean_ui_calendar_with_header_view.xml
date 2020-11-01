@@ -9,7 +9,7 @@
     android:layout_height="wrap_content"
     >
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:id="@+id/ui_clean_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

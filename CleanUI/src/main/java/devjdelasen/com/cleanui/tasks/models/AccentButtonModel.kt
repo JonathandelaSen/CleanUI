@@ -1,8 +1,7 @@
 package devjdelasen.com.cleanui.tasks.models
 
-import android.graphics.drawable.Drawable
 import androidx.annotation.ColorRes
-import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.utils.TextStyle
 
 
 /**

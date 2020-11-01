@@ -6,11 +6,10 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.UtilsDate
+import devjdelasen.com.cleanui.utils.UtilsDate
 import devjdelasen.com.cleanui.calendar.setSelectedTopCalendarDay
 import devjdelasen.com.cleanui.calendar.top.list.DayCalendar
 import kotlinx.android.synthetic.main.clean_ui_top_explanded_calendar.view.*
-import kotlinx.android.synthetic.main.clean_ui_item_week_day_month_day_horizontal_calendar.view.*
 import kotlin.collections.ArrayList
 
 
@@ -102,7 +101,13 @@ internal class TopExpandedCalendar : LinearLayout {
 
 
     private fun setHasNotification(day: DayCalendar, vNotification: View) {
-        vNotification.visibility = if (day.tasks.isEmpty()) View.INVISIBLE else View.VISIBLE
+        vNotification.visibility = if (day.tasks.isEmpty()) {
+            View.INVISIBLE
+        }
+        else {
+            vNotification.background.setTint(accentColor)
+            View.VISIBLE
+        }
     }
 
     private fun setListeners() {

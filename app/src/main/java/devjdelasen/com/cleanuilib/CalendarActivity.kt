@@ -5,10 +5,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import devjdelasen.com.cleanui.TextStyle
+import devjdelasen.com.cleanui.utils.TextStyle
 import devjdelasen.com.cleanui.calendar.top.TopHorizontalCalendarWithHeader
 import devjdelasen.com.cleanui.extensions.addHours
-import devjdelasen.com.cleanui.icons.SimpleIcon
 import devjdelasen.com.cleanui.icons.models.CircleIconModel
 import devjdelasen.com.cleanui.icons.models.SimpleIconModel
 import devjdelasen.com.cleanui.tasks.List.RvAdapterTasks
@@ -53,7 +52,24 @@ class CalendarActivity : AppCompatActivity() {
 
     private fun setList(list: List<TaskAbstract>) {
         if (rvAdapter == null) {
-            rvAdapter = RvAdapterTasks(list)
+            rvAdapter = RvAdapterTasks(list, object : RvAdapterTasks.TaskInteractionListener {
+                override fun onItemClickListener() {
+                    Toast.makeText(this@CalendarActivity,"On item click", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onTopRightIconListener() {
+                    Toast.makeText(this@CalendarActivity,"On top right icon click", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onCategoryListener() {
+                    Toast.makeText(this@CalendarActivity,"On category click", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onActionButtonListener() {
+                    Toast.makeText(this@CalendarActivity,"On action button click", Toast.LENGTH_SHORT).show()
+                }
+
+            })
             val llManager = LinearLayoutManager(this)
             rv.layoutManager = llManager
             rv.adapter = rvAdapter
@@ -92,12 +108,38 @@ class CalendarActivity : AppCompatActivity() {
         val dateEnd4 = Date()
         dateEnd4.addHours(256)
 
+        val dateStart5 = Date()
+        dateStart5.addHours(94)
+        val dateEnd5 = Date()
+        dateEnd5.addHours(94)
+
         tasks.add(SimpleTask(
             title = "Lorem ipsum dolor",
             description = "Cum adiurator messis, omnes nixuses vitare noster.",
             date = dateStart1,
             startTime = dateStart1,
             endTime = dateEnd1,
+            category = CategoryTaskModel("1",
+                CircleIconModel(
+                    ResourcesCompat.getDrawable(
+                        resources,
+                        R.drawable.streamline_application_framework_meteor,
+                        null
+                    ),
+                    null,
+                    null
+                )
+            )
+            //topRightIcon = IconModel(ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null), null, null),
+            //accentButton = AccentButtonModel(text = "#Daily", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)
+        ))
+
+        tasks.add(SimpleTask(
+            title = "This anomaly has only been teleported by a remarkable planet.",
+            description = "Cum adiurator messis, omnes nixuses vitare noster.",
+            date = dateStart2,
+            startTime = dateStart2,
+            endTime = dateEnd2,
             category = CategoryTaskModel("1",
                 CircleIconModel(
                     ResourcesCompat.getDrawable(
@@ -193,6 +235,36 @@ class CalendarActivity : AppCompatActivity() {
                 )
             )
         )
+        tasks.add(
+            SimpleTask(
+                title = "It is the only guarantee of life.",
+                description = "Cum deus assimilant, omnes brabeutaes attrahendam talis, flavum adiuratores.",
+                date = dateStart5,
+                category = CategoryTaskModel(
+                    "1",
+                    CircleIconModel(
+                        ResourcesCompat.getDrawable(
+                            resources,
+                            R.drawable.streamline_food_barbeque_pot,
+                            null
+                        ), null, null
+                    )
+                ),
+                topRightIcon = SimpleIconModel(
+                    ResourcesCompat.getDrawable(
+                        resources,
+                        R.drawable.ic_options,
+                        null
+                    ), null
+                ),
+                accentButton = AccentButtonModel(
+                    text = "#Daily",
+                    textSize = 12f,
+                    textStyle = TextStyle.NORMAL,
+                    tintColor = R.color.app_colorAccent
+                )
+            )
+        )
 
 
         tasks.add(SimpleTask(
@@ -201,6 +273,20 @@ class CalendarActivity : AppCompatActivity() {
             date = dateStart3,
             startTime = dateStart3,
             endTime = dateEnd3,
+            topRightIcon = SimpleIconModel(
+                ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null),
+                null
+            ),
+            accentButton = AccentButtonModel(text = "#SprintPlaning", textSize = 12f, textStyle = TextStyle.NORMAL, tintColor = R.color.app_colorAccent)))
+
+
+
+        tasks.add(SimpleTask(
+            title = "Lorem ipsum dolor sit amet",
+            description = "Cum adiurator messis, omnes nixuses vitare noster, altus mineralises. Compater moris, tanquam ferox verpa.",
+            date = dateStart5,
+            startTime = dateStart5,
+            endTime = dateEnd5,
             topRightIcon = SimpleIconModel(
                 ResourcesCompat.getDrawable(resources, R.drawable.ic_options, null),
                 null
@@ -259,6 +345,13 @@ class CalendarActivity : AppCompatActivity() {
             date = dateStart3,
             startTime = dateStart3,
             endTime = dateEnd3))
+
+        tasks.add(SimpleTask(
+            title = "Sroom! Imbers mori, tanquam grandis pes.",
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo",
+            date = dateStart5,
+            startTime = dateStart5,
+            endTime = dateEnd5))
 
         tasks.add(SimpleTask(
             title = "Sroom! With ground beef  drink whipped cream.",

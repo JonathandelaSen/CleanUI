@@ -2,22 +2,24 @@ package devjdelasen.com.cleanui.tasks.List
 
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintSet
-import androidx.recyclerview.widget.RecyclerView
 import devjdelasen.com.cleanui.R
-import devjdelasen.com.cleanui.Utils
+import devjdelasen.com.cleanui.utils.Utils
 import devjdelasen.com.cleanui.extensions.constraintParent
 import devjdelasen.com.cleanui.extensions.constraintParentDontApply
 import devjdelasen.com.cleanui.extensions.constraintTo
 import devjdelasen.com.cleanui.extensions.removeConstraint
 import devjdelasen.com.cleanui.tasks.models.SimpleTask
-import devjdelasen.com.cleanui.tasks.models.TaskAbstract
-import kotlinx.android.synthetic.main.clean_ui_tasks_item_hour_taskline.view.*
 import kotlinx.android.synthetic.main.clean_ui_tasks_simple_item_task_taskline.view.*
 import kotlinx.android.synthetic.main.clean_ui_tasks_simple_item_task_taskline.view.clean_ui_tvTitle
 
-class SimpleTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbstract(itemView) {
+internal class SimpleTaskTimelineViewHolder(itemView: View, listener: RvAdapterTasks.TaskInteractionListener?) : TaskTimelineViewHolderAbstract(itemView, listener) {
 
     override var task: SimpleTask? = null
+
+
+    init {
+        setSimpleTaskListener()
+    }
 
     fun bind(task: SimpleTask) {
         this.task = task
@@ -41,6 +43,14 @@ class SimpleTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbstr
         setAccentButtonConstraints()
         setTopRightIconConstraints()
     }
+
+    fun setSimpleTaskListener() {
+        super.setListeners()
+        setAccentButtonListener()
+        setCategoryListener()
+    }
+
+
 
     private fun setTopRightIconConstraints() {
         if (itemView.clean_ui_tvHours.visibility == View.VISIBLE) {
@@ -333,6 +343,18 @@ class SimpleTaskTimelineViewHolder(itemView: View) : TaskTimelineViewHolderAbstr
             bottomToId = itemView.clean_ui_tvHours.id,
             bottomToOfView = ConstraintSet.BOTTOM,
             constraintSet = constraintSet)
+    }
+
+    private fun setAccentButtonListener() {
+        itemView.clean_ui_accentButton.setOnClickListener {
+            listener?.onActionButtonListener()
+        }
+    }
+
+    private fun setCategoryListener() {
+        itemView.clean_ui_iconCategory.setOnClickListener {
+            listener?.onCategoryListener()
+        }
     }
 
 

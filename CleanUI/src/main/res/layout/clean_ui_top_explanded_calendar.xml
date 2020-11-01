@@ -118,7 +118,6 @@
                 />
 
             <View
-                android:visibility="gone"
                 style="@style/clean_ui_TopCalendarNotification"
                 />
 

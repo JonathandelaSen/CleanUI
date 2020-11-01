@@ -10,13 +10,17 @@ import kotlinx.android.synthetic.main.clean_ui_tasks_simple_item_task_taskline.v
 import kotlinx.android.synthetic.main.clean_ui_tasks_simple_item_task_taskline.view.clean_ui_tvTitle
 import kotlinx.android.synthetic.main.clean_ui_tasks_simple_item_task_taskline.view.clean_ui_vMarkColor
 
-abstract class TaskTimelineViewHolderAbstract(itemView: View) : RecyclerView.ViewHolder(itemView) {
+internal abstract class TaskTimelineViewHolderAbstract(itemView: View, protected val listener: RvAdapterTasks.TaskInteractionListener?) : RecyclerView.ViewHolder(itemView) {
 
     protected abstract val task: TaskAbstract?
 
 
     protected abstract fun reorganizeConstraints()
 
+    open fun setListeners() {
+        setItemListener()
+        setTopRightIconListener()
+    }
 
     fun setAccentButton() {
         if (task?.accentButton == null) {
@@ -84,5 +88,19 @@ abstract class TaskTimelineViewHolderAbstract(itemView: View) : RecyclerView.Vie
         itemView.clean_ui_taskTopRightIcon.visibility = View.VISIBLE
         itemView.clean_ui_taskTopRightIcon.set(task?.topRightIcon)
     }
+
+
+    private fun setItemListener() {
+        itemView.setOnClickListener {
+            listener?.onItemClickListener()
+        }
+    }
+
+    private fun setTopRightIconListener() {
+        itemView.clean_ui_taskTopRightIcon.setOnClickListener {
+            listener?.onTopRightIconListener()
+        }
+    }
+
 
 }

@@ -11,7 +11,7 @@
     >
 
 
-    <devjdelasen.com.cleanui.SimpleToolbar
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <devjdelasen.com.cleanui.TitleSection
+            <devjdelasen.com.cleanui.sections.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF"
@@ -71,9 +71,9 @@
                     app:settings_row_title="Privacy policy"
                     />
 
-            </devjdelasen.com.cleanui.TitleSection>
+            </devjdelasen.com.cleanui.sections.TitleSection>
 
-            <devjdelasen.com.cleanui.TitleSection
+            <devjdelasen.com.cleanui.sections.TitleSection
                 android:id="@+id/blocksTitleSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,9 +91,9 @@
                     app:settings_row_title="Blocks"
                     />
 
-            </devjdelasen.com.cleanui.TitleSection>
+            </devjdelasen.com.cleanui.sections.TitleSection>
 
-            <devjdelasen.com.cleanui.TitleSection
+            <devjdelasen.com.cleanui.sections.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF"
@@ -118,9 +118,9 @@
                     app:settings_row_title="Sound on"
                     />
 
-            </devjdelasen.com.cleanui.TitleSection>
+            </devjdelasen.com.cleanui.sections.TitleSection>
 
-            <devjdelasen.com.cleanui.TitleSection
+            <devjdelasen.com.cleanui.sections.TitleSection
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF"
@@ -152,7 +152,7 @@
                     app:settings_row_title="Privacy policy"
                     />
 
-            </devjdelasen.com.cleanui.TitleSection>
+            </devjdelasen.com.cleanui.sections.TitleSection>
         </LinearLayout>
 
     </ScrollView>

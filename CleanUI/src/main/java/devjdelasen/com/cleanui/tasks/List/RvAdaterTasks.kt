@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import devjdelasen.com.cleanui.NoPostViewHolder
+import devjdelasen.com.cleanui.utils.NoPostViewHolder
 import devjdelasen.com.cleanui.R
 import devjdelasen.com.cleanui.tasks.models.MinimalTask
 import devjdelasen.com.cleanui.tasks.models.SimpleTask
 import devjdelasen.com.cleanui.tasks.models.TaskAbstract
 
 
-class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
+class RvAdapterTasks(list: List<TaskAbstract>, val listener: TaskInteractionListener?) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
 
 
     private val sortedList: ArrayList<TaskAbstract> = ArrayList()
@@ -32,11 +32,11 @@ class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<RecyclerVi
         val itemView: View
         if (viewType == TaskAbstract.TaskType.SIMPLE.value) {
             itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_tasks_simple_item_task_taskline, viewGroup, false)
-            return SimpleTaskTimelineViewHolder(itemView)
+            return SimpleTaskTimelineViewHolder(itemView, listener)
         }
         if (viewType == TaskAbstract.TaskType.MINIMAL.value) {
             itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_tasks_minimal_item_task_taskline, viewGroup, false)
-            return MinimalTaskTimelineViewHolder(itemView)
+            return MinimalTaskTimelineViewHolder(itemView, listener)
         }
         itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.clean_ui_item_no_task, viewGroup, false)
         return NoPostViewHolder(itemView)
@@ -70,6 +70,13 @@ class RvAdapterTasks(list: List<TaskAbstract>) : RecyclerView.Adapter<RecyclerVi
         })
     }
 
+
+    interface TaskInteractionListener {
+        fun onItemClickListener()
+        fun onTopRightIconListener()
+        fun onCategoryListener()
+        fun onActionButtonListener()
+    }
 
 
 }

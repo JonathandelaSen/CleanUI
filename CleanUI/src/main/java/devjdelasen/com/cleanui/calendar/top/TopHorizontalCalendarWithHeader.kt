@@ -8,13 +8,14 @@ import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import devjdelasen.com.cleanui.*
-import devjdelasen.com.cleanui.DividerType
+import devjdelasen.com.cleanui.utils.DividerType
 import devjdelasen.com.cleanui.calendar.models.YearCalendar
 import devjdelasen.com.cleanui.calendar.top.list.RvAdapterTopHorizontalCalendar
 import devjdelasen.com.cleanui.tasks.models.TaskAbstract
+import devjdelasen.com.cleanui.utils.UtilsDate
+import devjdelasen.com.cleanui.utils.setDividerType
 import kotlinx.android.synthetic.main.clean_ui_calendar_with_header_view.view.*
 
 
@@ -103,9 +104,14 @@ class TopHorizontalCalendarWithHeader : LinearLayout {
         setStyles()
         showHideViews()
         setType()
-        setDividerType(dividerType, clean_ui_calendar_vDivider, this,
+        setDividerType(
+            dividerType,
+            clean_ui_calendar_vDivider,
+            this,
             context.resources.getDimensionPixelOffset(R.dimen.clean_ui_dialog_button_radius),
-            shadowColor = resources.getColor(R.color.clean_ui_divider_shadow, null), dividerColor = dividerColor)
+            shadowColor = resources.getColor(R.color.clean_ui_divider_shadow, null),
+            dividerColor = dividerColor
+        )
         selectCurrentDayMonth()
         setDayListIfVisible()
         updateExpandedIfVisible()

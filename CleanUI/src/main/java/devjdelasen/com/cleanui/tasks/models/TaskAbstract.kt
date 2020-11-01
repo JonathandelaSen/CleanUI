@@ -1,8 +1,7 @@
 package devjdelasen.com.cleanui.tasks.models
 
 import androidx.annotation.ColorRes
-import devjdelasen.com.cleanui.UtilsDate
-import devjdelasen.com.cleanui.icons.models.CircleIconModel
+import devjdelasen.com.cleanui.utils.UtilsDate
 import devjdelasen.com.cleanui.icons.models.SimpleIconModel
 import java.util.*
 

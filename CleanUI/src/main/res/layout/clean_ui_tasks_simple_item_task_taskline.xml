@@ -12,8 +12,8 @@
         android:id="@+id/clean_ui_constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         style="@style/clean_ui_TasklineBgTask"
@@ -123,101 +123,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/clean_ui_iconCategory" />
 
-
-<!--
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="112dp"
-            android:paddingBottom="12dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            >
-
-            <LinearLayout
-                android:id="@+id/clean_ui_llHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="12dp"
-                >
-
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/clean_ui_tvDescription"
-                style="@style/clean_ui_TasklineDescriptionTask"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="4dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    >
-
-
-                    <devjdelasen.com.cleanui.icons.CircleIcon
-                        android:id="@+id/clean_ui_iconCategory"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        app:circle_icon_icon="@drawable/icons8_origami_96"
-                        app:circle_icon_tint_bg_color="@color/clean_ui_icon_bg"
-                        />
-
-
-                </LinearLayout>
-
-                <devjdelasen.com.cleanui.buttons.AccentButton
-                    android:id="@+id/clean_ui_accentButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:circle_accent_button_text="#GoGoGo"
-                    app:circle_accent_button_tint_color="@color/clean_ui_colorPrimary"
-                    android:layout_gravity="center_vertical"
-                    />
-
-            </LinearLayout>
-
-            <devjdelasen.com.cleanui.tasks.TaskDurationBar
-                android:visibility="gone"
-                android:id="@+id/clean_ui_durationBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-            &lt;!&ndash;
-            - Total duration
-            - Category with circle icon
-            - Hashtag
-            - Place
-            - Top right icon
-            - Move color mark
-            - Progress bar
-            - action button
-            - Highlighted text
-            - Iconos para categorías específicas, por ejemplo, place con relleno cuadrado redondeado con el icono en color?
-            - Notification de important
-            - Bottom section actions (e.g. iconos de enviar, comentar ?)
-            - Lista enumerado
-            &ndash;&gt;
-
-        </LinearLayout>
--->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
