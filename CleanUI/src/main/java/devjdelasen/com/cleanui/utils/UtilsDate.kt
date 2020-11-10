@@ -30,10 +30,65 @@ internal class UtilsDate {
 
         const val DEFAULT_TIME_FORMAT = "HH:mm aa"
 
-
         private const val DEFAULT_TIME_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS"
 
+
+        fun format(date: Date, outFormat: String): String {
+            val simpleDateFormat = SimpleDateFormat(outFormat, Locale.getDefault())
+            return simpleDateFormat.format(date)
+        }
+
         /* TIME */
+        /** e.g. 20 April  */
+        fun getFormatDateDayMonthLong(
+            stringDate: String?,
+            context: Context
+        ): String {
+            return try {
+                getFormatDateDayMonthLongMillis(
+                    getDate(
+                        stringDate
+                    ).time.toString(), context
+                )
+            } catch (e: ParseException) {
+                e.printStackTrace()
+                ""
+            }
+        }
+
+        /** e.g. 20 April  */
+        fun getFormatDateDayMonthLong(day: Int, month: Int): String {
+            return day.toString() + " " + getMonthOfYearName(
+                month
+            )
+        }
+
+        /** e.g. 20 April  */
+        private fun getFormatDateDayMonthLongMillis(
+            stringDate: String,
+            context: Context
+        ): String {
+            val calendar = Calendar.getInstance()
+            calendar.timeInMillis = java.lang.Long.valueOf(stringDate)
+            if (isToday(
+                    calendar
+                )
+            ) {
+                return context.resources.getString(R.string.clean_ui_today)
+            }
+            return if (isYesterday(
+                    calendar
+                )
+            ) {
+                context.resources.getString(R.string.clean_ui_yesterday)
+            } else calendar[Calendar.DAY_OF_MONTH].toString() + " " +
+                    calendar.getDisplayName(
+                        Calendar.MONTH,
+                        Calendar.SHORT,
+                        Locale.getDefault()
+                    )
+        }
+
         fun getHour24Format(): Int {
             val rightNow = Calendar.getInstance()
             return rightNow[Calendar.HOUR_OF_DAY]
@@ -77,22 +132,7 @@ internal class UtilsDate {
             return "$hours:$min"
         }
 
-        fun getDifferenceInMinutesTimes(startTime: String?, endTime: String?): Int {
-            val dateStart: Date
-            val dateEnd: Date
-            try {
-                dateStart =
-                    getTime(
-                        startTime
-                    )
-                dateEnd =
-                    getTime(
-                        endTime
-                    )
-            } catch (e: ParseException) {
-                e.printStackTrace()
-                return 0
-            }
+        fun getDifferenceInMinutes(dateStart: Date, dateEnd: Date): Int {
             val difference = dateEnd.time - dateStart.time
             val days = (difference / (1000 * 60 * 60 * 24)).toInt()
             val hours = ((difference - 1000 * 60 * 60 * 24 * days) / (1000 * 60 * 60)).toInt()
@@ -115,35 +155,8 @@ internal class UtilsDate {
             }
         }
 
-        fun getTime(date: Date, outFormat: String): String {
-            val simpleDateFormat = SimpleDateFormat(outFormat, Locale.getDefault())
-            return simpleDateFormat.format(date)
-        }
-
-
-        /* TIME */
-        /** e.g. 20 April  */
-        fun getFormatDateDayMonthLong(
-            stringDate: String?,
-            context: Context
-        ): String {
-            return try {
-                getFormatDateDayMonthLongMillis(
-                    getDate(
-                        stringDate
-                    ).time.toString(), context
-                )
-            } catch (e: ParseException) {
-                e.printStackTrace()
-                ""
-            }
-        }
-
-        /** e.g. 20 April  */
-        fun getFormatDateDayMonthLong(day: Int, month: Int): String {
-            return day.toString() + " " + getMonthOfYearName(
-                month
-            )
+        fun hasTimeZone(stringDate: String): Boolean {
+            return stringDate.substring(stringDate.length - 1) == "Z"
         }
 
         /** e.g. 20 April 2017  */
@@ -211,6 +224,18 @@ internal class UtilsDate {
                     getDate(
                         stringDate2
                     )
+                val calendar2 = Calendar.getInstance()
+                calendar2.time = date2
+                calendar1[Calendar.DAY_OF_MONTH] == calendar2[Calendar.DAY_OF_MONTH] && calendar1[Calendar.MONTH] == calendar2[Calendar.MONTH] && calendar1[Calendar.YEAR] == calendar2[Calendar.YEAR]
+            } catch (e: ParseException) {
+                false
+            }
+        }
+
+        fun isSameDay(date1: Date, date2: Date): Boolean {
+            return try {
+                val calendar1 = Calendar.getInstance()
+                calendar1.time = date1
                 val calendar2 = Calendar.getInstance()
                 calendar2.time = date2
                 calendar1[Calendar.DAY_OF_MONTH] == calendar2[Calendar.DAY_OF_MONTH] && calendar1[Calendar.MONTH] == calendar2[Calendar.MONTH] && calendar1[Calendar.YEAR] == calendar2[Calendar.YEAR]
@@ -310,7 +335,12 @@ internal class UtilsDate {
             )
         }
 
-        fun getDayNameShort(yearNumber: Int, monthNumber: Int, dayNumber: Int, context: Context): String {
+        fun getDayNameShort(
+            yearNumber: Int,
+            monthNumber: Int,
+            dayNumber: Int,
+            context: Context
+        ): String {
             val calendar = Calendar.getInstance()
             calendar[Calendar.YEAR] = yearNumber
             calendar[Calendar.MONTH] = monthNumber
@@ -323,7 +353,12 @@ internal class UtilsDate {
             )
         }
 
-        fun getDayNameInitialLetrer(yearNumber: Int, monthNumber: Int, dayNumber: Int, context: Context): String {
+        fun getDayNameInitialLetrer(
+            yearNumber: Int,
+            monthNumber: Int,
+            dayNumber: Int,
+            context: Context
+        ): String {
             val calendar = Calendar.getInstance()
             calendar[Calendar.YEAR] = yearNumber
             calendar[Calendar.MONTH] = monthNumber
@@ -336,7 +371,12 @@ internal class UtilsDate {
             ).first().toString()
         }
 
-        fun getDayName(yearNumber: Int, monthNumber: Int, dayNumber: Int, context: Context): String {
+        fun getDayName(
+            yearNumber: Int,
+            monthNumber: Int,
+            dayNumber: Int,
+            context: Context
+        ): String {
             val calendar = Calendar.getInstance()
             calendar[Calendar.YEAR] = yearNumber
             calendar[Calendar.MONTH] = monthNumber
@@ -369,39 +409,13 @@ internal class UtilsDate {
         }
 
         fun getNDaysMonth(monthNumber: Int, yearNumber: Int): Int {
-            return GregorianCalendar(yearNumber, monthNumber, 1).getActualMaximum(Calendar.DAY_OF_MONTH)
+            return GregorianCalendar(
+                yearNumber,
+                monthNumber,
+                1
+            ).getActualMaximum(Calendar.DAY_OF_MONTH)
         }
 
-
-
-
-
-
-        /** e.g. 20 April  */
-        private fun getFormatDateDayMonthLongMillis(
-            stringDate: String,
-            context: Context
-        ): String {
-            val calendar = Calendar.getInstance()
-            calendar.timeInMillis = java.lang.Long.valueOf(stringDate)
-            if (isToday(
-                    calendar
-                )
-            ) {
-                return context.resources.getString(R.string.clean_ui_today)
-            }
-            return if (isYesterday(
-                    calendar
-                )
-            ) {
-                context.resources.getString(R.string.clean_ui_yesterday)
-            } else calendar[Calendar.DAY_OF_MONTH].toString() + " " +
-                    calendar.getDisplayName(
-                        Calendar.MONTH,
-                        Calendar.SHORT,
-                        Locale.getDefault()
-                    )
-        }
 
         /** e.g. 20 April 2017  */
         private fun getFormatDateDayMonthYearLongMillis(
@@ -435,25 +449,22 @@ internal class UtilsDate {
         }
 
         @Throws(ParseException::class)
-        private fun getDate(stringDate: String?): Date {
+        fun getDate(stringDate: String?): Date {
             if (stringDate == null) {
                 throw ParseException("", 0)
             }
-            val simpleDateFormat = SimpleDateFormat(
-                DEFAULT_TIME_DATE_FORMAT,
-                Locale.getDefault()
-            )
+            val simpleDateFormat = SimpleDateFormat(DEFAULT_TIME_DATE_FORMAT, Locale.getDefault())
             return simpleDateFormat.parse(stringDate)
         }
 
-        private fun isToday(cal: Calendar): Boolean {
+        fun isToday(cal: Calendar): Boolean {
             return isSameDay(
                 cal,
                 Calendar.getInstance()
             )
         }
 
-        private fun isYesterday(cal: Calendar): Boolean {
+        fun isYesterday(cal: Calendar): Boolean {
             val cal1 = Calendar.getInstance()
             return cal1[Calendar.YEAR] == cal[Calendar.YEAR] && cal1[Calendar.DAY_OF_YEAR] - 1 == cal[Calendar.DAY_OF_YEAR]
         }

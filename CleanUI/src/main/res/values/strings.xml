@@ -1,3 +1,8 @@
 <resources>
     <string name="open_section">Open section</string>
+    <string name="clean_ui_copy_text">Copy text</string>
+    <string name="clean_ui_reply">Reply</string>
+    <string name="clean_ui_pin_message">Pin message</string>
+    <string name="clean_ui_forward_message">Forward message</string>
+    <string name="clean_ui_select_message">Select message</string>
 </resources>

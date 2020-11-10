@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners
+        android:bottomLeftRadius="@dimen/clean_ui_chat_popup_menu_radius"
+        android:bottomRightRadius="@dimen/clean_ui_chat_popup_menu_radius"
+        android:topLeftRadius="@dimen/clean_ui_chat_popup_menu_radius"
+        android:topRightRadius="@dimen/clean_ui_chat_popup_menu_radius" />
+    <solid android:color="@color/clean_ui_white" />
+</shape>

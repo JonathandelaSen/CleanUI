@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="clean_ui_chat_date_box_bg">#F0F4FF</color>
+    <color name="clean_ui_chat_bubble_left_bg">#FE5DA5</color>
+    <color name="clean_ui_chat_bubble_left_dark_bg">#D11C6C</color>
+    <color name="clean_ui_chat_bubble_right_bg">#FFF</color>
+    <color name="clean_ui_chat_left_shadow">#DC2376</color>
+    <color name="clean_ui_chat_send_message_shadow">#DC2376</color>
+    <color name="clean_ui_chat_right_shadow">#6B768F</color>
+    <color name="clean_ui_chat_left_message_border">#E0E0E0</color>
+    <color name="clean_ui_chat_text_message">#707C97</color>
+    <color name="clean_ui_chat_bg">#F2F2F2</color>
+    <color name="clean_ui_chat_overlay_shadow_bg">#A8333333</color>
+    <color name="clean_ui_type_message_box_border">#E6E6E6</color>
+    <color name="clean_ui_chat_message_date_time">#A9333333</color>
+</resources>

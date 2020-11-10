@@ -9,4 +9,10 @@
     <dimen name="clean_ui_simple_task_top_half_inner_space">8dp</dimen>
     <dimen name="clean_ui_simple_task_bottom_half_inner_space">8dp</dimen>
     <dimen name="clean_ui_simple_task_side_half_inner_space">8dp</dimen>
+    <dimen name="clean_ui_chat_message_radius">16dp</dimen>
+    <dimen name="clean_ui_chat_popup_menu_radius">16dp</dimen>
+    <dimen name="clean_ui_type_message_box_radius">20dp</dimen>
+    <dimen name="clean_ui_chat_chat_box_side_space">20dp</dimen>
+    <dimen name="clean_ui_chat_chat_box_top_bottom_space">12dp</dimen>
+    <dimen name="clean_ui_chat_chat_message_elevation">18dp</dimen>
 </resources>

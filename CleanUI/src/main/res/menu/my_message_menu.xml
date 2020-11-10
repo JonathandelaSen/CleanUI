@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/opt_copy" android:title="@string/clean_ui_copy_text" />
+    <item android:id="@+id/opt_reply" android:title="@string/clean_ui_reply" />
+    <item android:id="@+id/opt_pin" android:title="@string/clean_ui_pin_message" />
+    <item android:id="@+id/opt_forward" android:title="@string/clean_ui_forward_message" />
+    <item android:id="@+id/opt_select" android:title="@string/clean_ui_select_message" />
+</menu>

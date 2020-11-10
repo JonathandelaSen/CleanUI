@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="clean_ui_chat_MessageDate" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/clean_ui_chat_message_date_time</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="clean_ui_chat_TimeDate" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/clean_ui_title_default</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="clean_ui_chat_Message" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:elevation">@dimen/clean_ui_chat_chat_message_elevation</item>
+    </style>
+
+    <style name="clean_ui_chat_MessageLeft" parent="clean_ui_chat_Message">
+        <item name="android:background">@drawable/clean_ui_chat_bubble_left_bg</item>
+        <item name="android:textColor">@color/clean_ui_white</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
+    </style>
+
+    <style name="clean_ui_chat_MessageRight" parent="clean_ui_chat_Message">
+        <item name="android:background">@drawable/clean_ui_chat_bubble_right_bg</item>
+        <item name="android:textColor">@color/clean_ui_chat_text_message</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
+    </style>
+
+    <style name="clean_ui_chat_MessageTime" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/clean_ui_chat_message_date_time</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="clean_ui_chat_ChatOptionsIcon">
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:contentDescription">@string/clean_ui_icon_options_description</item>
+    </style>
+
+</resources>

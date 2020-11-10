@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clean_ui_icon_options_description">Options</string>
+    <string name="clean_ui_send_message_hint">Type a message here</string>
+</resources>

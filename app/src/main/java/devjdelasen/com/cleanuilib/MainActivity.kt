@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import devjdelasen.com.cleanui.chat.ChatCleanUI
 import devjdelasen.com.cleanui.dialogs.ActionDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -31,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         settingsSettings.setListener(View.OnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         })
+
+        settingsChat.setListener(View.OnClickListener {
+
+            ChatCleanUI.init(this)
+            ChatCleanUI.userId = "5d10a56ca31b5d140d2d609f"
+            startActivity(Intent(this, ChatActivity::class.java))
+        })
+
 
         settingsActionDialog.setListener(View.OnClickListener {
             val dialog = ActionDialog(title = "Sed ut perspiciatis",

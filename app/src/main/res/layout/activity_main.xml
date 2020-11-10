@@ -74,6 +74,13 @@
                     />
 
                 <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
+                    android:id="@+id/settingsChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:settings_row_title="Open samples chat"
+                    />
+
+                <devjdelasen.com.cleanui.settingsRow.SettingsRowAction
                     android:id="@+id/settingsActionDialog"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

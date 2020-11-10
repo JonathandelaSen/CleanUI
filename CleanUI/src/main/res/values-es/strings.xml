@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="open_section">Abrir sección</string>
+    <string name="clean_ui_copy_text">Copiar texto</string>
+    <string name="clean_ui_reply">Responder</string>
+    <string name="clean_ui_pin_message">Fijar mensaje</string>
+    <string name="clean_ui_forward_message">Reenviar mensaje</string>
+    <string name="clean_ui_select_message">Seleccionar mensaje</string>
 </resources>

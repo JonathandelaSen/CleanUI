@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clean_ui_clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipToPadding="false"
+    android:background="@color/clean_ui_chat_bg"
+    >
+
+    <View
+        android:id="@+id/clean_ui_vDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:outlineAmbientShadowColor="@color/clean_ui_chat_right_shadow"
+        android:outlineSpotShadowColor="@color/clean_ui_chat_right_shadow"
+        android:elevation="20dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clean_ui_clBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clean_ui_type_message_box_bg"
+
+        android:layout_marginEnd="@dimen/clean_ui_chat_chat_box_side_space"
+        android:layout_marginStart="@dimen/clean_ui_chat_chat_box_side_space"
+        android:layout_marginTop="@dimen/clean_ui_chat_chat_box_top_bottom_space"
+        android:layout_marginBottom="@dimen/clean_ui_chat_chat_box_top_bottom_space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clean_ui_vDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/clean_ui_etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@null"
+            android:hint="@string/clean_ui_send_message_hint"
+            android:textColor="@color/clean_ui_chat_text_message"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clean_ui_flSendMessage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/clean_ui_flSendMessage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:outlineAmbientShadowColor="@color/clean_ui_chat_left_shadow"
+            android:outlineSpotShadowColor="@color/clean_ui_chat_send_message_shadow"
+            android:elevation="4dp"
+            android:padding="11dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/clean_ui_circle"
+            android:backgroundTint="@color/clean_ui_colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <ImageView
+                android:src="@drawable/clean_ui_send_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:elevation="14dp"
+                />
+
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

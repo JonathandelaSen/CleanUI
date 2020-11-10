@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".ToolbarSampleActivity" />
         <activity android:name=".MainActivity">

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatActivity"
+    android:id="@+id/clRoot"
+    >
+
+    <devjdelasen.com.cleanui.toolbars.SimpleToolbar
+        android:id="@+id/simpleToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:simple_toolbar_hide_divider="true"
+        android:outlineAmbientShadowColor="@color/clean_ui_taskline_task_shadow"
+        android:outlineSpotShadowColor="@color/clean_ui_taskline_task_shadow"
+        android:elevation="6dp"
+        android:layout_marginBottom="2dp"
+        app:simple_toolbar_title="Chat"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F2F2F2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/TypeMessageBox"
+        tools:itemCount="10"
+        tools:listitem="@layout/clean_ui_chat_item_message_right"
+        />
+
+
+    <devjdelasen.com.cleanui.chat.TypeMessageBox.TypeMessageBox
+        android:id="@+id/TypeMessageBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <devjdelasen.com.cleanui.ShadowOverlay
+        android:id="@+id/shadowOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

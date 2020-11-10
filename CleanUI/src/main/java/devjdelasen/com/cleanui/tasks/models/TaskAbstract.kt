@@ -24,10 +24,10 @@ abstract class TaskAbstract(val title: String,
 
     fun getTimeInterval(): String {
         if (startTime != null && endTime != null) {
-            return "${UtilsDate.getTime(startTime, UtilsDate.DEFAULT_TIME_FORMAT)} - ${UtilsDate.getTime(endTime, UtilsDate.DEFAULT_TIME_FORMAT)}"
+            return "${UtilsDate.format(startTime, UtilsDate.DEFAULT_TIME_FORMAT)} - ${UtilsDate.format(endTime, UtilsDate.DEFAULT_TIME_FORMAT)}"
         }
         if (startTime != null) {
-            return UtilsDate.getTime(startTime, UtilsDate.DEFAULT_TIME_FORMAT)
+            return UtilsDate.format(startTime, UtilsDate.DEFAULT_TIME_FORMAT)
         }
         return ""
     }
