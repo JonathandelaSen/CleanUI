@@ -26,8 +26,8 @@
             android:src="@drawable/clean_ui_ic_chat_options"
             android:layout_marginBottom="6dp"
 
-            app:layout_constraintEnd_toEndOf="@+id/clean_ui_chat_tvMessage"
-            app:layout_constraintBottom_toTopOf="@+id/clean_ui_chat_tvMessage"
+            app:layout_constraintEnd_toEndOf="@+id/clean_ui_chat_clImage"
+            app:layout_constraintBottom_toTopOf="@+id/clean_ui_chat_clImage"
             />
 
         <TextView
@@ -37,20 +37,48 @@
             android:text="13:43"
 
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/clean_ui_chat_tvMessage"
+            app:layout_constraintStart_toStartOf="@+id/clean_ui_chat_clImage"
             />
 
-        <TextView
-            android:id="@+id/clean_ui_chat_tvMessage"
-            style="@style/clean_ui_chat_MessageLeft"
-
-            tools:text="eneris. salvus huvus hus"
-            android:layout_marginTop="6dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clean_ui_chat_clImage"
+            style="@style/clean_ui_chat_ImageMessageLeftBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clean_ui_chat_tvTime"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clean_ui_chat_tvTime"
             android:layout_marginBottom="40dp"
-            />
+            android:layout_marginTop="6dp"
+            android:elevation="20dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            >
+
+            <ImageView
+                android:id="@+id/clean_ui_chat_ivImage"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1.1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/clean_ui_chat_tvMessage"
+                style="@style/clean_ui_chat_ImageMessageLeft"
+                android:layout_width="0dp"
+
+                tools:text="eneris. salvus hus. salvus hus. salvus hus. salvus hus. salvus hus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clean_ui_chat_ivImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/clean_ui_chat_ivImage"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

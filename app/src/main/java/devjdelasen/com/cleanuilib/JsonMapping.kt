@@ -3,6 +3,7 @@ package devjdelasen.com.cleanuilib
 import android.text.format.DateUtils
 import devjdelasen.com.cleanui.chat.models.ChatMessageModel
 import devjdelasen.com.cleanui.chat.models.ChatMessageModelAbstract
+import devjdelasen.com.cleanui.chat.models.FileChatMessageModel
 import devjdelasen.com.cleanui.chat.models.ImageChatMessageModel
 import org.json.JSONArray
 import org.json.JSONException
@@ -31,6 +32,10 @@ class JsonMapping {
                         messages.add(getImageMessage(jsonArray.getJSONObject(i)))
                         continue
                     }
+                    if (jsonArray.getJSONObject(i).has(Constants.JSON.FILE_URL)) {
+                        messages.add(getFileMessage(jsonArray.getJSONObject(i)))
+                        continue
+                    }
                     messages.add(getMessage(jsonArray.getJSONObject(i)))
                 } catch (e: JSONException) {
                     e.printStackTrace()
@@ -42,7 +47,11 @@ class JsonMapping {
         @Throws(JSONException::class)
         private fun getImageMessage(json: JSONObject): ImageChatMessageModel {
             val id = json.getString(Constants.JSON._ID)
-            val message = json.getString(Constants.JSON.BODY)
+            var message = ""
+                try {
+                message = json.getString(Constants.JSON.BODY)
+            } catch (e: JSONException) {
+            }
             val createdAt = json.getString(Constants.JSON.CREATED_AT)
             val senderId = json.getString(Constants.JSON.SENDER_ID)
             val imageUrl = json.getString(Constants.JSON.IMAGE_URL)
@@ -57,6 +66,27 @@ class JsonMapping {
                 message = message,
                 senderId = senderId,
                 imageUrl = imageUrl,
+                conversationId = conversationId,
+                receptorId = receptorId,
+                createdAt = getDate(createdAt))
+        }
+
+        @Throws(JSONException::class)
+        private fun getFileMessage(json: JSONObject): FileChatMessageModel {
+            val id = json.getString(Constants.JSON._ID)
+            val createdAt = json.getString(Constants.JSON.CREATED_AT)
+            val senderId = json.getString(Constants.JSON.SENDER_ID)
+            val fileUrl = json.getString(Constants.JSON.FILE_URL)
+            val receptorId = json.getString(Constants.JSON.RECEPTOR_ID)
+            var conversationId = ""
+            try {
+                conversationId = json.getString(Constants.JSON.CONVERSATION_ID)
+            } catch (e: JSONException) {
+            }
+            return FileChatMessageModel(
+                id = id,
+                senderId = senderId,
+                fileUrl = fileUrl,
                 conversationId = conversationId,
                 receptorId = receptorId,
                 createdAt = getDate(createdAt))

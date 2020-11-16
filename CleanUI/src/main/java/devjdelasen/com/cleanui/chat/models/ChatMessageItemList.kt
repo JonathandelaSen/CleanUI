@@ -16,5 +16,7 @@ interface ChatMessageItemList {
         const val MESSAGE_RIGHT_ITEM = 3
         const val IMAGE_MESSAGE_LEFT_ITEM = 4
         const val IMAGE_MESSAGE_RIGHT_ITEM = 5
+        const val FILE_MESSAGE_LEFT_ITEM = 6
+        const val FILE_MESSAGE_RIGHT_ITEM = 7
     }
 }

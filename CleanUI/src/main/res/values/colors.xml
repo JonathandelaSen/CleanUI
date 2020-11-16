@@ -11,6 +11,7 @@
     <color name="clean_ui_divider">#DEE4EB</color>
     <color name="clean_ui_divider_light">#E3E7EC</color>
     <color name="clean_ui_white">#FFF</color>
+    <color name="clean_ui_black_trans50">#80000000</color>
     <color name="clean_ui_icon_bg">#F5F6F8</color>
     <color name="clean_ui_title_default">#313943</color>
     <!--<color name="clean_ui_title_default">#3F4A58</color>-->
@@ -20,4 +21,5 @@
     <color name="clean_ui_divider_calendar">#F7F8FC</color>
     <color name="clean_ui_taskline_task_shadow">#98AEB5</color>
     <color name="clean_ui_divider_shadow">#98AEB5</color>
+
 </resources>

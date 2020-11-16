@@ -33,14 +33,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simpleToolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/TypeMessageBox"
+        app:layout_constraintBottom_toTopOf="@+id/typeMessageBox"
         tools:itemCount="10"
         tools:listitem="@layout/clean_ui_chat_item_message_right"
         />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/typeMessageBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/clean_ui_custom_shadow"
+        />
 
     <devjdelasen.com.cleanui.chat.TypeMessageBox.TypeMessageBox
-        android:id="@+id/TypeMessageBox"
+        android:id="@+id/typeMessageBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,13 +57,4 @@
         />
 
 
-    <devjdelasen.com.cleanui.ShadowOverlay
-        android:id="@+id/shadowOverlay"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

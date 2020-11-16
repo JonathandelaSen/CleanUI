@@ -18,6 +18,8 @@
         <item name="android:textSize">10dp</item>
     </style>
 
+
+
     <style name="clean_ui_chat_Message" parent="@android:style/TextAppearance">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -33,9 +35,99 @@
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
     </style>
 
+    <style name="clean_ui_chat_MessageLeftText"  parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/clean_ui_white</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="clean_ui_chat_MessageRightText"  parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/clean_ui_chat_text_message</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="clean_ui_chat_MessageLeftTextDark"  parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/clean_ui_black_trans50</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="clean_ui_chat_MessageRightTextDark"  parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="clean_ui_chat_ImageMessageLeft" parent="clean_ui_chat_Message">
+        <item name="android:textColor">@color/clean_ui_white</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="clean_ui_chat_ImageMessageLeftBg">
+        <item name="android:background">@drawable/clean_ui_chat_bubble_image_left_bg</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
+        <item name="android:elevation">@dimen/clean_ui_chat_chat_message_elevation</item>
+    </style>
+
+    <style name="clean_ui_chat_FileMessageLeftBg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:elevation">@dimen/clean_ui_chat_chat_message_elevation</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_left_shadow</item>
+    </style>
+
+    <style name="clean_ui_chat_FileMessageRightBg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/clean_ui_chat_bubble_right_bg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:elevation">@dimen/clean_ui_chat_chat_message_elevation</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
+    </style>
+
+    <style name="clean_ui_chat_FileMessageLeftFileICon">
+        <item name="android:layout_width">@dimen/clean_ui_chat_chat_file_message_file_icon_size</item>
+        <item name="android:layout_height">@dimen/clean_ui_chat_chat_file_message_file_icon_size</item>
+        <item name="android:src">@drawable/clean_ui_chat_ic_file</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/clean_ui_chat_circle_file_bg</item>
+        <item name="android:contentDescription">@string/clean_ui_chat_file_message_file_icon_description</item>
+    </style>
+
+    <style name="clean_ui_chat_FileMessageRightFileICon">
+        <item name="android:layout_width">@dimen/clean_ui_chat_chat_file_message_file_icon_size</item>
+        <item name="android:layout_height">@dimen/clean_ui_chat_chat_file_message_file_icon_size</item>
+        <item name="android:src">@drawable/clean_ui_chat_ic_file</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/clean_ui_circle</item>
+        <item name="android:contentDescription">@string/clean_ui_chat_file_message_file_icon_description</item>
+    </style>
+
     <style name="clean_ui_chat_MessageRight" parent="clean_ui_chat_Message">
         <item name="android:background">@drawable/clean_ui_chat_bubble_right_bg</item>
         <item name="android:textColor">@color/clean_ui_chat_text_message</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
+    </style>
+
+    <style name="clean_ui_chat_ImageMessageRight" parent="clean_ui_chat_MessageRight">
+        <item name="android:background">@drawable/clean_ui_chat_bubble_image_right_bg</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="clean_ui_chat_ImageMessageRightBg">
+        <item name="android:elevation">@dimen/clean_ui_chat_chat_message_elevation</item>
+        <item name="android:background">@drawable/clean_ui_chat_bubble_right_bg</item>
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/clean_ui_chat_right_shadow</item>
     </style>
@@ -51,7 +143,9 @@
         <item name="android:layout_width">22dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">2dp</item>
+        <item name="android:src">@drawable/clean_ui_ic_chat_options</item>
         <item name="android:contentDescription">@string/clean_ui_icon_options_description</item>
     </style>
 
+    <dimen name="clean_ui_chat_chat_file_message_file_icon_size">48dp</dimen>
 </resources>

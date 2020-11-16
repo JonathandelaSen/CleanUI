@@ -2,6 +2,7 @@ package devjdelasen.com.cleanui.popups.PopupMenu
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
+import android.view.Gravity
 import android.view.View
 import android.widget.PopupWindow
 import devjdelasen.com.cleanui.R
@@ -21,6 +22,7 @@ class CleanUIChatPopupMenu {
     class ChatPopupMenuModel(anchorView: View, menu: Int, isMyMessage: Boolean, onClickListener: OnClickListener? = null, onDismissListener: PopupWindow.OnDismissListener? = null):
         PopupMenuModel(
             anchorView,
+            if (isMyMessage) Gravity.END else Gravity.TOP or Gravity.START,
             menu,
             if (isMyMessage)
                 PopupMenuModelStyles(

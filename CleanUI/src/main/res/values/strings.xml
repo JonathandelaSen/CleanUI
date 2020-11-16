@@ -5,4 +5,5 @@
     <string name="clean_ui_pin_message">Pin message</string>
     <string name="clean_ui_forward_message">Forward message</string>
     <string name="clean_ui_select_message">Select message</string>
+    <string name="clean_ui_chat_file_message_file_icon_description">Icon file</string>
 </resources>

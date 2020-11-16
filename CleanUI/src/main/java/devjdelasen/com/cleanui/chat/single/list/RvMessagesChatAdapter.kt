@@ -61,6 +61,26 @@ class RvMessagesChatAdapter(messagesModel: List<ChatMessageModelAbstract>, onIte
                     .inflate(R.layout.clean_ui_chat_item_message_left, viewGroup, false)
                 MessageLeftChatViewHolder(itemView, onItemClickListener)
             }
+            ChatMessageItemList.IMAGE_MESSAGE_RIGHT_ITEM -> {
+                itemView = LayoutInflater.from(viewGroup.context)
+                    .inflate(R.layout.clean_ui_chat_item_message_image_right, viewGroup, false)
+                ImageMessageRightChatViewHolder(itemView, onItemClickListener)
+            }
+            ChatMessageItemList.IMAGE_MESSAGE_LEFT_ITEM -> {
+                itemView = LayoutInflater.from(viewGroup.context)
+                    .inflate(R.layout.clean_ui_chat_item_message_image_left, viewGroup, false)
+                ImageMessageLeftChatViewHolder(itemView, onItemClickListener)
+            }
+            ChatMessageItemList.FILE_MESSAGE_LEFT_ITEM -> {
+                itemView = LayoutInflater.from(viewGroup.context)
+                    .inflate(R.layout.clean_ui_chat_item_message_file_left, viewGroup, false)
+                FileMessageLeftChatViewHolder(itemView, onItemClickListener)
+            }
+            ChatMessageItemList.FILE_MESSAGE_RIGHT_ITEM -> {
+                itemView = LayoutInflater.from(viewGroup.context)
+                    .inflate(R.layout.clean_ui_chat_item_message_file_right, viewGroup, false)
+                FileMessageRightChatViewHolder(itemView, onItemClickListener)
+            }
             ChatMessageItemList.DATE_ITEM -> {
                 itemView = LayoutInflater.from(viewGroup.context)
                     .inflate(R.layout.clean_ui_chat_item_message_date, viewGroup, false)
@@ -87,6 +107,13 @@ class RvMessagesChatAdapter(messagesModel: List<ChatMessageModelAbstract>, onIte
             ChatMessageItemList.IMAGE_MESSAGE_LEFT_ITEM -> {
                 (viewHolder as ImageMessageChatViewHolderAbstract).bind(
                     messages[pos] as ImageChatMessageModel
+                )
+                return
+            }
+            ChatMessageItemList.FILE_MESSAGE_RIGHT_ITEM,
+            ChatMessageItemList.FILE_MESSAGE_LEFT_ITEM -> {
+                (viewHolder as FileMessageChatViewHolderAbstract).bind(
+                    messages[pos] as FileChatMessageModel
                 )
                 return
             }
@@ -133,13 +160,12 @@ class RvMessagesChatAdapter(messagesModel: List<ChatMessageModelAbstract>, onIte
 
 
     private fun setMessages(messages: List<ChatMessageModelAbstract>) {
-        val items: MutableList<ChatMessageItemList> =
-            ArrayList()
+        val items: MutableList<ChatMessageItemList> = ArrayList()
         for (i in messages.indices) {
             items.add(messages[i])
             if (i + 1 >= messages.size) {
                 //items.add(createTimeItem(messages[i]))
-                items.add(createDateItem(messages[i]))
+                //items.add(createDateItem(messages[i]))
                 continue
             }
             /*if (hasToShowTime(messages[i], messages[i + 1])) {

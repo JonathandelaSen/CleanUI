@@ -8,7 +8,9 @@ import devjdelasen.com.cleanui.chat.ChatCleanUI
 import kotlinx.android.synthetic.main.clean_ui_popup_message_menu.view.*
 
 
-open class PopupMenuModel(val anchorView: View, val menu: Int,
+open class PopupMenuModel(val anchorView: View,
+                          val gravity: Int,
+                          val menu: Int,
                           val styles: PopupMenuModelStyles,
                           val onClickListener: OnClickListener? = null,
                           val onDismissListener: PopupWindow.OnDismissListener? = null) {

@@ -15,4 +15,5 @@
     <dimen name="clean_ui_chat_chat_box_side_space">20dp</dimen>
     <dimen name="clean_ui_chat_chat_box_top_bottom_space">12dp</dimen>
     <dimen name="clean_ui_chat_chat_message_elevation">18dp</dimen>
+    <dimen name="clean_ui_chat_chat_box_edit_text_side_space">14dp</dimen>
 </resources>

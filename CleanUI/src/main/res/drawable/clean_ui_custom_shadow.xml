@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:type="linear"
+        android:angle="90"
+        android:startColor="@color/clean_ui_chat_box_start_shadow"
+        android:endColor="@color/clean_ui_chat_box_end_shadow" />
+</shape>

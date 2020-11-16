@@ -2,9 +2,10 @@ package devjdelasen.com.cleanuilib
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
 import android.view.View
 import java.io.IOException
-import java.io.InputStream
+import kotlin.math.roundToInt
 
 class Utils {
 

@@ -6,4 +6,5 @@
     <string name="clean_ui_pin_message">Fijar mensaje</string>
     <string name="clean_ui_forward_message">Reenviar mensaje</string>
     <string name="clean_ui_select_message">Seleccionar mensaje</string>
+    <string name="clean_ui_chat_file_message_file_icon_description">Archivo icono</string>
 </resources>

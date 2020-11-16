@@ -14,4 +14,7 @@
     <color name="clean_ui_chat_overlay_shadow_bg">#A8333333</color>
     <color name="clean_ui_type_message_box_border">#E6E6E6</color>
     <color name="clean_ui_chat_message_date_time">#A9333333</color>
+
+    <color name="clean_ui_chat_box_start_shadow">#206B768F</color>
+    <color name="clean_ui_chat_box_end_shadow">#006B768F</color>
 </resources>

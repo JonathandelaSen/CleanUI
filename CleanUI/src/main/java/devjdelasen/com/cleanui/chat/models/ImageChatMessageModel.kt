@@ -11,7 +11,7 @@ class ImageChatMessageModel(id: String,
                             var imageUrl: String,
                             var conversationId: String,
                             val receptorId: String,
-                            val createdAt: Date) : ChatMessageModelAbstract(id, senderId, message) {
+                            createdAt: Date) : ChatMessageModelAbstract(id, senderId, message, createdAt) {
 
 
 

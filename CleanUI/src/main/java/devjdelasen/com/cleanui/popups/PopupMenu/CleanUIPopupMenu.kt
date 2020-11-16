@@ -26,7 +26,7 @@ class CleanUIPopupMenu {
             setListeners(popupWindow, popupMenuModel.onDismissListener)
             setOptions(popupWindow, popupMenuModel.menu, popupMenuModel.onClickListener, popupMenuModel.styles, context)
             setStyles(popupWindow, popupMenuModel.styles)
-            placeInScreen(popupWindow, popupMenuModel.anchorView)
+            placeInScreen(popupWindow, popupMenuModel.anchorView, popupMenuModel.gravity)
 
             return popupWindow
         }
@@ -37,11 +37,11 @@ class CleanUIPopupMenu {
 
 
 
-        private fun placeInScreen(popupWindow: PopupWindow, anchorView: View) {
+        private fun placeInScreen(popupWindow: PopupWindow, anchorView: View, gravity: Int) {
             val viewRect = Rect()
             anchorView.getGlobalVisibleRect(viewRect)
             popupWindow.showAtLocation(anchorView.parent as View,
-                Gravity.TOP or Gravity.START, viewRect.left, viewRect.bottom)
+                gravity, viewRect.left, viewRect.bottom)
         }
 
         private fun setStyles(

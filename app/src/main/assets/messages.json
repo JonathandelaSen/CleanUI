@@ -11,6 +11,7 @@
     "sender_id" : "5d108ebea31b5d140d2d609e",
     "receptor_id" : "5d10a56ca31b5d140d2d609f",
     "body" : "Sainthood doesn’t cosmically need any wind — but the seeker is what exists.",
+    "image_url" : "https://images.unsplash.com/photo-1604952476874-e1ee98b16a02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
     "created_at" : "2020-06-14T20:46:32.874Z"
   },
   {
@@ -29,8 +30,8 @@
   },
   {
     "_id" : "5ee68bb7584b3316d079b104",
-    "sender_id" : "5d108ebea31b5d140d2d609e",
-    "receptor_id" : "5d10a56ca31b5d140d2d609f",
+    "sender_id" : "5d10a56ca31b5d140d2d609f",
+    "receptor_id" : "5d108ebea31b5d140d2d609e",
     "body" : "Particles warp on friendship at hyperspace!",
     "created_at" : "2020-06-14T20:42:31.161Z"
   },
@@ -39,6 +40,7 @@
     "sender_id" : "5d108ebea31b5d140d2d609e",
     "receptor_id" : "5d10a56ca31b5d140d2d609f",
     "body" : "HCamerarius caniss ducunt ad accentor.h",
+    "imageUrl" : "https://images.unsplash.com/photo-1605099436582-94d723bdfd84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
     "created_at" : "2020-06-14T20:35:23.512Z"
   },
   {
@@ -66,6 +68,7 @@
     "_id" : "5ee6876b584b3316d079b0f1",
     "sender_id" : "5d10a56ca31b5d140d2d609f",
     "receptor_id" : "5d108ebea31b5d140d2d609e",
+    "image_url" : "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?ixlib=rb-1.2.1&auto=format&fit=crop&w=2855&q=80",
     "body" : "KObservare velox ducunt ad ferox zirbus.",
     "created_at" : "2020-06-14T20:24:11.494Z"
   },
@@ -80,28 +83,22 @@
     "_id" : "5ecaebc62e75b45d0407e04b",
     "sender_id" : "5d108ebea31b5d140d2d609e",
     "receptor_id" : "5d10a56ca31b5d140d2d609f",
-    "body" : "Get a chance",
+    "image_url" : "https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80",
     "created_at" : "2020-05-24T21:48:54.434Z"
   },
   {
     "_id" : "5ecaebc32e75b45d0407e04a",
     "sender_id" : "5d108ebea31b5d140d2d609e",
     "receptor_id" : "5d10a56ca31b5d140d2d609f",
-    "body" : "Thanks for the update on the",
+    "file_url" : "https://images.unsplash.com/logo-final.svg",
     "created_at" : "2020-05-24T21:48:51.704Z"
-  },
-  {
-    "_id" : "5ecaebc02e75b45d0407e049",
-    "sender_id" : "5d108ebea31b5d140d2d609e",
-    "receptor_id" : "5d10a56ca31b5d140d2d609f",
-    "body" : "Gg I will be there at least I can",
-    "created_at" : "2020-05-24T21:48:48.452Z"
   },
   {
     "_id" : "5ecaebbc2e75b45d0407e048",
     "sender_id" : "5d10a56ca31b5d140d2d609f",
     "receptor_id" : "5d108ebea31b5d140d2d609e",
     "body" : "I just want",
+    "image_url": "https://images.unsplash.com/photo-1604018612946-b40898a4236e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
     "created_at" : "2020-05-24T21:48:44.759Z"
   },
   {
@@ -115,8 +112,15 @@
     "_id" : "5ecaebba2e75b45d0407e046",
     "sender_id" : "5d10a56ca31b5d140d2d609f",
     "receptor_id" : "5d108ebea31b5d140d2d609e",
-    "body" : "Thanks 🙏 I will have a few hours of working on",
+    "image_url" : "https://images.unsplash.com/photo-1605020799108-17f052ed5cb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
     "created_at" : "2020-05-24T21:48:42.147Z"
+  },
+  {
+    "_id" : "5ecaebc32e75b45d0407e04a",
+    "sender_id" : "5d10a56ca31b5d140d2d609f",
+    "receptor_id" : "5d108ebea31b5d140d2d609e",
+    "file_url" : "https://images.unsplash.com/postman_collection.zip",
+    "created_at" : "2020-05-24T21:47:48.763Z"
   },
   {
     "_id" : "5ecaebb42e75b45d0407e045",
@@ -199,6 +203,7 @@
     "_id" : "5ecaeabe2e75b45d0407e03a",
     "sender_id" : "5d108ebea31b5d140d2d609e",
     "receptor_id" : "5d10a56ca31b5d140d2d609f",
+    "image_url": "https://images.unsplash.com/photo-1605121116474-81866646827b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80",
     "body" : "🔥🔥🔥🔥🔥🔥",
     "created_at" : "2020-05-24T21:44:30.339Z"
   },
@@ -213,7 +218,7 @@
     "_id" : "5ecaea9a2e75b45d0407e038",
     "sender_id" : "5d10a56ca31b5d140d2d609f",
     "receptor_id" : "5d108ebea31b5d140d2d609e",
-    "body" : "ForEst fortis fluctus, cesaris. this one app I",
+    "image_url" : "https://images.unsplash.com/photo-1605180118952-dfeee170b8db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1250&q=80",
     "created_at" : "2020-05-24T21:43:54.359Z"
   },
   {

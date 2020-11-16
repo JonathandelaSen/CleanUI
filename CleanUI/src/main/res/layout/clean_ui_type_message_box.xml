@@ -44,12 +44,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginStart="14dp"
-            android:layout_marginEnd="14dp"
+            android:layout_marginStart="@dimen/clean_ui_chat_chat_box_edit_text_side_space"
+            android:layout_marginEnd="@dimen/clean_ui_chat_chat_box_edit_text_side_space"
             android:background="@null"
             android:hint="@string/clean_ui_send_message_hint"
             android:textColor="@color/clean_ui_chat_text_message"
             android:textStyle="bold"
+            android:maxLines="3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/clean_ui_flSendMessage"
@@ -65,20 +66,20 @@
             android:elevation="4dp"
             android:padding="11dp"
             android:layout_marginEnd="14dp"
+            android:layout_marginTop="@dimen/clean_ui_chat_chat_box_top_bottom_space"
+            android:layout_marginBottom="@dimen/clean_ui_chat_chat_box_top_bottom_space"
             android:background="@drawable/clean_ui_circle"
-            android:backgroundTint="@color/clean_ui_colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <ImageView
-                android:src="@drawable/clean_ui_send_message"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:elevation="14dp"
-                />
+                android:src="@drawable/clean_ui_send_message" />
 
 
         </FrameLayout>
